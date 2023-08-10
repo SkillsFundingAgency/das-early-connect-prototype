@@ -1,0 +1,80 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <span class="govuk-caption-xl">{{ serviceName }}</span>
+    <h1 class="govuk-heading-xl">Welcome to the early connect prototype library</h1>
+
+  </div>
+</div>
+
+<div class="govuk-grid-row govuk-!-margin-top-7">
+  <div class="govuk-grid-column-one-third">
+    <strong class="govuk-tag govuk-tag--grey govuk-!-margin-bottom-4">
+      To do
+    </strong>
+    <h3 class="govuk-heading-m"><a href="feature/multiple-locations/changelog"
+        class="govuk-link govuk-link--no-visited-state" rel="noreferrer noopener">Multiple locations</a></h3>
+    <p class="govuk-body">As an employer I want to be able to list multiple locations so that I can offer
+      apprenticeships to multiple places of work. </p>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <strong class="govuk-tag govuk-tag--grey govuk-!-margin-bottom-4">
+      To do
+    </strong>
+    <h3 class="govuk-heading-m"><a href="feature/unknown-locations/changelog"
+        class="govuk-link govuk-link--no-visited-state" rel="noreferrer noopener">Unknown locations</a></h3>
+    <p class="govuk-body">As an employer I want to be able to list an unknown location so that I am not restricted to a
+      specific address (HQ). </p>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <strong class="govuk-tag govuk-tag--grey govuk-!-margin-bottom-4">
+      To do
+    </strong>
+    <h3 class="govuk-heading-m"><a href="feature/no-provider/changelog" class="govuk-link govuk-link--no-visited-state"
+        rel="noreferrer noopener">No provider</a></h3>
+    <p class="govuk-body">As an employer I want to be able to list my vacany before I have made a decision on which
+      provider to go with.</p>
+  </div>
+
+</div>
+<div class="govuk-grid-row govuk-!-margin-top-7">
+  <div class="govuk-grid-column-one-third">
+    <strong class="govuk-tag govuk-tag--grey govuk-!-margin-bottom-4">
+      To do
+    </strong>
+    <h3 class="govuk-heading-m"><a href="feature/change-provider/changelog"
+        class="govuk-link govuk-link--no-visited-state" rel="noreferrer noopener">Change provider</a></h3>
+    <p class="govuk-body">As an employer I want to be able to change my provider after my vacany has been reviewed and
+      posted. </p>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <strong class="govuk-tag govuk-tag--grey govuk-!-margin-bottom-4">
+      To do
+    </strong>
+    <h3 class="govuk-heading-m"><a href="feature/number-positions/changelog"
+        class="govuk-link govuk-link--no-visited-state" rel="noreferrer noopener">Number of positions</a></h3>
+    <p class="govuk-body">As an employer I don't want to limit the amount of positions I want to recruit for. </p>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <strong class="govuk-tag govuk-tag--grey govuk-!-margin-bottom-4">
+      To do
+    </strong>
+    <h3 class="govuk-heading-m"><a href="feature/competitive-salary/changelog"
+        class="govuk-link govuk-link--no-visited-state" rel="noreferrer noopener">Competitive salary</a></h3>
+    <p class="govuk-body">As an employer I want to be able to list a salary as 'competitive' so I do not have to be
+      specific about a salary. </p>
+  </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,71 @@
+{% extends "layouts/employer-header.html" %}
+
+{% block beforeContent %}
+{{super()}}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.go(-1);"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form method="post" action="/feature/no-provider/v1/action/">
+            <fieldset class="govuk-fieldset">
+                <div class="govuk-form-group">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                        <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Safety, Health &
+                            Environment Technician Apprentice{% endif %}</span>
+                        <h1 class="govuk-fieldset__heading">
+                            Do you know the name of the training provider or UKPRN?
+                        </h1>
+                    </legend>
+                    <div class="govuk-radios" data-module="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="provider-known-yes" name="provider-known"
+                                type="radio" value="yes">
+                            <label class="govuk-label govuk-radios__label" for="provider-known-yes">
+                                Yes
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="provider-known-no" name="provider-known" type="radio"
+                                value="no" data-aria-controls="conditional-provider">
+                            <label class="govuk-label govuk-radios__label" for="provider-known-no">
+                                No
+                            </label>
+                        </div>
+                        <div class="govuk-radios__conditional govuk-radios__conditional--hidden"
+                            id="conditional-provider">
+                            <p>A training provider or UKPRN will need to be provided before [to be agreed]</p>
+                        </div>
+                    </div>
+                </div>
+                <details class="govuk-details">
+                    <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text">
+                            What is a UK Provider Reference Number?
+                        </span>
+                    </summary>
+                    <div class="govuk-details__text">
+                        A UK Provider Reference Number (UKPRN) is a unique, 8-digit number that identifies a training
+                        provider. Your
+                        training provider can tell you their UKPRN.
+                    </div>
+                </details>
+
+
+            </fieldset>
+            <div class="govuk-button-group">
+                <button class="govuk-button" data-module="govuk-button">Continue</button>
+                <a class="govuk-link" href="../dashboard">Cancel</a>
+            </div>
+        </form>
+
+    </div>
+</div>
+
+
+{% endblock %}

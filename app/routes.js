@@ -14,4 +14,17 @@ router.post('/feature/multiple-locations/v1/action/', function (req, res) {
     if (apprenticeLocation == "multiple-locations") {
         res.redirect('/feature/multiple-locations/v1/multiple-locations')
     }
+    else {
+        res.redirect('/feature/multiple-locations/v1/task-list')
+    }
+})
+router.post('/feature/no-provider/v1/action/', function (req, res) {
+    var providerKnow = req.session.data['provider-known']
+
+    if (providerKnow == "yes") {
+        res.redirect('/feature/no-provider/v1/select-training-provider')
+    }
+    else {
+        res.redirect('/feature/no-provider/v1/task-list')
+    }
 })

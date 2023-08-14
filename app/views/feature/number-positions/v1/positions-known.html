@@ -1,0 +1,65 @@
+{% extends "layouts/employer-header.html" %}
+
+{% block beforeContent %}
+{{super()}}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.go(-1);"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form method="post" action="/feature/no-provider/v1/action/">
+            <fieldset class="govuk-fieldset">
+                <div class="govuk-form-group">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                        <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Safety, Health &
+                            Environment Technician Apprentice{% endif %}</span>
+                        <h1 class="govuk-fieldset__heading">
+                            Do you know how many positions are available?
+                        </h1>
+                    </legend>
+                    <div class="govuk-radios" data-module="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="provider-known-yes" name="positions-known"
+                                type="radio" value="yes" data-aria-controls="conditional-positions">
+                            <label class="govuk-label govuk-radios__label" for="positions-known-yes">
+                                Yes
+                            </label>
+                        </div>
+                        <div class="govuk-radios__conditional govuk-radios__conditional--hidden"
+                            id="conditional-positions">
+                            <div class="govuk-form-group">
+                                <label class="govuk-label" for="positions-availble">
+                                    Number of positions available
+                                </label>
+                                <input class="govuk-input govuk-!-width-one-third" id="positions-available"
+                                    name="positions-availble">
+                            </div>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="positions-known-no" name="positions-known"
+                                type="radio" value="no">
+                            <label class="govuk-label govuk-radios__label" for="positions-known-no">
+                                No
+                            </label>
+                        </div>
+
+                    </div>
+                </div>
+
+            </fieldset>
+            <div class="govuk-button-group">
+                <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+                <a class="govuk-link" href="../dashboard">Cancel</a>
+            </div>
+        </form>
+
+    </div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,56 @@
+{% extends "layouts/main.html" %}
+{% block header %}
+{{ govukHeader({
+serviceName: "Manage apprenticeships",
+containerClasses: "govuk-width-container das-header--no-border"
+}) }}
+
+
+
+{% block after_header %}
+<div id="floating-menu-holder">
+    <div class="account-information floating-menu" role="navigation">
+        <div class="js-float">
+            <p class="floating-head-text">Your employer account</p>
+            <nav id="user-nav">
+                <ul role="menubar">
+                    <li><a href=# class="menu-main">Help</a></li>
+                    <li class="has-sub-menu">
+                        <a href="#" role="menuitem" class="menu-main">Settings</a>
+                    </li>
+                    <li><a href="#" role="menuitem" class="menu-main">Sign out</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<div class="header-organisation" role="navigation">
+    <nav class="header-inner">
+        <ul role="menubar" id="global-nav-links">
+            <li><a href="home" class="govuk-link--no-visited-state" role="menuitem">Home</a></li>
+            <li><a href="#" class="govuk-link--no-visited-state" role="menuitem">Finance</a></li>
+            <li><a href="#" class="selected govuk-link--no-visited-state" role="menuitem">Adverts</a></li>
+            <li><a href="#" class="govuk-link--no-visited-state" role="menuitem">Apprentices</a></li>
+            <li><a href="#" class="govuk-link--no-visited-state" role="menuitem">Your team</a></li>
+            <li><a href="#" class="govuk-link--no-visited-state" role="menuitem">Your organisations and agreements</a>
+            </li>
+            <li class="menu-link"><a href="#" class="govuk-link--no-visited-state">More</a>
+                <ul>
+                    <li><a href="#" role="menuitem">PAYE schemes</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</div>
+{% endblock %}
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+        <strong class="govuk-tag govuk-phase-banner__content__tag ">Prototype</strong>
+        <span class="govuk-phase-banner__text">This is not a real service.</span>
+    </p>
+</div>
+{% endblock %}

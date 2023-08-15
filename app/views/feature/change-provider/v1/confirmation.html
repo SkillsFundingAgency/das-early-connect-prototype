@@ -1,0 +1,52 @@
+{% extends "layouts/employer-header.html" %}
+
+{% block beforeContent %}
+{{super()}}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.go(-1);"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-panel govuk-panel--confirmation">
+            <h1 class="govuk-panel__title">
+                Advert submitted for approval
+            </h1>
+            <div class="govuk-panel__body">
+                The advert reference number is
+                <br><strong>VAC1000000965</strong>
+            </div>
+        </div>
+        <h2 class="govuk-heading-m">What happens next</h2>
+        {% if data.user == employer %}{% set pronoun = "your" %}{%else%}{% set pronoun = "the" %}{%endif%}
+        {% if data.has_notifications == "yes"%}
+
+        <p class="govuk-body">We’ll check the advert within one working day and let you know by email if you need to
+            make any edits. <a href="../notifications/notification-preferences">Manage your emails</a>.</p>
+        {% else %}
+        <p class="govuk-body">
+            We’ll check the advert and tell you within 24 hours if you need to make any edits. If the advert is not
+            approved, we’ll let you know on the dashboard what changes you’ll need to make. <a
+                href="../notifications/notification-preferences-new">Manage your recruitment emails</a> if you’d rather
+            get an email.</p>
+        {% endif %}
+        <p class="govuk-body">When we approve your advert, it will appear on the ​<a
+                href="https://www.gov.uk/apply-apprenticeship">Find an apprenticeship service</a> (opens in a new tab or
+            window).</p>
+        <form method="post">
+
+            <div class="govuk-button-group govuk-!-margin-top-5">
+                <a class="govuk-button" href="task-list">Create another advert</a>
+            </div>
+            <a class="govuk-link" href="../dashboard">Return to dashboard</a>
+
+        </form>
+    </div>
+</div>
+
+
+{% endblock %}

@@ -28,3 +28,18 @@ router.post('/feature/no-provider/v1/action/', function (req, res) {
         res.redirect('/feature/no-provider/v1/task-list')
     }
 })
+
+
+router.post('/feature/competitive-salary/v1/wages/action', function (req, res) {
+    var WageType = req.session.data['WageType']
+
+    if (WageType == "competitiveWage") {
+        res.redirect('/feature/competitive-salary/v1/competitive-min-wage')
+    }
+    if(WageType == "fixedWage") {
+        res.redirect('/feature/competitive-salary/v1/set-wage')
+    }
+    else {
+        res.redirect('/feature/competitive-salary/v1/extra-info-pay')
+    }
+})

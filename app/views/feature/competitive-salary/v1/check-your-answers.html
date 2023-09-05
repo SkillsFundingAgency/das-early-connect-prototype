@@ -1,0 +1,455 @@
+{% extends "layouts/employer-header.html" %}
+
+{% block beforeContent %}
+{{super()}}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.go(-1);"
+}) }}
+{% endblock %}
+
+{% block pageTitle %}
+Check your answers before submitting your advert - Your apprenticeship adverts - {{serviceName}} - GOV.UK
+{% endblock %}
+
+
+{% block content %}
+<form action="" method="post">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-l">Check your answers before submitting your advert</h1>
+
+      <h2 class="govuk-heading-m">Advert summary</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Advert title
+          </dt>
+          <dd class="govuk-summary-list__value">
+            [[your advert name]]
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              Change<span class="govuk-visually-hidden"> advert name</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Name of organisation
+          </dt>
+          <dd class="govuk-summary-list__value">
+            [[selected organisation]]
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              Change<span class="govuk-visually-hidden"> organisation</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Name of employer
+          </dt>
+          <dd class="govuk-summary-list__value">
+            [[selected employer]]
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              Change<span class="govuk-visually-hidden"> employer</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Training course
+          </dt>
+          <dd class="govuk-summary-list__value">
+            [[selected training]]
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              Change<span class="govuk-visually-hidden"> training</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+
+            Training provider
+          </dt>
+          <dd class="govuk-summary-list__value">
+            [[your training provider]]
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              Change<span class="govuk-visually-hidden"> training provider</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Summary of the apprenticeship </dt>
+          <dd class="govuk-summary-list__value">
+            [[your short description]]
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              Change<span class="govuk-visually-hidden"> short description</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            What will the apprentice be doing?
+            <br>
+            <br>
+            Training and qualification levels
+          </dt>
+          <dd class="govuk-summary-list__value">
+            [[your description]]
+            <br>
+            <br>
+            <br>
+            <br>
+            [[your description]]
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              Change<span class="govuk-visually-hidden"> description</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+      <h2 class="govuk-heading-m">Employment details</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Application closing date
+          </dt>
+          <dd class="govuk-summary-list__value">
+            [[selected dates]]
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              Change<span class="govuk-visually-hidden"> selected dates</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Apprenticeship start date
+          </dt>
+          <dd class="govuk-summary-list__value">
+            [[selected dates]]
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              Change<span class="govuk-visually-hidden"> selected dates</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row govuk-summary-list__row--no-border">
+          <dt class="govuk-summary-list__key">
+            Pay rate
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Competitive
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              Change<span class="govuk-visually-hidden"> description</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Extra information about pay (optional)
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p>This pay rate meets National Minimum Wage for apprentices.</p>
+            <br>
+            Salary increases yearly with the progression of the apprenticeship
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              Change<span class="govuk-visually-hidden"> description</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Duration
+            <br>
+            <br>
+            Working week details
+            <br>
+            <br>
+            Hours a week
+          </dt>
+          <dd class="govuk-summary-list__value">
+            [[selected months or years]]
+            <br>
+            <br>
+            [[your description]]
+            <br>
+            <br>
+            <br>
+            [[selected number]]
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              Change<span class="govuk-visually-hidden"> description</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Number of positions
+          </dt>
+          <dd class="govuk-summary-list__value">
+            [[selected number]]
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              Change<span class="govuk-visually-hidden"> number of positions</span>
+            </a>
+          </dd>
+        </div>
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            [[selected location]]
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              Change<span class="govuk-visually-hidden"> selected location</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+      <!-- ////SECTION 3//// -->
+
+      <h2 class="govuk-heading-m">Skills and qualifications</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Skills
+          </dt>
+          <dd class="govuk-summary-list__value">
+            [[skills and qualities]]
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              Change<span class="govuk-visually-hidden"> skills and qualities</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Qualifications required
+          </dt>
+          <dd class="govuk-summary-list__value">
+            [[selected qualifications]]
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              Change<span class="govuk-visually-hidden"> selected qualifications</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Future prospects
+          </dt>
+          <dd class="govuk-summary-list__value">
+            [[your description]]
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              Change<span class="govuk-visually-hidden"> future prospects</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Other things to consider
+          </dt>
+          <dd class="govuk-summary-list__value">
+            [[selected considerations]]
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              Change<span class="govuk-visually-hidden"> considerations</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+      <!-- ////SECTION 4//// -->
+
+      <h2 class="govuk-heading-m">About the employer</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Name of employer on advert
+          </dt>
+          <dd class="govuk-summary-list__value">
+            [[selected employer name]]
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              Change<span class="govuk-visually-hidden"> employer name</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Employer information
+            <br>
+            <br>
+            Organisation website
+          </dt>
+          <dd class="govuk-summary-list__value">
+            [[selected information]]
+            <br>
+            <br>
+            [[your description]]
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              Change<span class="govuk-visually-hidden"> employer information</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Disability Confident employer?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            [[your description]]
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              Change<span class="govuk-visually-hidden"> employer information</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Contact details
+          </dt>
+          <dd class="govuk-summary-list__value">
+            [[selected contact information]]
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              Change<span class="govuk-visually-hidden"> selected contact information</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Application website
+            <br>
+            <br>
+            Application process
+          </dt>
+          <dd class="govuk-summary-list__value">
+            [[selected answer]]
+            <br>
+            <br>
+            [[your description]]
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              Change<span class="govuk-visually-hidden"> selected answer</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+      <!-- section start -->
+      <h2 class="govuk-heading-m">Application</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Question 1
+            <br>
+            <br>
+            <br>
+            Question 2
+            <br>
+            <br>
+          </dt>
+          <dd class="govuk-summary-list__value">
+            [[show question or 'None' if they haven't entered one]]
+            <br>
+            <br>
+            [[show question or 'None' if they haven't entered one]]
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              Change<span class="govuk-visually-hidden"> description</span>
+            </a>
+          </dd>
+        </div>
+
+      </dl>
+      <!-- section end -->
+
+      <h2 class="govuk-heading-m">Now submit your advert</h2>
+
+      <p class="govuk-body">By submitting this advert you are confirming that, to the best of your knowledge, the
+        details you are providing are correct.</p>
+
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive">Warning</span>
+          Proofread your advert for spelling and formatting to avoid it being rejected by our QA team.
+        </strong>
+      </div>
+
+      <p><a class="govuk-link" href="advert-preview">Preview advert before submitting</a></p>
+
+      <br>
+
+      <form action="/form-handler" method="post" novalidate>
+
+        <input type="hidden" name="answers-checked" value="true">
+
+        <div class="govuk-button-group">
+          <a href="confirmation" class="govuk-button" data-module="govuk-button">Submit advert</a>
+
+          <a href="../dashboard" class="govuk-link" href="#">Cancel</a>
+        </div>
+
+      </form>
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+      <h1 class="govuk-heading-s">No longer need this advert?</h1>
+
+      <a href="delete" class="govuk-button govuk-button--warning">Delete advert</a>
+
+    </div>
+  </div>
+  {% endblock %}

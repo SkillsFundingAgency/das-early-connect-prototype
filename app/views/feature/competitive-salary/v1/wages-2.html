@@ -1,0 +1,100 @@
+{% extends "layouts/employer-header.html" %}
+
+{% block beforeContent %}
+{{super()}}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.go(-1);"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<!-- {{minWage}} -->
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Safety, Health &
+            Environment Technician Apprentice{% endif %}</span>
+        <h1 class="govuk-heading-xl">
+            Apprentice pay
+        </h1>
+        <p class="govuk-body">Apprentices must be paid at least the​ <a
+                href="https://www.gov.uk/national-minimum-wage-rates" rel="noopener" target="_blank">​National Minimum
+                Wage
+                for apprentices (opens in a new tab)​</a>.</p>
+
+        <p class="govuk-body">From 1 April 2023, the <strong>National Minimum Wage</strong> is between £5.28 and £10.42
+            an hour, depending on the
+            applicant’s age.</p>
+        <p class="govuk-body">From 1 April 2023, the <strong>National Minimum Wage for apprentices</strong> is £5.28 an
+            hour.</p>
+
+        <p class="govuk-body">Pay will show as a yearly figure on your advert.</p>
+        <div class="govuk-form-group govuk-!-margin-top-7">
+            <form method="post" action="/feature/competitive-salary/v1/wages/action">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        How much will the apprentice be paid?
+                    </legend>
+                    <div class="govuk-radios" data-module="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="wage-type-fixed" name="WageType" type="radio"
+                                value="fixedWage" aria-describedby="wage-type-fixed-hint">
+                            <label class="govuk-label govuk-radios__label" for="wage-type-fixed">
+                                Set wage yourself
+                            </label>
+                            <div id="wage-type-fixed-hint" class="govuk-hint govuk-radios__hint">
+                                This must be more than the National Minimum Wage for apprentices
+                            </div>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="wage-type-national-minimum-wage" name="WageType"
+                                type="radio" value="nationalMinWage"
+                                aria-describedby="wage-type-national-minimum-wage-hint">
+                            <label class="govuk-label govuk-radios__label" for="wage-type-national-minimum-wage">
+                                National Minimum Wage
+                            </label>
+                            <div id="wage-type-national-minimum-wage-hint" class="govuk-hint govuk-radios__hint">
+                                Displayed as a yearly wage of £5,752.76 to £11,362
+                            </div>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="wage-type-national-minimum-wage-for-apprentices"
+                                name="WageType" type="radio" value="nationalMinApprenticeWage"
+                                aria-describedby="wage-type-national-minimum-wage-for-apprentices-hint">
+                            <label class="govuk-label govuk-radios__label"
+                                for="wage-type-national-minimum-wage-for-apprentices">
+                                National Minimum Wage for apprentices
+                            </label>
+                            <div id="wage-type-national-minimum-wage-for-apprentices-hint"
+                                class="govuk-hint govuk-radios__hint">
+                                Displayed as a yearly wage of £5,752.76
+                            </div>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="wage-type-competitive" name="WageType" type="radio"
+                                value="competitiveWage" aria-describedby="competitiveWage-hint">
+                            <label class="govuk-label govuk-radios__label" for="wage-type-competitive">
+                                Set as "Competitive"
+                            </label>
+                            <div id="competitiveWage-hint" class="govuk-hint govuk-radios__hint">
+                                Not providing a salary may limit applications for this apprenticeship
+                            </div>
+                        </div>
+                    </div>
+
+                </fieldset>
+        </div>
+
+        <div class="govuk-button-group">
+            <button class="govuk-button" data-module="govuk-button">
+                Save and continue
+            </button>
+
+            <a href="../dashboard" class="govuk-link" href="#">Cancel</a>
+        </div>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

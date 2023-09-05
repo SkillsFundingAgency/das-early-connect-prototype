@@ -36,7 +36,7 @@ router.post('/feature/competitive-salary/v1/wages/action', function (req, res) {
     if (WageType == "competitiveWage") {
         res.redirect('/feature/competitive-salary/v1/competitive-min-wage')
     }
-    if(WageType == "fixedWage") {
+    else if(WageType == "fixedWage") {
         res.redirect('/feature/competitive-salary/v1/set-wage')
     }
     else {

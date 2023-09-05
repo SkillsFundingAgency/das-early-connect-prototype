@@ -17,10 +17,8 @@ href: "javascript:window.history.go(-1);"
             <form method="post" action="extra-info-pay">
                 <fieldset class="govuk-fieldset">
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-                        <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Safety, Health &
-                            Environment Technician Apprentice{% endif %}</span>
                         <h1 class="govuk-fieldset__heading">
-                            Which minimum wage does the "Competitive" pay meet?
+                            How much will your "competive" salary pay?
                         </h1>
                     </legend>
                     <div class="govuk-radios" data-module="govuk-radios">
@@ -29,10 +27,10 @@ href: "javascript:window.history.go(-1);"
                                 type="radio" value="nationalMinWage"
                                 aria-describedby="wage-type-national-minimum-wage-hint">
                             <label class="govuk-label govuk-radios__label" for="wage-type-national-minimum-wage">
-                                National Minimum Wage
+                                National Minimum Wage or above
                             </label>
                             <div id="wage-type-national-minimum-wage-hint" class="govuk-hint govuk-radios__hint">
-                                A minimum of £5,752.76 to £11,362, depending on the applicant's age
+                                Depending on the applicant's age, a minimum of £5,752.76 to £11,362
                             </div>
                         </div>
                         <div class="govuk-radios__item">
@@ -41,11 +39,11 @@ href: "javascript:window.history.go(-1);"
                                 aria-describedby="wage-type-national-minimum-wage-for-apprentices-hint">
                             <label class="govuk-label govuk-radios__label"
                                 for="wage-type-national-minimum-wage-for-apprentices">
-                                National Minimum Wage for apprentices
+                                Between National Minimum Wage for apprentices and National Minimum Wage
                             </label>
                             <div id="wage-type-national-minimum-wage-for-apprentices-hint"
                                 class="govuk-hint govuk-radios__hint">
-                                A minimum of £5,752.76
+                                £5,752.76 for all apprentices for their first year
                             </div>
                         </div>
                     </div>

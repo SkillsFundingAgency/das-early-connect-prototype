@@ -3,7 +3,7 @@
 {% block beforeContent %}
 {{super()}}
 {{ govukBackLink({
-text: "Back",
+text: "Back to check your answers",
 href: "javascript:window.history.go(-1);"
 }) }}
 {% endblock %}
@@ -11,7 +11,7 @@ href: "javascript:window.history.go(-1);"
 {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
-        <h1 class="govuk-heading-xl">View your advert</h1>
+        <h1 class="govuk-heading-xl">Preview your advert</h1>
     </div>
 
     <div class="govuk-grid-column-full govuk-!-margin-bottom-7">
@@ -35,8 +35,8 @@ href: "javascript:window.history.go(-1);"
                         (ST0249) and Engineering Technician Standard (ST0457) respectively.</p>
                 </div>
                 <div class="govuk-grid-column-one-third">
-                    <p class="govuk-body">This apprenticeship requires you to apply through the employer's website.</p>
-                    <p class="govuk-!-margin-bottom-1"><a id="external-employer-website" href="#">Apply now</a></p>
+                    <p class="govuk-!-margin-bottom-1"><a id="external-employer-website" href="#" class="govuk-button ">Sign in to apply</a>
+                    </p>
                     <p class="govuk-body-s">Closing date: 31 Mar 2022</p>
                 </div>
             </div>
@@ -235,20 +235,47 @@ href: "javascript:window.history.go(-1);"
             <div class="govuk-grid-row">
                 <div class="govuk-grid-column-full">
                     <h2 class="govuk-heading-l">
-                        Employer's Application Instructions
+                        Application process
                     </h2>
-                </div>
-                <div class="govuk-grid-column-three-quarters">
-                    <p class="govuk-!-margin-bottom-8">Please apply through the Civil Service Jobs website.</p>
-                    <p>This apprenticeship requires you to apply through the employer's website.</p>
-                    <p class="govuk-!-margin-bottom-1"><a id="external-employer-website" href="#">Apply now</a></p>
-                    <p class="govuk-body-s">Closing date: 31 Mar 2022</p>
+                    <p class="govuk-body">
+                        Candidates will apply through the <a href="https://www.gov.uk/apply-apprenticeship" class="govuk-link"
+                            rel="noopener" target="_blank">Find an apprenticeship service (opens in a new tab)</a>
+                    </p>
                 </div>
             </div>
+            </div>
+        </div>
+        </div>
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <h2 class="govuk-heading-m">Now submit your advert</h2>
+        
+                <p class="govuk-body">By submitting this advert you are confirming that, to the best of your knowledge, the
+                    details you are providing are correct.</p>
 
+        <div class="govuk-warning-text">
+            <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+            <strong class="govuk-warning-text__text">
+                <span class="govuk-warning-text__assistive">Warning</span>
+                Proofread your advert for spelling and formatting to avoid it being rejected by our QA team.
+            </strong>
+        </div>
+        <form action="/form-handler" method="post" novalidate>
+        
+            <div class="govuk-button-group">
+                <a href="confirmation" class="govuk-button" data-module="govuk-button">Submit advert</a>
+        
+                <a href="../dashboard" class="govuk-button govuk-button--secondary" href="#">Change your advert</a>
+            </div>
+        </form>
+        
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+        
+        <h1 class="govuk-heading-s">No longer need this advert?</h1>
+        
+        <a href="delete" class="govuk-button govuk-button--warning">Delete advert</a>
+        
         </div>
     </div>
-
-</div>
 </div>
 {% endblock %}

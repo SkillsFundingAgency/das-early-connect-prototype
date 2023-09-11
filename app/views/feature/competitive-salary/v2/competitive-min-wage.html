@@ -1,0 +1,65 @@
+{% extends "layouts/employer-header.html" %}
+
+{% block beforeContent %}
+{{super()}}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.go(-1);"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<!-- {{minWage}} -->
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-form-group">
+            <form method="post" action="extra-info-pay">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                        <h1 class="govuk-fieldset__heading">
+                            How much will your competitive salary pay?
+                        </h1>
+                    </legend>
+                    <div class="govuk-radios" data-module="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="wage-type-national-minimum-wage" name="WageType"
+                                type="radio" value="nationalMinWage"
+                                aria-describedby="wage-type-national-minimum-wage-hint">
+                            <label class="govuk-label govuk-radios__label" for="wage-type-national-minimum-wage">
+                                National Minimum Wage or above
+                            </label>
+                            <div id="wage-type-national-minimum-wage-hint" class="govuk-hint govuk-radios__hint">
+                                Depending on the applicant's age, a minimum of £5,752.76 to £11,362
+                            </div>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="wage-type-national-minimum-wage-for-apprentices"
+                                name="WageType" type="radio" value="nationalMinApprenticeWage"
+                                aria-describedby="wage-type-national-minimum-wage-for-apprentices-hint">
+                            <label class="govuk-label govuk-radios__label"
+                                for="wage-type-national-minimum-wage-for-apprentices">
+                                Between National Minimum Wage for apprentices and National Minimum Wage
+                            </label>
+                            <div id="wage-type-national-minimum-wage-for-apprentices-hint"
+                                class="govuk-hint govuk-radios__hint">
+                                £5,752.76 for all apprentices for their first year
+                            </div>
+                        </div>
+                    </div>
+
+                </fieldset>
+        </div>
+
+        <div class="govuk-button-group">
+            <button class="govuk-button" data-module="govuk-button">
+                Save and continue
+            </button>
+
+            <a href="../dashboard" class="govuk-link" href="#">Cancel</a>
+        </div>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

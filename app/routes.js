@@ -14,6 +14,9 @@ router.post('/feature/multiple-locations/v1/action/', function (req, res) {
     if (apprenticeLocation == "multiple-locations") {
         res.redirect('/feature/multiple-locations/v1/multiple-locations')
     }
+    else if (apprenticeLocation == "different-location") {
+        res.redirect('/feature/multiple-locations/v1/different-location')
+    }
     else {
         res.redirect('/feature/multiple-locations/v1/task-list')
     }

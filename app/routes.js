@@ -49,16 +49,6 @@ router.post('/feature/competitive-salary/v1/wages/action', function (req, res) {
 
 // V2
 
-router.post('/feature/multiple-locations/v2/action/', function (req, res) {
-    var apprenticeLocation = req.session.data['selected-location']
-
-    if (apprenticeLocation == "multiple-locations") {
-        res.redirect('/feature/multiple-locations/v2/multiple-locations')
-    }
-    else {
-        res.redirect('/feature/multiple-locations/v2/task-list')
-    }
-})
 router.post('/feature/no-provider/v2/action/', function (req, res) {
     var providerKnow = req.session.data['provider-known']
 
@@ -82,5 +72,28 @@ router.post('/feature/competitive-salary/v2/wages/action', function (req, res) {
     }
     else {
         res.redirect('/feature/competitive-salary/v2/extra-info-pay')
+    }
+})
+
+router.post('/feature/multiple-locations/v2/action/', function (req, res) {
+    var apprenticeLocation = req.session.data['selected-location']
+
+    if (apprenticeLocation == "different-location") {
+        res.redirect('/feature/multiple-locations/v2/multiple-locations')
+    }
+    else {
+        res.redirect('/feature/multiple-locations/v2/task-list')
+    }
+})
+
+    
+router.post('/feature/multiple-locations-summary/v2/action/', function (req, res) {
+    var addAnother = req.session.data['add-another']
+
+    if (addAnother == "Yes") {
+        res.redirect('/feature/multiple-locations/v2/multiple-locations')
+    }
+    else {
+        res.redirect('/feature/multiple-locations/v2/task-list')
     }
 })

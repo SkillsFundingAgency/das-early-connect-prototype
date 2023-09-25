@@ -1,0 +1,40 @@
+{% extends "layouts/employer-header.html" %}
+
+{% block beforeContent %}
+{{super()}}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.go(-1);"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <form method="post" action="location">
+            <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                    <h1 class="govuk-label-wrapper">
+                        <label class="govuk-label govuk-label--xl" for="numberOfPositions">
+                            How many positions are there for this apprenticeship?
+                        </label>
+                    </h1>
+                </legend>
+                <div class="govuk-form-group govuk-!-margin-bottom-8">
+                    <input class="govuk-input govuk-input--width-4" id="numberOfPositions" name="numberOfPositions"
+                        type="text" value="{% if data.numberOfPositions %}{%else%}{%endif%}">
+                </div>
+
+                <div class="govuk-button-group">
+                    <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+                    <a class="govuk-link" href="../dashboard">Cancel</a>
+                </div>
+
+
+            </fieldset>
+        </form>
+    </div>
+</div>
+{% endblock %}

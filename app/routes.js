@@ -118,3 +118,27 @@ router.post('/feature/multiple-locations/v2/add-new-location/action', function (
         res.redirect('/feature/multiple-locations/v2/multiple-locations-summary')
     }
 })
+
+router.post('/feature/competitive-salary/v3/wages/action', function (req, res) {
+    var WageType = req.session.data['WageType']
+
+    if (WageType == "competitiveWage") {
+        res.redirect('/feature/competitive-salary/v3/competitive-min-wage')
+    }
+    else if(WageType == "fixedWage") {
+        res.redirect('/feature/competitive-salary/v3/set-wage')
+    }
+    else {
+        res.redirect('/feature/competitive-salary/v3/extra-info-pay')
+    }
+})
+router.post('/feature/competitive-salary/v3/competitive-min-wage/action', function (req, res) {
+    var aboveMinWage = req.session.data['above-mimimum-wage']
+
+    if (aboveMinWage == "yes") {
+        res.redirect('/feature/competitive-salary/v3/extra-info-pay')
+    }
+    else {
+        res.redirect('/feature/competitive-salary/v3/wages')
+    }
+})

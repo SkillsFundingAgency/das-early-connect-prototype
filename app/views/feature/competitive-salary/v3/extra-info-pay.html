@@ -1,0 +1,48 @@
+{% extends "layouts/employer-header.html" %}
+
+{% block beforeContent %}
+{{super()}}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.go(-1);"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<!-- {{minWage}} -->
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form action="positions" method="post" novalidate>
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="extra-info-hint">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                        <h1 class="govuk-fieldset__heading">
+                            Extra information about pay (optional)
+                        </h1>
+                    </legend>
+                    <div id="extra-info-hint" class="govuk-hint">
+                        For example bonus schemes, performance increases or benefits
+                    </div>
+                    <div class="govuk-character-count" data-module="govuk-character-count" data-minlength="50"
+                        data-maxlength="250">
+                        <textarea class="govuk-textarea govuk-!-width-three-quarters govuk-js-character-count"
+                            id="WageAdditionalInformation" name="WageAdditionalInformation" rows="5"></textarea>
+                        <div id="WageAdditionalInformation-info" class="govuk-hint govuk-character-count__message"
+                            aria-live="polite">
+                            You can enter up to 250 characters
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="govuk-button-group">
+                <button class="govuk-button" data-module="govuk-button">
+                    Continue
+                </button>
+                <a href="../dashboard" class="govuk-link" href="#">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

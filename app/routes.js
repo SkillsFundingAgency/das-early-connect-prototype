@@ -101,9 +101,20 @@ router.post('/feature/multiple-location-check/v2/action/', function (req, res) {
     var multipleLocations = req.session.data['multiple-locations']
 
     if (multipleLocations == "yes") {
-        res.redirect('/feature/multiple-locations/v2/multiple-location-set')
+        res.redirect('/feature/multiple-locations/v2/add-existing-location')
     }
     else {
         res.redirect('/feature/multiple-locations/v2/location')
+    }
+})
+
+router.post('/feature/multiple-locations/v2/add-new-location/action', function (req, res) {
+    var newLocation = req.session.data['new-location']
+
+    if (newLocation == "yes") {
+        res.redirect('/feature/multiple-locations/v2/multiple-locations')
+    }
+    else {
+        res.redirect('/feature/multiple-locations/v2/multiple-locations-summary')
     }
 })

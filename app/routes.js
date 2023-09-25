@@ -101,9 +101,9 @@ router.post('/feature/multiple-location-check/v2/action/', function (req, res) {
     var multipleLocations = req.session.data['multiple-locations']
 
     if (multipleLocations == "yes") {
-        res.redirect('/feature/multiple-locations/v3/multiple-location-set')
+        res.redirect('/feature/multiple-locations/v2/multiple-location-set')
     }
     else {
-        res.redirect('/feature/multiple-locations/v3/location')
+        res.redirect('/feature/multiple-locations/v2/location')
     }
 })

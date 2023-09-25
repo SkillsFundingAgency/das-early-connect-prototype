@@ -1,0 +1,54 @@
+{% extends "layouts/employer-header.html" %}
+
+{% block beforeContent %}
+{{super()}}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.go(-1);"
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">
+            Work locations
+        </h1>
+        <p class="govuk-body">
+            Some apprenticeships allow for apprentices to be locations at multiple locations or have their locations
+            designated as part of the receruitment process.
+        </p>
+        <p class="govuk-body">Apprentices will not be able to apply for sepecific locations.</p>
+
+        <form action="/feature/multiple-location-check/v2/action/" method="post" novalidate
+            class="govuk-!-margin-top-9">
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                        Do you offer multiple locations?
+                    </legend>
+                    <div class="govuk-radios" data-module="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="multiple-locations" name="multiple-locations"
+                                type="radio" value="yes">
+                            <label class="govuk-label govuk-radios__label" for="multiple-locations">
+                                Yes
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="multiple-locations-2" name="multiple-locations"
+                                type="radio" value="no">
+                            <label class="govuk-label govuk-radios__label" for="multiple-locations-2">
+                                No
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <button class="govuk-button" data-module="govuk-button">
+                Continue
+            </button>
+        </form>
+    </div>
+</div>
+{% endblock %}

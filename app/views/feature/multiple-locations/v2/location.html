@@ -42,11 +42,22 @@ href: "javascript:window.history.go(-1);"
                             <label class="govuk-label govuk-radios__label" for="different-location">A different
                                 location</label>
                         </div>
+                        <div class="govuk-radios__divider">or</div>
+                        <div class="govuk-radios__item" data-target="business-name-vacancy-panel">
+                            <input class="govuk-radios__input" id="multiple-locations" name="selected-location" type="radio"
+                                value="multiple-locations" aria-describedby="multiple-locations-hint">
+                            <label class="govuk-label govuk-radios__label" for="multiple-locations">This apprenticeship is available in more
+                                than one location</label>
+                            <div id="multiple-locations-hint" class="govuk-hint govuk-radios__hint">
+                                For example, you have locations in different cities. An apprentice will work from one of your locations.
+                            </div>
+
+                        </div>
                     </div>
                 </fieldset>
             </div>
             <div class="govuk-button-group">
-                <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+                <button class="govuk-button" data-module="govuk-button">Continue</button>
                 <a class="govuk-link" href="../dashboard">Cancel</a>
             </div>
 

@@ -79,7 +79,10 @@ router.post('/feature/multiple-locations/v2/action/', function (req, res) {
     var apprenticeLocation = req.session.data['selected-location']
 
     if (apprenticeLocation == "different-location") {
-        res.redirect('/feature/multiple-locations/v2/multiple-locations')
+        res.redirect('/feature/multiple-locations/v2/new-address')
+    }
+    else if (apprenticeLocation == "multiple-locations") {
+        res.redirect('/feature/multiple-locations/v2/add-existing-location')
     }
     else {
         res.redirect('/feature/multiple-locations/v2/task-list')
@@ -112,7 +115,7 @@ router.post('/feature/multiple-locations/v2/add-new-location/action', function (
     var newLocation = req.session.data['new-location']
 
     if (newLocation == "yes") {
-        res.redirect('/feature/multiple-locations/v2/multiple-locations')
+        res.redirect('/feature/multiple-locations/v2/new-address')
     }
     else {
         res.redirect('/feature/multiple-locations/v2/multiple-locations-summary')

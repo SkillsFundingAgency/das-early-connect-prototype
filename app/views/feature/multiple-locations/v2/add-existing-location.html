@@ -14,12 +14,15 @@ href: "javascript:window.history.go(-1);"
     <div class="govuk-grid-column-two-thirds">
         <form method="post" action="/feature/multiple-locations/v2/add-new-location">
             <div class="govuk-form-group">
-                <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+                <fieldset class="govuk-fieldset" aria-describedby="existing-location-hint">
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
                         <h1 class="govuk-fieldset__heading">
-                            Would you like to add any existing locations?
+                            Add locations already in your account
                         </h1>
                     </legend>
+                    <div id="existing-location-hint" class="govuk-hint">
+                        You'll be able to add new locations at the next step.
+                    </div>
                     <div class="govuk-checkboxes" data-module="govuk-checkboxes">
                         <div class="govuk-checkboxes__item">
                             <input class="govuk-checkboxes__input" id="selected-organisation-id"

@@ -1,0 +1,235 @@
+{% extends "layouts/employer-header.html" %}
+
+{% block beforeContent %}
+{{super()}}
+{{ govukBackLink({
+text: "Back to check your answers",
+href: "javascript:window.history.go(-1);"
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full govuk-!-margin-bottom-7">
+
+        <div class="govuk-grid-row govuk-!-margin-bottom-6">
+            <div class="govuk-grid-column-full">
+                <h2 class="govuk-heading-xl govuk-!-margin-bottom-6 govuk-!-width-three-quarters">
+                    RAF Mover - Full Time Career with Apprenticeship
+                    <div class="govuk-caption-xl govuk-!-margin-top-1">Royal Air Force</div>
+                </h2>
+            </div>
+        </div>
+
+        <div class="govuk-grid-row govuk-!-margin-bottom-6">
+            <div class="govuk-grid-column-two-thirds">
+
+                <p class="govuk-body">A unique opportunity to complete an advanced apprenticeship as an RAF Mover with
+                    an OFSTED outstanding training
+                    provider. You'll will be working with some of the most advanced equipment in the world and play a
+                    key part in the UKs
+                    defence. With places available throughout the year, apply today!</p>
+            </div>
+            <div class="govuk-grid-column-one-third">
+                <p class="govuk-!-margin-bottom-1"><a id="external-employer-website" href="#" class="govuk-button ">Sign
+                        in to apply</a>
+                </p>
+                <p class="govuk-body-s">Closing date: 31 Mar 2022</p>
+            </div>
+        </div>
+
+        <div class="govuk-grid-row" id="apprenticeshipSummary">
+            <div class="govuk-grid-column-full">
+                <h2 class="govuk-heading-l">Apprenticeship summary</h2>
+            </div>
+        </div>
+
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-one-third">
+                <ul class="govuk-list">
+                    <li>
+                        <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Annual wage</h3>
+                        <p id="vacancy-wage">
+                            £11,752.76
+                        </p>
+                        <p>Salary increases yearly with the progression of the apprenticeship</p>
+                    </li>
+                    <li>
+                        <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Working week</h3>
+                        <p>Flexible working, Full-time, Compressed Hours<br>
+                            Total hours per week: 37
+                        </p>
+                    </li>
+                    <li>
+                        <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Expected duration</h3>
+                        <p>45 Months</p>
+                    </li>
+                    <li>
+                        <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Possible start date</h3>
+                        <p id="vacancy-start-date">01 Sep 2022</p>
+                    </li>
+                    <li>
+                        <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Date posted</h3>
+                        <p id="vacancy-posted-date">28 Feb 2022</p>
+                    </li>
+                    <li>
+                    </li>
+                    <li>
+                        <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Apprenticeship level</h3>
+                        <p id="vacancy-type" itemprop="employmentType">
+                            Advanced
+                            <br>Level 3 (A level)
+                        </p>
+                    </li>
+                    <li>
+                        <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Reference number</h3>
+                        <p id="vacancy-reference-id">VAC1000031062</p>
+                    </li>
+                    <li>
+                        <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Positions</h3>
+                        <p id="number-of-positions">32 available</p>
+                    </li>
+                </ul>
+            </div>
+
+
+            <div class="govuk-grid-column-two-thirds" id="vacancyDescription">
+                <h3 class="govuk-heading-s govuk-!-margin-bottom-1">What will the apprentice be doing?</h3>
+                <p>With these structured training programmes you’ll divide your time between the classroom and
+                    electronics or mechanical engineering workshop. Our schemes follow Institute for
+                    Apprenticeships’ Level 3 standards, with bespoke modules added to prepare you for a career in
+                    Defence. Start your apprenticeship with a year at college, then gradually move onto work
+                    placements on real projects in our laboratories and workshops.</p>
+
+                <h3 class="govuk-heading-s govuk-!-margin-bottom-1">What training will the apprentice take and what
+                    qualification will the apprentice get at the end?</h3>
+                <p>You will spend your first year full time at college, developing theoretical and practical skills
+                    whilst studying for BTEC Diploma in Engineering at an appropriate level to your prior
+                    experience. More details can be found on the Civil Service Jobs website (below).</p>
+                <p>Following this, you will follow a structured work placement program, working on real projects in
+                    our groups.</p>
+
+                <h3 class="govuk-heading-s govuk-!-margin-bottom-1">What is the expected career progression after
+                    this apprenticeship?</h3>
+                <p>Upon successful completion of the Level 3 Apprenticeship you will apply for a permanent role in
+                    your chosen team; this will include further career development opportunities according to the
+                    role.</p>
+            </div>
+        </div>
+
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+                <h2 class="govuk-heading-l">Requirements and prospects</h2>
+            </div>
+        </div>
+
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-one-half">
+                <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Desired skills and personal qualities</h3>
+                <p>Communication skills, Attention to detail, Organisation skills, Problem solving skills, Logical,
+                    Team working, Creative, Initiative</p>
+
+                <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Qualifications</h3>
+                <p>GCSE or equivalent five inc. Maths, English, any Science (Grade 5 or above) Essential<br>
+                    BTEC or equivalent Engineering (Grade Diploma L3) Desired<br>
+                    BTEC or equivalent Engineering (Electrical/Electronic or Mechanical) (Grade L3 Extended Diploma)
+                    Desired</p>
+
+
+            </div>
+
+        </div>
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+                <h2 class="govuk-heading-l">About the employer</h2>
+            </div>
+        </div>
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <p>DSTL has set out a bold new vision as the government agency that provides the science inside UK
+                    defence and security. To make this a reality, we are looking for motivated individuals who are
+                    inquisitive and have a desire to understand how technology and systems fundamentally operate,
+                    who can bring their developing technical experience into play to ensure that DSTL can meet the
+                    constantly evolving challenges of the digital age.</p>
+
+                <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Employer</h3>
+                <p class="govuk-body">ABC Opticions.</p>
+
+                <img src="https://www.findapprenticeship.service.gov.uk/Content/_assets/img/disability-confident.png"
+                    class="das-disability-confident-logo"
+                    alt="A logo confirming that the employer is registered as disability confident">
+                <details class="govuk-details">
+                    <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text">
+                            About disability confident
+                        </span>
+                    </summary>
+                    <div class="govuk-details__text">
+                        <p>Disabled candidates are generally guaranteed an interview if you meet the minimum
+                            requirements for this vacancy. Contact the employer for full details.</p>
+
+                        <p>Employers may need to limit the number of interviews offered to both disabled and
+                            non-disabled people if they receive high numbers of applications.</p>
+
+                        <p>The disability confident scheme supports employers to make the most of the talents
+                            disabled people can bring to your workplace.provide your nationality, you’ll have to
+                            send copies of identity documents through the post.</p>
+                    </div>
+                </details>
+
+
+            </div>
+
+        </div>
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-one-half">
+                <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Contact</h3>
+                <p>ABC Opticians Recrtuiment Team</p>
+                <p><a href="#">abcopticiansrecrtuiment@abc.gov.uk</a></p>
+            </div>
+        </div>
+
+
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+                <h2 class="govuk-heading-l">Training</h2>
+            </div>
+
+            <div class="govuk-grid-column-one-half">
+                <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Training provider</h3>
+                <p>WILTSHIRE COLLEGE</p>
+
+            </div>
+
+            <div class="govuk-grid-column-one-half">
+
+                <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Apprenticeship standard</h3>
+                <p>Safety, health and environment technician<br>
+                    Level 3 (A level)</p>
+
+            </div>
+
+        </div>
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+                <h2 class="govuk-heading-l">
+                    Application process
+                </h2>
+                <p class="govuk-body">
+                    Candidates will apply through the <a href="https://www.gov.uk/apply-apprenticeship"
+                        class="govuk-link" rel="noopener" target="_blank">Find an apprenticeship service (opens in a
+                        new tab)</a>
+                </p>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

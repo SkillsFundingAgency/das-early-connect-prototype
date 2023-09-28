@@ -1,0 +1,246 @@
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% set serviceName %}
+Find an apprenticeship
+{% endset%}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+        <strong class="govuk-tag govuk-phase-banner__content__tag ">Prototype</strong>
+        <span class="govuk-phase-banner__text">This is not a real service.</span>
+    </p>
+</div>
+{% endblock %}
+
+{% extends "layouts/main.html" %}
+
+{% block content %}
+
+<div class="search-results-wrapper">
+    <div class="govuk-grid-row govuk-!-margin-bottom-8">
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-xl govuk-!-margin-bottom-2">Search results</h1>
+            <div id="vacancy-result-summary">
+                <p id="result-message" class="govuk-body">We've found <b class="bold-medium">145</b>
+                    apprenticeships in your selected area.</p>
+                <p class="govuk-body">
+                    <a href="#">
+                        Receive alerts for this search</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="govuk-grid-row">
+        <form action="/apprenticeships" id="apprenticeship-results-form" method="get" novalidate="novalidate">
+            <section class="govuk-grid-column-one-third">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-heading-m">
+                        Edit search
+                    </legend>
+
+                    <div class="govuk-form-group">
+                        <label class="govuk-label govuk-label--s" for="Keywords" id="keyword-label">Keywords
+                            (optional)
+                        </label>
+                        <select class="govuk-select" id="SearchField" name="SearchField">
+                            <option selected="selected" value="All">-- Refine search --</option>
+                            <option value="JobTitle">Job title</option>
+                            <option value="Description">Description</option>
+                            <option value="Employer">Employer</option>
+                            <option value="ReferenceNumber">Ref. number</option>
+                        </select>
+
+                        <input class="govuk-input govuk-!-margin-top-1" id="Keywords" name="Keywords" type="text"
+                            value="">
+                    </div>
+                    <div class="govuk-form-group">
+                        <label class="govuk-label govuk-label--s" for="Location">Location</label>
+                        <input class="govuk-input  govuk-input--width-10" id="Location" name="Location" type="text"
+                            value="Montpelier (Bristol)" autocomplete="off">
+                        <p class="govuk-body govuk-!-margin-top-2"><a href="#" class="govuk-link">Use current
+                                location</a></p>
+                        <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="nationwide" name="nationwide" type="checkbox"
+                                    value="nationwide" checked>
+                                <label class="govuk-label govuk-checkboxes__label" for="nationwide">
+                                    Nationwide
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="govuk-form-group">
+                        <label for="loc-within" class=" govuk-label govuk-label--s">Within</label>
+                        <select class="govuk-select" id="loc-within" name="WithinDistance">
+                            <option value="2">2 miles</option>
+                            <option selected="selected" value="5">5 miles</option>
+                            <option value="10">10 miles</option>
+                            <option value="15">15 miles</option>
+                            <option value="20">20 miles</option>
+                            <option value="30">30 miles</option>
+                            <option value="40">40 miles</option>
+                            <option value="0">England</option>
+                        </select>
+                    </div>
+                    <div class="govuk-form-group">
+                        <label for="apprenticeship-level" class="govuk-label govuk-label--s">Apprenticeship
+                            level</label>
+                        <select class="govuk-select" id="apprenticeship-level" name="ApprenticeshipLevel">
+                            <option selected="selected" value="All">All levels</option>
+                            <option value="Intermediate">Intermediate</option>
+                            <option value="Advanced">Advanced</option>
+                            <option value="Higher">Higher</option>
+                            <option value="Degree">Degree</option>
+                        </select>
+                    </div>
+                    <div class="govuk-form-group">
+                        <span class="govuk-label--s" id="disabilityconfidentonlylabel">Only show</span>
+                        <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox"
+                                    value="carcasses">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste">
+                                    Disability Confident
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group form-group-compound">
+                        <button class="govuk-button" id="search-button" name="SearchAction" value="Search">Update
+                            results</button>
+                    </div>
+                    <div class="form-group">
+                        <a href="/apprenticeshipsearch?SearchMode=Keyword&amp;reset=True" id="start-again-link"
+                            class="govuk-link">Start
+                            again</a>
+                    </div>
+                </fieldset>
+                <img class="govuk-!-margin-top-6" src="/public/images/search-results-filter-map.png"
+                    style="max-width:100%" alt="">
+            </section>
+            <section class="govuk-grid-column-two-thirds">
+                <fieldset class="govuk-fieldset">
+                    <div class="govuk-grid-row">
+                        <div class="govuk-grid-column-one-third">
+                            <p class="govuk-body govuk-!-padding-top-1"><a class="govuk-link" href="#">More/less
+                                    detail</a></p>
+                        </div>
+                        <div class="govuk-grid-column-two-thirds ">
+                            <div class="govuk-form-group">
+                                <label for="sort-results" class="govuk-label--s">Sort
+                                    results</label>
+                                <select class="govuk-select" id="sort-results" name="sortType">
+                                    <option value="ClosingDate" selected="selected">Closing date</option>
+                                    <option value="Distance">Distance</option>
+                                    <option value="RecentlyAdded">Recently added</option>
+                                </select>
+                                <noscript>
+                                    <button style="float: right; margin-left: 5px;" class="button show-nojs"
+                                        name="SearchAction" value="Sort">Sort</button>
+                                </noscript>
+                                <input id="SearchAction" name="SearchAction" value="Search" type="hidden">
+                            </div>
+                        </div>
+                </fieldset>
+                <ul class="govuk-list search-results">
+                    <li class="search-result sfa-section-bordered">
+                        <h2 class="govuk-heading-m govuk-!-margin-bottom-0">
+                            <a class="vacancy-link" data-is-employer-anonymous="False" data-lat="51.469738"
+                                data-lon="-2.589366" data-vacancy-id="1000199152" href="apprenticeship-detail">RAF
+                                Mover - Full Time Career with
+                                Apprenticeship</a>
+                        </h2>
+                        <ul class="govuk-list">
+                            <li class="govuk-hint">Royal Air Force</li>
+                            <li>
+                                <p class="govuk-body-s" style="color:#505a5f;"><span id="posted-date-1000199152">(Added
+                                        yesterday</span>
+                                    <span id="number-of-positions-1000199152">
+                                        - 32 positions available)
+                                    </span>
+                                </p>
+                            </li>
+                        </ul>
+                        <p data-show="DisplayDescription" class="">
+                            A unique opportunity to complete an advanced apprenticeship as an RAF Mover with an OFSTED
+                            outstanding training
+                            provider. You'll will be working with some of the most advanced equipment in the world and
+                            play a key part in the UKs
+                            defence. With places available throughout the year, apply today!
+                        </p>
+                        <div class="govuk-grid-row">
+                            <div class="govuk-grid-column-two-thirds">
+                                <ul class="govuk-list">
+                                    <li>
+                                        <span class="govuk-!-font-weight-bold">Location:</span> <span>Nationwide</span>
+                                    </li>
+                                    <li data-show="DisplayClosingDate">
+                                        <span class="govuk-!-font-weight-bold">Closing date:</span> <span
+                                            data-date="2023-12-04 00:00:00Z">04 Dec
+                                            2023</span>
+                                    </li>
+                                    <li data-show="DisplayStartDate">
+                                        <span class="govuk-!-font-weight-bold">Possible start date:</span> <span
+                                            id="start-date-value">02 Jan 2024</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+                {# Pagination #}
+                <nav class="govuk-pagination" role="navigation" aria-label="results">
+                    <div class="govuk-pagination__prev">
+                        <a class="govuk-link govuk-pagination__link" href="#" rel="prev">
+                            <svg class="govuk-pagination__icon govuk-pagination__icon--prev"
+                                xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true"
+                                focusable="false" viewBox="0 0 15 13">
+                                <path
+                                    d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z">
+                                </path>
+                            </svg>
+                            <span class="govuk-pagination__link-title">Previous</span></a>
+                    </div>
+                    <ul class="govuk-pagination__list">
+                        <li class="govuk-pagination__item govuk-pagination__item--current">
+                            <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1"
+                                aria-current="page">
+                                1
+                            </a>
+                        </li>
+                        <li class="govuk-pagination__item">
+                            <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2">
+                                2
+                            </a>
+                        </li>
+                        <li class="govuk-pagination__item">
+                            <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 3">
+                                3
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="govuk-pagination__next">
+                        <a class="govuk-link govuk-pagination__link" href="#" rel="next"> <span
+                                class="govuk-pagination__link-title">Next</span> <svg
+                                class="govuk-pagination__icon govuk-pagination__icon--next"
+                                xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true"
+                                focusable="false" viewBox="0 0 15 13">
+                                <path
+                                    d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z">
+                                </path>
+                            </svg></a>
+                    </div>
+                </nav>
+            </section>
+        </form>
+    </div>
+</div>
+
+
+
+{% endblock %}

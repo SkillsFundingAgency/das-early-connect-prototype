@@ -145,3 +145,16 @@ router.post('/feature/competitive-salary/v3/competitive-min-wage/action', functi
         res.redirect('/feature/competitive-salary/v3/wages')
     }
 })
+
+// Version 3
+
+router.post('/feature/multiple-locations/v3/action/', function (req, res) {
+    var apprenticeLocation = req.session.data['selected-location']
+
+    if (apprenticeLocation == "different-location") {
+        res.redirect('/feature/multiple-locations/v3/new-address')
+    }
+    else {
+        res.redirect('/feature/multiple-locations/v3/task-list')
+    }
+})

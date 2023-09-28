@@ -1,0 +1,64 @@
+{% extends "layouts/employer-header.html" %}
+
+{% block beforeContent %}
+{{super()}}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.go(-1);"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form method="post" action="/feature/multiple-locations/v3/action/">
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                        <h1 class="govuk-fieldset__heading">
+                            Where {% if data.numberOfPositions > 1 %}will the 6 positions{% else %}will the apprentice{%
+                            endif %} work?
+                        </h1>
+                    </legend>
+                    <div class="govuk-radios" data-module="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="selected-organisation-id" name="selected-location"
+                                type="radio" value="Organisation {{i}}">
+                            <label class="govuk-label govuk-radios__label" for="selected-organisation-id">
+                                Cheylesmore House, 5 Quinton Rd, Coventry CV1 2WT
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="selected-organisation-id" name="selected-location"
+                                type="radio" value="Organisation {{i}}">
+                            <label class="govuk-label govuk-radios__label" for="selected-organisation-id">
+                                Unit Dc1, Boscombe Road, Coventry, Dunstable, LU5 4FE</li>
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item" data-target="business-name-vacancy-panel">
+                            <input class="govuk-radios__input" id="different-location" name="selected-location"
+                                type="radio" value="different-location">
+                            <label class="govuk-label govuk-radios__label" for="different-location">A different
+                                location</label>
+                        </div>
+                        <div class="govuk-radios__item" data-target="business-name-vacancy-panel">
+                            <input class="govuk-radios__input" id="nationwide" name="selected-location" type="radio"
+                                value="nationwide">
+                            <label class="govuk-label govuk-radios__label" for="nationwide">Nationwide</label>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="govuk-button-group">
+                <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+                <a class="govuk-link" href="../dashboard">Cancel</a>
+            </div>
+
+        </form>
+
+    </div>
+</div>
+
+
+{% endblock %}

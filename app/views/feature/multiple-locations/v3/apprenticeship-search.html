@@ -1,0 +1,160 @@
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% set serviceName %}
+Find an apprenticeship
+{% endset%}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+        <strong class="govuk-tag govuk-phase-banner__content__tag ">Prototype</strong>
+        <span class="govuk-phase-banner__text">This is not a real service.</span>
+    </p>
+</div>
+{% endblock %}
+
+{% extends "layouts/main.html" %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full  govuk-!-margin-bottom-8">
+        <h1 class="govuk-heading-xl govuk-!-margin-bottom-2">Find an apprenticeship
+        </h1>
+        <span class="govuk-caption-xl">Search and apply for an apprenticeship in England</span>
+    </div>
+
+    <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-tabs" data-module="govuk-tabs">
+            <h2 class="govuk-tabs__title">
+                Contents
+            </h2>
+            <ul class="govuk-tabs__list" role="tablist">
+                <li class="govuk-tabs__list-item govuk-tabs__list-item--selected" role="presentation">
+                    <a class="govuk-tabs__tab" href="#search" id="tab_search" role="tab" aria-controls="search"
+                        aria-selected="true" tabindex="0">
+                        Search
+                    </a>
+                </li>
+            </ul>
+
+            <div class="govuk-tabs__panel" id="search" role="tabpanel" aria-labelledby="tab_search">
+                <form action="search-listing" method="post" novalidate>
+                    <div class="govuk-form-group">
+                        <label class="govuk-label govuk-label--s" for="Keywords" id="keyword-label">Keywords
+                            (optional)
+                        </label>
+                        <div id="waste-hint" class="govuk-hint">
+                            Can include job title, employer or reference number
+                        </div>
+                        <div class="govuk-input__wrapper"><select class="govuk-select" id="SearchField"
+                                name="SearchField">
+                                <option selected="selected" value="All">All</option>
+                                <option value="JobTitle">Job title</option>
+                                <option value="Description">Description</option>
+                                <option value="Employer">Employer</option>
+                                <option value="ReferenceNumber">Ref. number</option>
+                            </select>
+
+                            <input class="govuk-input" id="Keywords" name="Keywords" type="text" value="">
+                        </div>
+                    </div>
+                    <div class="govuk-form-group">
+                        <label class="govuk-label govuk-label--s" for="Location">Location</label>
+                        <div id="waste-hint" class="govuk-hint">
+                            Enter postcode, town or city or use <a class="govuk-link" href="#">current location</a>
+                        </div>
+                        <input class="govuk-input  govuk-input--width-10" id="Location" name="Location" type="text"
+                            value="Montpelier (Bristol)" autocomplete="off">
+                        <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                            <div class="govuk-checkboxes__item govuk-!-margin-top-2">
+                                <input class="govuk-checkboxes__input" id="nationwide" name="nationwide" type="checkbox"
+                                    value="nationwide" checked>
+                                <label class="govuk-label govuk-checkboxes__label" for="nationwide">
+                                    Nationwide
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="govuk-form-group">
+                        <label for="loc-within" class=" govuk-label govuk-label--s">Within</label>
+                        <select class="govuk-select" id="loc-within" name="WithinDistance">
+                            <option value="2">2 miles</option>
+                            <option selected="selected" value="5">5 miles</option>
+                            <option value="10">10 miles</option>
+                            <option value="15">15 miles</option>
+                            <option value="20">20 miles</option>
+                            <option value="30">30 miles</option>
+                            <option value="40">40 miles</option>
+                            <option value="0">England</option>
+                        </select>
+                    </div>
+                    <div class="govuk-form-group">
+                        <label for="apprenticeship-level" class="govuk-label govuk-label--s">Apprenticeship
+                            level</label>
+                        <select class="govuk-select" id="apprenticeship-level" name="ApprenticeshipLevel">
+                            <option selected="selected" value="All">All levels</option>
+                            <option value="Intermediate">Intermediate</option>
+                            <option value="Advanced">Advanced</option>
+                            <option value="Higher">Higher</option>
+                            <option value="Degree">Degree</option>
+                        </select>
+                    </div>
+                    <div class="govuk-form-group">
+                        <span class="govuk-label--s" id="disabilityconfidentonlylabel">Only show</span>
+                        <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox"
+                                    value="carcasses">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste">
+                                    Disability Confident
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group form-group-compound">
+                        <button class="govuk-button" id="search-button" name="SearchAction"
+                            value="Search">Search</button>
+                    </div>
+                    <p class="govuk-body"><a href="/apprenticeshipsearch?reset=True&amp;SearchMode=Keyword"
+                            id="reset-search-options-link">Reset search
+                            options</a></p>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="govuk-grid-column-one-third">
+        <div class="govuk-related-items" style="border-top: 10px solid #005ea5;
+    padding-top: 20px;">
+            <h2 class="govuk-heading-m">Help</h2>
+            <ul class="govuk-list">
+                <li class="hide-nojs"><a href="#" class="govuk-link" id="runSearchHelp"><i
+                            class="fa fa-question-circle"></i>How to search
+                        for
+                        an apprenticeship</a> <span class="inl-block">(interactive walkthrough)</span></li>
+
+            </ul>
+            <ul class="govuk-list">
+                <li>0800 015 0400</li>
+                <li><a href="/helpdesk">Contact us</a></li>
+            </ul>
+            <ul class="govuk-list">
+                <li>
+                    <a href="https://help.apprenticeships.education.gov.uk/hc/en-gb/sections/360003798540-Apprentice"
+                        target="_blank">Coronavirus (COVID-19): read our guidance for apprentices</a>
+                </li>
+                <li>
+                    <a href="https://www.gov.uk/apprenticeships-guide">About apprenticeships</a>
+                </li>
+                <li>
+                    <a href="/traineeshipsearch" id="find-traineeship-link">Find a traineeship</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -158,3 +158,51 @@ router.post('/feature/multiple-locations/v3/action/', function (req, res) {
         res.redirect('/feature/multiple-locations/v3/task-list')
     }
 })
+
+// Version 4 - Multiple Locations
+router.post('/feature/multiple-locations/v4/action/', function (req, res) {
+    var apprenticeLocation = req.session.data['selected-location']
+
+    if (apprenticeLocation == "different-location") {
+        res.redirect('/feature/multiple-locations/v4/new-address')
+    }
+    else if (apprenticeLocation == "multiple-locations") {
+        res.redirect('/feature/multiple-locations/v4/add-existing-location')
+    }
+    else {
+        res.redirect('/feature/multiple-locations/v4/task-list')
+    }
+})
+
+    
+router.post('/feature/multiple-locations-summary/v4/action/', function (req, res) {
+    var addAnother = req.session.data['add-another']
+
+    if (addAnother == "Yes") {
+        res.redirect('/feature/multiple-locations/v4/new-address')
+    }
+    else {
+        res.redirect('/feature/multiple-locations/v4/task-list')
+    }
+})
+router.post('/feature/multiple-location-check/v4/action/', function (req, res) {
+    var multipleLocations = req.session.data['multiple-locations']
+
+    if (multipleLocations == "yes") {
+        res.redirect('/feature/multiple-locations/v4/add-existing-location')
+    }
+    else {
+        res.redirect('/feature/multiple-locations/v4/location')
+    }
+})
+
+router.post('/feature/multiple-locations/v4/add-new-location/action', function (req, res) {
+    var newLocation = req.session.data['new-location']
+
+    if (newLocation == "yes") {
+        res.redirect('/feature/multiple-locations/v4/new-address')
+    }
+    else {
+        res.redirect('/feature/multiple-locations/v4/multiple-locations-summary')
+    }
+})

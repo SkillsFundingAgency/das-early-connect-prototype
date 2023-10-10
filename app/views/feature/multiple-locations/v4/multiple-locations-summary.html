@@ -1,0 +1,105 @@
+{% extends "layouts/employer-header.html" %}
+
+{% block beforeContent %}
+{{super()}}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.go(-1);"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">
+            You have added 3 locations
+        </h1>
+        <p class="govuk-body">We’ll show your advert when people search for these locations.</p>
+
+        <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+                <dd class="govuk-summary-list__value">
+                    72 Guild Street<br>Coventry<br>SE23 6FH
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                    <ul class="govuk-summary-list__actions-list">
+                        <li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="#">
+                                Change<span class="govuk-visually-hidden"> 72 Guild Street</span>
+                            </a></li>
+                        <li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="#">
+                                Delete<span class="govuk-visually-hidden"> 72 Guild Street</span>
+                            </a></li>
+                    </ul>
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dd class="govuk-summary-list__value">
+                    94 School Lane<br>Lincoln<br>LN70 9PC
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                    <ul class="govuk-summary-list__actions-list">
+                        <li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="#">
+                                Change<span class="govuk-visually-hidden"> 94 School Lane</span>
+                            </a></li>
+                        <li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="#">
+                                Delete<span class="govuk-visually-hidden"> 94 School Lane</span>
+                            </a></li>
+                    </ul>
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dd class="govuk-summary-list__value">
+                    91 Mill Lane<br>Oxford<br>OX26 5KI
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                    <ul class="govuk-summary-list__actions-list">
+                        <li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="#">
+                                Change<span class="govuk-visually-hidden"> 91 Mill Lane</span>
+                            </a></li>
+                        <li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="#">
+                                Delete<span class="govuk-visually-hidden"> 91 Mill Lane</span>
+                            </a></li>
+                    </ul>
+                </dd>
+            </div>
+        </dl>
+
+        <form method="post" novalidate action="/feature/multiple-locations-summary/v4/action/" class="
+            govuk-!-margin-top-9">
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend govuk-fieldset__legend--m">
+                        Do you want to add another location?
+                    </legend>
+
+                    <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="add-another" name="add-another" type="radio"
+                                value="Yes">
+                            <label class="govuk-label govuk-radios__label" for="add-another">
+                                Yes
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="add-another-2" name="add-another" type="radio"
+                                value="No">
+                            <label class="govuk-label govuk-radios__label" for="add-another-2">
+                                No
+                            </label>
+                        </div>
+                    </div>
+
+                </fieldset>
+            </div>
+
+            <button class="govuk-button" data-module="govuk-button">
+                Save and continue
+            </button>
+        </form>
+
+    </div>
+</div>
+
+
+{% endblock %}

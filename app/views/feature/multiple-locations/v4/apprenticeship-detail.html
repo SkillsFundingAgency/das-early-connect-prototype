@@ -1,12 +1,24 @@
-{% extends "layouts/employer-header.html" %}
+{% block pageTitle %}
+Business Admin Apprenticeship | Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% set serviceName %}
+Find an apprenticeship
+{% endset%}
 
 {% block beforeContent %}
-{{super()}}
-{{ govukBackLink({
-text: "Back to check your answers",
-href: "javascript:window.history.go(-1);"
-}) }}
+<div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+        <strong class="govuk-tag govuk-phase-banner__content__tag ">Prototype</strong>
+        <span class="govuk-phase-banner__text">This is not a real service.</span>
+    </p>
+</div>
+
+<a href="javascript:window.history.go(-1);" class="govuk-back-link">Back</a>
+
 {% endblock %}
+
+{% extends "layouts/main.html" %}
 
 {% block content %}
 <div class="govuk-grid-row">
@@ -15,7 +27,7 @@ href: "javascript:window.history.go(-1);"
         <div class="govuk-grid-row govuk-!-margin-bottom-6">
             <div class="govuk-grid-column-full">
                 <h2 class="govuk-heading-xl govuk-!-margin-bottom-6 govuk-!-width-three-quarters">
-                    Electronic Engineering Technician Apprentice
+                    Business Admin Apprenticeship
                     <div class="govuk-caption-xl govuk-!-margin-top-1">ABC Opticians.</div>
                 </h2>
             </div>

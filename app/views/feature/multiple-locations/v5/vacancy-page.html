@@ -42,7 +42,7 @@ Find an apprenticeship
     <body>
 
       <a href="#" class="heart-link govuk-!-padding-right-5">
-        <i class="far fa-heart" style="color:		#1d70b8"></i> Save to my favourites
+        — Add to your shortlist
       </a>
 
     </body>
@@ -74,50 +74,55 @@ Find an apprenticeship
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-one-third content-list__sticky">
     <nav data-module="gem-track-click" aria-label="Contents" class="gem-c-contents-list" role="navigation">
-      <h2 class="gem-c-contents-list__title">
+      <h2 class="govuk-heading-s">
         Contents
       </h2>
       <ol class="gem-c-contents-list__list">
         <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
-          <a class="gem-c-contents-list__link govuk-link govuk-link--no-underline" data-track-category="contentsClicked"
+          <a class="gem-c-contents-list__link govuk-link govuk-link--no-underline govuk-link--no-visited-state"
+            data-track-category="contentsClicked"
             data-track-action="content_item 1" data-track-label="#summary"
             data-track-options='{"dimension29":"Summary"}' href="#summary">Summary</a>
 
         </li>
         <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
-          <a class="gem-c-contents-list__link govuk-link govuk-link--no-underline" data-track-category="contentsClicked"
-            data-track-action="content_item 2" data-track-label="#your-work"
-            data-track-options='{"dimension29":"Your work"}' href="#your-work">What you’ll do on this apprenticeship</a>
+          <a class="gem-c-contents-list__link govuk-link govuk-link--no-underline govuk-link--no-visited-state"
+            data-track-category="contentsClicked" data-track-action="content_item 2" data-track-label="#work"
+            data-track-options='{"dimension29":"Work"}' href="#work">Work</a>
 
         </li>
         <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
-          <a class="gem-c-contents-list__link govuk-link govuk-link--no-underline" data-track-category="contentsClicked"
+          <a class="gem-c-contents-list__link govuk-link govuk-link--no-underline govuk-link--no-visited-state"
+            data-track-category="contentsClicked"
             data-track-action="content_item 3" data-track-label="#requirements"
-            data-track-options='{"dimension29":"Requirements"}' href="#requirements">Requirements</a>
+            data-track-options='{"dimension29":"Requirements"}' href="#requirements">Training requirements</a>
 
         </li>
-        <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+        {# <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
           <a class="gem-c-contents-list__link govuk-link govuk-link--no-underline" data-track-category="contentsClicked"
             data-track-action="content_item 5" data-track-label="#working-week-timetable"
             data-track-options='{"dimension29":"Working week timetable"}' href="#working-week-timetable">Work and
             training timetable</a>
 
-        </li>
+        </li> #}
         <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
-          <a class="gem-c-contents-list__link govuk-link govuk-link--no-underline" data-track-category="contentsClicked"
+          <a class="gem-c-contents-list__link govuk-link govuk-link--no-underline govuk-link--no-visited-state"
+            data-track-category="contentsClicked"
             data-track-action="content_item 4" data-track-label="#about-this-company"
             data-track-options='{"dimension29":"About this company"}' href="#about-this-company">About this company</a>
 
         </li>
         <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
-          <a class="gem-c-contents-list__link govuk-link govuk-link--no-underline" data-track-category="contentsClicked"
+          <a class="gem-c-contents-list__link govuk-link govuk-link--no-underline govuk-link--no-visited-state"
+            data-track-category="contentsClicked"
             data-track-action="content_item 6" data-track-label="#after-this-apprenticeship"
             data-track-options='{"dimension29":"After this apprenticeships"}' href="#after-this-apprenticeship">After
             this apprenticeship</a>
 
         </li>
         <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
-          <a class="gem-c-contents-list__link govuk-link govuk-link--no-underline" data-track-category="contentsClicked"
+          <a class="gem-c-contents-list__link govuk-link govuk-link--no-underline govuk-link--no-visited-state"
+            data-track-category="contentsClicked"
             data-track-action="content_item 7" data-track-label="#ask-a-question"
             data-track-options='{"dimension29":"Ask a question about this apprenticeship"}' href="#ask-a-question">Ask a
             question</a>
@@ -126,7 +131,8 @@ Find an apprenticeship
 
         </li>
         <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
-          <a class="gem-c-contents-list__link govuk-link govuk-link--no-underline" data-track-category="contentsClicked"
+          <a class="gem-c-contents-list__link govuk-link govuk-link--no-underline govuk-link--no-visited-state"
+            data-track-category="contentsClicked"
             data-track-action="content_item 8" data-track-label="#apply-now"
             data-track-options='{"dimension29":"Apply now"}' href="#apply-now">Apply now</a>
 
@@ -151,26 +157,22 @@ Find an apprenticeship
       </thead>
       <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Working for</th>
-          <td class="govuk-table__cell">King Recruitment
+          <th scope="row" class="govuk-table__header">Annual wage</th>
+          <td class="govuk-table__cell">You'll start on £19,670<p class="govuk-body-s govuk-!-margin-0" govuk-!-font-size-14
+              govuk-!-margin->National Minimum Wage for a 20 year old <a href="https://www.gov.uk/national-minimum-wage-rates"
+                class="govuk-link govuk-link--no-visited-state">National
+                Minimum Wage rates (opens in new tab)</a>.</p>
           </td>
         </tr>
         <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Training with</th>
-          <td class="govuk-table__cell">Sheffield Professional College
-          </td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Annual age</th>
-          <td class="govuk-table__cell">£10,290 to £21,670<p class="govuk-body govuk-!-font-size-14 govuk-!-margin-0"
-              govuk-!-font-size-14 govuk-!-margin->You’ll be paid the <a
-                href="https://www.gov.uk/national-minimum-wage-rates"
-                class="govuk-link govuk-link--no-visited-state">National Minimum Wage</a> for your age.</p>
+          <th scope="row" class="govuk-table__header">Training course</th>
+          <td class="govuk-table__cell">Business administration (Level 3)
           </td>
         </tr>
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">Hours</th>
-          <td class="govuk-table__cell">37 hours a week</p>
+          <td class="govuk-table__cell">Monday to Friday 8:30am to 5pm<p class="govuk-body-s govuk-!-margin-bottom-0">37 hours a
+              week</p>
           </td>
         </tr>
         <tr class="govuk-table__row">
@@ -179,8 +181,8 @@ Find an apprenticeship
           </td>
         </tr>
         <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Length of apprenticeship</th>
-          <td class="govuk-table__cell">18 months</td>
+          <th scope="row" class="govuk-table__header">Length</th>
+          <td class="govuk-table__cell">1 year 6 months</td>
         </tr>
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">Positions available</th>
@@ -192,8 +194,10 @@ Find an apprenticeship
 
     <!-- START what you'll do -->
     <div class="govuk-!-padding-bottom-3"></div>
-    <h2 class="govuk-heading-m govuk-!-margin-bottom-5" id="your-work">What you’ll do on this apprenticeship</h2>
-    <h3 class="govuk-heading-s">Work</h3>
+    <h2 class="govuk-heading-m govuk-!-margin-bottom-5" id="work">Work</h2>
+    <p class="govuk-body">Most of an apprenticeship is spent at work. You'll get hands-on experience working for a company
+      alongside skilled colleagues. </p>
+    <h3 class="govuk-heading-s">Your role</h3>
     <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
       <li>
         Be part of King Recruitment’s commitment to being an inclusive, open and supportive workplace
@@ -219,13 +223,138 @@ Find an apprenticeship
       </li>
     </ul>
 
-    <h3 class="govuk-heading-s">Training course</h3>
-    <p class="govuk-body govuk-!-margin-bottom-1" style="color:#0b0c0c">Business administrator</p>
-    <p class="govuk-body" style="color:	#505a5f">Level 3 (equal to A level)</p>
+    <h3 class="govuk-heading-s">Work location closest to your search</h3>
+    <p class="govuk-body govuk-!-margin-bottom-3">10 Jam Jar Way<br>Sheffield<br>S3 7GE</p>
+    
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Check your travel to work
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <h3 class="govuk-heading-s">Check your commute</h3>
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper">
+            <label class="govuk-label" for="postcode">
+              Enter your postcode
+            </label>
+          </h1>
+          <div id="postcode-hint" class="govuk-hint">
+            For example SW1A 2AA <a href="#" class="govuk-link"> use current location</a>
+          </div>
+          <input class="govuk-input govuk-input--width-10" id="width-10" name="width10" type="text">
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="subject">
+            Work location
+          </label>
+          <select class="govuk-select" id="subject">
+            <option value="0" selected>10 Jam Jar Way
+              Sheffield</option>
+            <option value="1">94 School Lane
+              Lincoln</option>
+            <option value="2">91 Mill Lane
+              Oxford</option>
+            <option value="3">Upper Coscombe House
+              Upper Coscombe
+              Temple Guiting</option>
+          </select>
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="subject">
+            Select a transport method
+          </label>
+          <select class="govuk-select" id="subject" name="subject" aria-describedby="subject-hint">
+            <option value="choose" selected>Select a method</option>
+            <option value="car">Car</option>
+            <option value="public">Public transport</option>
+            <option value="walking">Walking</option>
+            <option value="cycling">Cycling</option>
+          </select>
+        </div>
+        <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Show route
+        </button>
+        <img src="/public/images/Map-sheff-college.png" width="630px">
+      </div>
+    </details>
+    
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          7 Alternative work locations
+        </span>
+      </summary>
+      <div class="govuk-grid-row govuk-!-margin-top-6">
+        <div class="govuk-grid-column-one-half">
+          <ul class="govuk-list govuk-list--spaced">
+            <li>94 School Lane<br>Lincoln<br>LN70 9PC</li>
+            <li><b>Distance</b> 32 miles</li>
+          </ul>
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <ul class="govuk-list govuk-list--spaced">
+            <li>91 Mill Lane<br>Oxford<br>OX26 5KI</li>
+            <li><b>Distance</b> 52 miles</li>
+          </ul>
+        </div>
+      </div>
+      <div class="govuk-grid-row govuk-!-margin-top-6">
+        <div class="govuk-grid-column-one-half">
+          <ul class="govuk-list govuk-list--spaced">
+            <li>Upper Coscombe House<br>Upper Coscombe<br>Temple
+              Guiting<br>GL54
+              5SB</li>
+            <li><b>Distance</b> 86 miles</li>
+          </ul>
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <ul class="govuk-list govuk-list--spaced">
+            <li>2 Lapine Gardens<br>Whitchurch<br>RG28 7GA</li>
+            <li><b>Distance</b> 98 miles</li>
+          </ul>
+        </div>
+      </div>
+      <div class="govuk-grid-row govuk-!-margin-top-6">
+        <div class="govuk-grid-column-one-half">
+          <ul class="govuk-list govuk-list--spaced">
+            <li>Field House, Yapton Road<br>Barnham<br>PO22 0BD</li>
+            <li><b>Distance</b> 164 miles</li>
+          </ul>
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <ul class="govuk-list govuk-list--spaced">
+            <li>2 Yew Tree Road<br>London<br>W12 0TH</li>
+            <li><b>Distance</b> 201 miles</li>
+          </ul>
+        </div>
+      </div>
+      <div class="govuk-grid-row govuk-!-margin-top-6">
+        <div class="govuk-grid-column-one-half">
+          <ul class="govuk-list govuk-list--spaced">
+            <li>Teign View<br>74A Mill Lane<br>Teignmouth<br>TQ14 9BB</li>
+            <li><b>Distance</b> 446 miles</li>
+          </ul>
+    
+        </div>
+      </div>
+    </details>
+    
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+    
+    <h2 class="govuk-heading-m">Training</h2>
+    <p class="govuk-body">An apprenticeship includes regular training time with a college or other training organisation.
+      You'll get dedicated time being taught new skills.</p>
+    <h3 class="govuk-heading-s">College or training Organisation</h3>
+    <p class="govuk-body">Sheffield Professional College</p>
+    <h3 class="govuk-heading-s">Course</h3>
+    <p class="govuk-body govuk-!-margin-bottom-1">Business administrator (Level 3)</p>
+    <p class="govuk-body" style="color:	#505a5f">Equal to A levels</p>
     <details class="govuk-details govuk-!-margin-top-0" data-module="govuk-details">
       <summary class="govuk-details__summary">
         <span class="govuk-details__summary-text">
-          What you’ll learn
+          Course contents
         </span>
       </summary>
       <div class="govuk-details__text">
@@ -291,12 +420,12 @@ Find an apprenticeship
       </div>
     </details>
 
-    <h3 class="govuk-heading-s">Additional training information</h3>
+    {# <h3 class="govuk-heading-s">Additional training information</h3>
     <p class="govuk-body govuk-!-margin-bottom-0">COURSE SCHEDULE</p>
     <p class="govuk-body govuk-!-margin-bottom-0">1. INTRODUCTION TO BUSINESS ADMINISTRATION</p>
     <p class="govuk-body govuk-!-margin-bottom-0">2. SAFETY IN THE WORKPLACE</p>
     <p class="govuk-body govuk-!-margin-bottom-0">3. MICROSOFT OFFICE ADVANCED SKILLS</p>
-    <p class="govuk-body govuk-!-margin-bottom-0">4. COMMUNICATION SKILLS</p>
+    <p class="govuk-body govuk-!-margin-bottom-0">4. COMMUNICATION SKILLS</p> #}
 
     <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
     <!-- END what you'll do -->
@@ -340,105 +469,16 @@ Find an apprenticeship
 
 
     <!-- START working week -->
-    <h2 class="govuk-heading-m govuk-!-margin-bottom-5" id="working-week-timetable">Work and training timetable</h2>
+    {# <h2 class="govuk-heading-m govuk-!-margin-bottom-5" id="working-week-timetable">Work and training timetable</h2>
 
     <h3 class="govuk-heading-s">Working hours</h3>
     <p class="govuk-body">Monday to Friday 8.30am to 5pm</p>
 
-    <h3 class="govuk-heading-s">Work location closest to your search</h3>
-    <p class="govuk-body govuk-!-margin-bottom-0">10 Jam Jar Way</p>
-    <p class="govuk-body govuk-!-margin-bottom-0">Sheffield</p>
-    <p class="govuk-body govuk-!-margin-bottom-3">S3 7GE</p>
-
-    <details class="govuk-details" data-module="govuk-details">
-      <summary class="govuk-details__summary">
-        <span class="govuk-details__summary-text">
-          Check your travel to work
-        </span>
-      </summary>
-      <div class="govuk-details__text">
-        <h3 class="govuk-heading-s">Check your commute</h3>
-        <div class="govuk-form-group">
-          <h1 class="govuk-label-wrapper">
-            <label class="govuk-label" for="event-name">
-              Enter your postcode
-            </label>
-          </h1>
-          <div id="event-name-hint" class="govuk-hint">
-            For example SW1A 2AA <a href="#" class="govuk-link"> use current location</a>
-          </div>
-          <input class="govuk-input govuk-input--width-10" id="width-10" name="width10" type="text">
-        </div>
-        <div class="govuk-form-group">
-          <label class="govuk-label" for="subject">
-            Select a transport method
-          </label>
-          <select class="govuk-select" id="subject" name="subject" aria-describedby="subject-hint">
-            <option value="choose" selected>Select a method</option>
-            <option value="eastmidlands">Car</option>
-            <option value="eastofengland">Public transport</option>
-            <option value="london">Walking</option>
-            <option value="northeast">Cycling</option>
-          </select>
-        </div>
-        <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
-          Show route
-        </button>
-        <img src="/public/images/Map-sheff-college.png" width="630px">
-      </div>
-    </details>
-
-    <details class="govuk-details" data-module="govuk-details">
-      <summary class="govuk-details__summary">
-        <span class="govuk-details__summary-text">
-          7 Alternative work locations
-        </span>
-      </summary>
-      <div class="govuk-grid-row govuk-!-margin-top-3">
-        <div class="govuk-grid-column-one-third">
-          <p class="govuk-body">94 School Lane<br>Lincoln<br>LN70 9PC</p>
-          <p class="govuk-body"><a href="#" class="govuk-link">Check travel to this location</a></p>
-        </div>
-        <div class="govuk-grid-column-one-third">
-          <p class="govuk-body">91 Mill Lane<br>Oxford<br>OX26 5KI</p>
-          <p class="govuk-body"><a href="#" class="govuk-link">Show on map</a></p>
-        </div>
-        <div class="govuk-grid-column-one-third">
-          <p class="govuk-body">Upper Coscombe House<br>Upper Coscombe<br>Temple
-            Guiting<br>GL54
-            5SB
-          </p>
-          <p class="govuk-body"><a href="#" class="govuk-link">Show on map</a></p>
-        </div>
-      </div>
-      <div class="govuk-grid-row govuk-!-margin-top-6">
-        <div class="govuk-grid-column-one-third">
-          <p class="govuk-body">2 Lapine Gardens<br>Whitchurch<br>RG28 7GA</p>
-          <p class="govuk-body"><a href="#" class="govuk-link">Show on map</a></p>
-        </div>
-        <div class="govuk-grid-column-one-third">
-          <p class="govuk-body">Field House, Yapton Road<br>Barnham<br>PO22 0BD</p>
-          <p class="govuk-body"><a href="#" class="govuk-link">Show on map</a></p>
-        </div>
-
-        <div class="govuk-grid-column-one-third">
-          <p class="govuk-body govuk-!-margin-bottom-7">2 Yew Tree Road<br>London<br>W12 0TH
-          </p>
-          <p class="govuk-body"><a href="#" class="govuk-link">Show on map</a></p>
-        </div>
-      </div>
-      <div class="govuk-grid-row govuk-!-margin-top-6">
-        <div class="govuk-grid-column-one-third">
-          <p class="govuk-body">Teign View<br>74A Mill Lane<br>Teignmouth<br>TQ14 9BB</p>
-          <p class="govuk-body"><a href="#" class="govuk-link">Show on map</a></p>
-        </div>
-      </div>
-    </details>
-
     <h3 class="govuk-heading-s">Training plan</h3>
-    <p class="govuk-body">You will spend a day week at Sheffield Professional College 0930 to 1730.</p>
+    <p class="govuk-body">You will spend a day week at Sheffield Professional College 0930 to 1730.</p> #}
 
-    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+    {#
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible"> #}
     <!-- END working week -->
 
     <!-- START working week -->

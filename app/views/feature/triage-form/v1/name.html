@@ -4,7 +4,16 @@ Get help finding apprenticeships with Early Connect
 {% endset%}
 
 {% block beforeContent %}
-{{super()}}
+<div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+        <strong class="govuk-tag govuk-phase-banner__content__tag">
+            Prototype
+        </strong>
+        <span class="govuk-phase-banner__text">
+            This is not a real service
+        </span>
+    </p>
+</div>
 {{ govukBackLink({
 text: "Back",
 href: "javascript:window.history.go(-1);"

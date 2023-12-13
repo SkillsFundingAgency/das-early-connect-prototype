@@ -1,0 +1,42 @@
+{% extends "layouts/main.html" %}
+{% set serviceName %}
+Get help finding apprenticeships with Early Connect
+{% endset%}
+
+{% block beforeContent %}
+{{super()}}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.go(-1);"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">Your postcode</h1>
+        <p class="govuk-body">Your postcode will be used to provide opportunities near where you live</p>
+        {% if data['change'] == "true" %}
+        <form action="/feature/triage-form/v1/check-your-answers/action" method="post" novalidate>
+            {% else %}
+            <form action="sector" method="post" novalidate>
+                {% endif %}
+
+                <div class="govuk-form-group">
+                    <label class="govuk-label govuk-label--m" for="postcode">
+                        What is your home postcode?
+                    </label>
+                    <input class="govuk-input govuk-input--width-10" id="postcode" name="post-code" type="text"
+                        autocomplete="postal-code" value="{{ data['post-code'] }}">
+                </div>
+                <button type="submit" class="govuk-button" data-module="govuk-button">
+                    Continue
+                </button>
+            </form>
+
+
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,61 @@
+{% extends "layouts/main.html" %}
+{% set serviceName %}
+Get help finding apprenticeships with Early Connect
+{% endset%}
+
+{% block beforeContent %}
+{{super()}}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.go(-1);"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        {% if data['change'] == "true" %}
+        <form action="/feature/triage-form/v1/check-your-answers/action" method="post" novalidate>
+            {% else %}
+            <form class="form" action="support" method="post">
+                {% endif %}
+
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                            <h1 class="govuk-heading-l">Are you prepared to move to another area of the country for a
+                                role?
+                            </h1>
+                        </legend>
+
+                        <div class="govuk-radios" data-module="govuk-radios">
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="relocate-1" name="relocate" type="radio"
+                                    value="Yes">
+                                <label class="govuk-label govuk-radios__label" for="relocate-1">
+                                    Yes, if the right role is available
+                                </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="relocate-2" name="relocate" type="radio"
+                                    value="No">
+                                <label class="govuk-label govuk-radios__label" for="relocate-2">
+                                    No
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+
+
+
+                <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+            </form>
+
+    </div>
+</div>
+
+{% endblock %}

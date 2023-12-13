@@ -1,0 +1,69 @@
+{% extends "layouts/main.html" %}
+{% set serviceName %}
+Get help finding apprenticeships with Early Connect
+{% endset%}
+
+{% block beforeContent %}
+{{super()}}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.go(-1);"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">Enter code to confirm your email address</h1>
+        <p class="govuk-body">We’ve sent a code to: <b>{{ data['email-address'] or 'emailaddress@domain.com' }}</b></p>
+        <p class="govuk-body">The code will expire in 30 minutes.</p>
+
+        <div class="govuk-warning-text">
+            <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+            <strong class="govuk-warning-text__text">
+                <span class="govuk-visually-hidden">Warning</span>
+                If you use a browser to access your email, you may need to open a new window or tab to see the code.
+            </strong>
+        </div>
+
+
+        <form action="confirm-details" method="post" novalidate>
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="confirmation-code">
+                    Confirmation code
+                </label>
+                <input class="govuk-input govuk-input--width-10" id="confirmation-code" name="confirmationCode"
+                    type="text" spellcheck="false">
+            </div>
+
+            <details class="govuk-details">
+                <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                        I have not received the email
+                    </span>
+                </summary>
+                <div class="govuk-details__text">
+                    <p class="govuk-body">The email may take a few minutes to arrive. Its subject line is: ‘Confirm your
+                        email address - Early Connect’.</p>
+
+                    <p class="govuk-body">Check your spam or junk folder – if it still has not arrived, you can
+                        <a href="#" class="govuk-link govuk-link--no-visited-state">request a new code</a>.
+                    </p>
+
+                    <p class="govuk-body">If you do not know or have access to this email address you can <a
+                            class="govuk-link" href="start-page">create a request
+                            with a new email address</p>
+                </div>
+            </details>
+
+            <button type="submit" class="govuk-button" data-module="govuk-button">
+                Continue
+            </button>
+        </form>
+
+
+    </div>
+</div>
+
+{% endblock %}

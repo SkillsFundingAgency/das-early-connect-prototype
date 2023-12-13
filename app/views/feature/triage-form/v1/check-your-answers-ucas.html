@@ -1,0 +1,175 @@
+{% extends "layouts/main.html" %}
+{% set serviceName %}
+Get help finding apprenticeships with Early Connect
+{% endset%}
+
+{% block beforeContent %}
+{{super()}}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.go(-1);"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-l">Check your answers before sending your request</h1>
+        <h2 class="govuk-heading-m">Personal details</h2>
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <div class="govuk-summary-list__row  govuk-summary-list__row--no-actions">
+                <dt class="govuk-summary-list__key">
+                    Name
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    {{ data['first-name'] or 'Sarah' }} {{ data['last-name'] or 'Philips' }}
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row  govuk-summary-list__row--no-actions">
+                <dt class="govuk-summary-list__key">
+                    Email address
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    {{ data['email-address'] or 'emailaddress@domain.com' }}
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Telephone number
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    {{ data['telephone-number'] or 'Not provided' }}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link govuk-link--no-visited-state" href="telephone?change=true">Change<span
+                            class="govuk-visually-hidden"> telephone number</span></a>
+            </div>
+            <div class="govuk-summary-list__row  govuk-summary-list__row--no-actions">
+                <dt class="govuk-summary-list__key">
+                    Postcode
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    {{ data['post-code'] or 'SE23 6FH' }}
+                </dd>
+            </div>
+
+        </dl>
+        <h2 class="govuk-heading-m">Request details</h2>
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <div class="govuk-summary-list__row   govuk-summary-list__row--no-actions">
+                <dt class="govuk-summary-list__key">
+                    Areas of interest
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <ul class="govuk-list govuk-list--bullet">
+                        <li>Business and administration</li>
+                        <li>Finance and accounting</li>
+                        <li>Law and legal studies</li>
+                        <li>Protective services (emergency and uniformed services)</li>
+                    </ul>
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Apprenticeship level
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <ul class="govuk-list govuk-list--bullet">
+                        {% if data['level'] %}
+                        {% for item in data['level'] %}
+                        <li>{{ item}}</li>
+                        {% endfor %}
+                        {% else %}
+                        <ul class="govuk-list govuk-list--bullet">
+                            <li>Intermediate apprenticeships (level 2)</li>
+                            <li>Advanced apprenticeships (level 3)</li>
+                        </ul>
+                        {% endif %}
+                    </ul>
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link govuk-link--no-visited-state" href="level?change=true">Change<span
+                            class="govuk-visually-hidden"> apprenticeship level</span></a>
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Previous and current applications
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <ul class="govuk-list govuk-list--bullet">
+                        {% if data['existing-applications'] %}
+                        {% for item in data['existing-applications'] %}
+                        <li>{{ item}}</li>
+                        {% endfor %}
+                        {% else %}
+                        <ul class="govuk-list govuk-list--bullet">
+                            <li>Apprenticeship</li>
+                        </ul>
+                        {% endif %}
+                    </ul>
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link govuk-link--no-visited-state"
+                        href="existing-applications?change=true">Change<span class="govuk-visually-hidden"> previous and
+                            current applications</span></a>
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Working in other areas of the country
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <ul class="govuk-list govuk-list--bullet">
+                        {{ data['relocate'] or 'No' }}
+                    </ul>
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link govuk-link--no-visited-state" href="relocate?change=true">Change<span
+                            class="govuk-visually-hidden"> working in
+                            other areas of the country</span></a>
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Support request
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <ul class="govuk-list govuk-list--bullet">
+                        {% if data['support'] %}
+                        {% for item in data['support'] %}
+                        <li>{{ item}}</li>
+                        {% endfor %}
+                        {% else %}
+                        <ul class="govuk-list govuk-list--bullet">
+                            <li>CV designing</li>
+                            <li>Applying for an apprenticeship</li>
+                            <li>Interview practice</li>
+                        </ul>
+                        {% endif %}
+                    </ul>
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link govuk-link--no-visited-state" href="support?change=true">Change<span
+                            class="govuk-visually-hidden"> previous and
+                            current applications</span></a>
+                </dd>
+            </div>
+        </dl>
+        <h2 class="govuk-heading-m">Now send your application</h2>
+        <p class="govuk-body">By submitting this request you are confirming that, to the best of your knowledge, the
+            details you are providing are
+            correct.</p>
+        <form action="confirmation" method="post" novalidate>
+            <input type="hidden" name="answers-checked" value="true">
+            <button type="submit" class="govuk-button" data-module="govuk-button">
+                Accept and send
+            </button>
+        </form>
+
+    </div>
+</div>
+
+{% endblock %}

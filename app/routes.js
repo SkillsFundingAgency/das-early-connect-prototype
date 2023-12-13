@@ -206,3 +206,15 @@ router.post('/feature/multiple-locations/v4/add-new-location/action', function (
         res.redirect('/feature/multiple-locations/v4/multiple-locations-summary')
     }
 })
+
+// Triage form
+router.post('/feature/triage-form/v1/check-your-answers/action', function (req, res) {
+    var source = req.session.data['source']
+
+    if (source == "ucas") {
+        res.redirect('/feature/triage-form/v1/check-your-answers-ucas')
+    }
+    else {
+        res.redirect('/feature/triage-form/v1/check-your-answers')
+    }
+})

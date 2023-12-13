@@ -1,0 +1,69 @@
+{% extends "layouts/main.html" %}
+{% set serviceName %}
+Get help finding apprenticeships with Early Connect
+{% endset%}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-l">Confirm your details</h1>
+        <p class="govuk-body">Make sure your details and interests are correct.</p>
+        <h2 class="govuk-heading-m">Your details</h2>
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+                <dt class="govuk-summary-list__key">
+                    Name
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    {{ data['first-name'] or 'Sarah' }} {{ data['last-name'] or 'Philips' }}
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+                <dt class="govuk-summary-list__key">
+                    Email address
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    {{ data['email-address'] or 'emailaddress@domain.com' }}
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+                <dt class="govuk-summary-list__key">
+                    Postcode
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    {{ data['post-code'] or 'SE23 6FH' }}
+                </dd>
+
+            </div>
+
+        </dl>
+        <h2 class="govuk-heading-m">Interests</h2>
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+                <dt class="govuk-summary-list__key">
+                    Areas of interest
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <ul class="govuk-list govuk-list--bullet">
+                        <li>Business and administration</li>
+                        <li>Finance and accounting</li>
+                        <li>Law and legal studies</li>
+                        <li>Protective services (emergency and uniformed services)</li>
+
+                    </ul>
+                </dd>
+            </div>
+        </dl>
+        <form action="telephone" method="post" novalidate>
+            <input type="hidden" name="answers-checked" value="true">
+            <button type="submit" class="govuk-button" data-module="govuk-button">
+                Continue
+            </button>
+        </form>
+
+    </div>
+</div>
+
+{% endblock %}

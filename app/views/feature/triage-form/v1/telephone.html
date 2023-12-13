@@ -1,0 +1,40 @@
+{% extends "layouts/main.html" %}
+{% set serviceName %}
+Get help finding apprenticeships with Early Connect
+{% endset%}
+
+{% block beforeContent %}
+{{super()}}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.go(-1);"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        {% if data['change'] == "true" %}
+        <form action="check-your-answers-ucas" method="post" novalidate>
+            {% else %}
+            <form action="level" method="post" novalidate>
+                {% endif %}
+
+                <div class="govuk-form-group">
+                    <h1 class="govuk-label-wrapper">
+                        <label class="govuk-label govuk-label--l" for="telephone-number">
+                            What’s your telephone number? (optional)
+                        </label>
+                    </h1>
+                    <input class="govuk-input govuk-input--width-20" id="telephone-number" name="telephone-number"
+                        type="tel" autocomplete="tel">
+                </div>
+                <button type="submit" class="govuk-button" data-module="govuk-button">
+                    Continue
+                </button>
+            </form>
+    </div>
+</div>
+
+{% endblock %}

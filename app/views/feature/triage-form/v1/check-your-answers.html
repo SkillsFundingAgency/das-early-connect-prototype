@@ -36,7 +36,7 @@ href: "javascript:window.history.go(-1);"
                     {{ data['first-name'] or 'Sarah' }} {{ data['last-name'] or 'Philips' }}
                 </dd>
                 <dd class="govuk-summary-list__actions">
-                    <a class="govuk-link govuk-link--no-visited-state" href="name?change=true">Change<span
+                    <a class="govuk-link govuk-link--no-visited-state" href="name?change=true&source=service">Change<span
                             class="govuk-visually-hidden">
                             name</span></a>
                 </dd>
@@ -50,7 +50,7 @@ href: "javascript:window.history.go(-1);"
                     <p class="govuk-body">{{ data['telephone number'] or '07700 900457' }}</p>
                 </dd>
                 <dd class="govuk-summary-list__actions">
-                    <a class="govuk-link govuk-link--no-visited-state" href="contact-details?change=true">Change<span
+                    <a class="govuk-link govuk-link--no-visited-state" href="contact-details?change=true&source=service">Change<span
                             class="govuk-visually-hidden">
                             contact
                             details</span></a>
@@ -64,85 +64,46 @@ href: "javascript:window.history.go(-1);"
                     {{ data['post-code'] or 'SE23 6FH' }}
                 </dd>
                 <dd class="govuk-summary-list__actions">
-                    <a class="govuk-link govuk-link--no-visited-state" href="postcode?change=true">Change<span
+                    <a class="govuk-link govuk-link--no-visited-state" href="postcode?change=true&source=service">Change<span
                             class="govuk-visually-hidden"> postcode</span></a>
                 </dd>
             </div>
+            
 
         </dl>
-        <h2 class="govuk-heading-m">Request details</h2>
+        <h2 class="govuk-heading-m">Education and preferences</h2>
         <dl class="govuk-summary-list govuk-!-margin-bottom-9">
             <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
-                    Areas of interest
+                    School or collage
                 </dt>
                 <dd class="govuk-summary-list__value">
-                    <ul class="govuk-list govuk-list--bullet">
-                        {% for item in data['sector'] %}
-                        <li>{{ item}}</li>
-                        {% endfor %}
-
-                        {% if data['sector'] %}
-                        {% for item in data['sector'] %}
-                        <li>{{ item}}</li>
-                        {% endfor %}
-                        {% else %}
-                        <ul class="govuk-list govuk-list--bullet">
-                            <li>Business and administration</li>
-                            <li>Finance and accounting</li>
-                        </ul>
-                        {% endif %}
-                    </ul>
+                    {{ data['establishment'] or 'Example Academy' }}
                 </dd>
                 <dd class="govuk-summary-list__actions">
-                    <a class="govuk-link govuk-link--no-visited-state" href="sector?change=true">Change<span
-                            class="govuk-visually-hidden"> areas of
-                            interest</span></a>
+                    <a class="govuk-link govuk-link--no-visited-state" href="establishment?change=true&source=service">Change<span
+                            class="govuk-visually-hidden"> school or collage</span></a>
                 </dd>
             </div>
             <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
-                    Apprenticeship level
+                    Current and past applications
                 </dt>
                 <dd class="govuk-summary-list__value">
-                    <ul class="govuk-list govuk-list--bullet">
-                        {% if data['level'] %}
-                        {% for item in data['level'] %}
-                        <li>{{ item}}</li>
-                        {% endfor %}
-                        {% else %}
-                        <ul class="govuk-list govuk-list--bullet">
-                            <li>Intermediate apprenticeships (level 2)</li>
-                            <li>Advanced apprenticeships (level 3)</li>
-                        </ul>
-                        {% endif %}
+                    {% if data['existing-applications'] %}
+                    <ul class="govuk-list govuk-list--bullet"></ul>
+                    {% for item in data['existing-applications'] %}
+                    <li>{{ item}}</li>
+                    {% endfor %}
                     </ul>
+                    {% else %}
+                    Apprenticeship
+                    {% endif %}
+        
                 </dd>
                 <dd class="govuk-summary-list__actions">
-                    <a class="govuk-link govuk-link--no-visited-state" href="level?change=true">Change<span
-                            class="govuk-visually-hidden"> apprenticeship level</span></a>
-                </dd>
-            </div>
-            <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                    Previous and current applications
-                </dt>
-                <dd class="govuk-summary-list__value">
-                    <ul class="govuk-list govuk-list--bullet">
-                        {% if data['existing-applications'] %}
-                        {% for item in data['existing-applications'] %}
-                        <li>{{ item}}</li>
-                        {% endfor %}
-                        {% else %}
-                        <ul class="govuk-list govuk-list--bullet">
-                            <li>Apprenticeship</li>
-                        </ul>
-                        {% endif %}
-                    </ul>
-                </dd>
-                <dd class="govuk-summary-list__actions">
-                    <a class="govuk-link govuk-link--no-visited-state"
-                        href="existing-applications?change=true">Change<span class="govuk-visually-hidden"> previous and
+                    <a class="govuk-link govuk-link--no-visited-state" href="existing-applications?change=true&source=service">Change<span
+                            class="govuk-visually-hidden"> previous and
                             current applications</span></a>
                 </dd>
             </div>
@@ -151,15 +112,69 @@ href: "javascript:window.history.go(-1);"
                     Working in other areas of the country
                 </dt>
                 <dd class="govuk-summary-list__value">
-                    <ul class="govuk-list govuk-list--bullet">
-                        {{ data['relocate'] or 'No' }}
-                    </ul>
+        
+                    {{ data['relocate'] or 'No' }}
+        
                 </dd>
                 <dd class="govuk-summary-list__actions">
-                    <a class="govuk-link govuk-link--no-visited-state" href="relocate?change=true">Change<span
+                    <a class="govuk-link govuk-link--no-visited-state" href="relocate?change=true&source=service">Change<span
                             class="govuk-visually-hidden"> working in
                             other areas of the country</span></a>
                 </dd>
+            </div>
+        </dl>
+        <h2 class="govuk-heading-m">Support details</h2>
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+            Areas of interest
+        </dt>
+        <dd class="govuk-summary-list__value">
+            <ul class="govuk-list govuk-list--bullet">
+                {% for item in data['sector'] %}
+                <li>{{ item}}</li>
+                {% endfor %}
+    
+                {% if data['sector'] %}
+                {% for item in data['sector'] %}
+                <li>{{ item}}</li>
+                {% endfor %}
+                {% else %}
+           
+                    <li>Business and administration</li>
+                    <li>Finance and accounting</li>
+              
+                {% endif %}
+                    </ul>
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+            <a class="govuk-link govuk-link--no-visited-state" href="sector?change=true&source=service">Change<span class="govuk-visually-hidden">
+                    areas of
+                    interest</span></a>
+            </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+            Apprenticeship level
+            </dt>
+            <dd class="govuk-summary-list__value">
+                <ul class="govuk-list govuk-list--bullet">
+                    {% if data['level'] %}
+                    {% for item in data['level'] %}
+                    <li>{{ item}}</li>
+                    {% endfor %}
+                    {% else %}
+                    
+                        <li>Intermediate apprenticeships (level 2)</li>
+                        <li>Advanced apprenticeships (level 3)</li>
+                    
+                    {% endif %}
+                </ul>
+                </dd>
+                <dd class="govuk-summary-list__actions">
+            <a class="govuk-link govuk-link--no-visited-state" href="level?change=true&source=service">Change<span class="govuk-visually-hidden">
+                    apprenticeship level</span></a>
+            </dd>
             </div>
             <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
@@ -172,21 +187,21 @@ href: "javascript:window.history.go(-1);"
                         <li>{{ item}}</li>
                         {% endfor %}
                         {% else %}
-                        <ul class="govuk-list govuk-list--bullet">
+                        
                             <li>CV designing</li>
                             <li>Applying for an apprenticeship</li>
                             <li>Interview practice</li>
-                        </ul>
+                        
                         {% endif %}
                     </ul>
                 </dd>
                 <dd class="govuk-summary-list__actions">
-                    <a class="govuk-link govuk-link--no-visited-state" href="support?change=true">Change<span
+                    <a class="govuk-link govuk-link--no-visited-state" href="support?change=true&source=service">Change<span
                             class="govuk-visually-hidden"> previous and
                             current applications</span></a>
                 </dd>
             </div>
-        </dl>
+            </dl>
         <h2 class="govuk-heading-m">Now send your application</h2>
         <p class="govuk-body">By submitting this request you are confirming that, to the best of your knowledge, the
             details you are providing are

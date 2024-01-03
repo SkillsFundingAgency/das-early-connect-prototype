@@ -1,6 +1,6 @@
 {% extends "layouts/main.html" %}
 {% set serviceName %}
-Get help finding apprenticeships with Early Connect
+Get an apprenticeship adviser
 {% endset%}
 
 {% block beforeContent %}
@@ -32,14 +32,59 @@ href: "javascript:window.history.go(-1);"
                 {% endif %}
 
                 <div class="govuk-form-group">
-                    <fieldset class="govuk-fieldset" aria-describedby="applications-hint">
+                    <fieldset class="govuk-fieldset" aria-describedby="applications-hint applications-hint-2">
                         <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                            <h1 class="govuk-heading-l">What would you like support with?</h1>
+                            <h1 class="govuk-fieldset__heading">What would you like support with most?</h1>
                         </legend>
-                        <p class="govuk-hint" id="applications-hint">Select up to 3 options
+                        <p class="govuk-hint" id="applications-hint">An adviser can help you with everything here, but
+                            tell them what's most
+                            important at the moment.
+                        </p>
+                        <p class="govuk-hint" id="applications-hint-2">Select up to 3 options
                         </p>
 
                         <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="support-1" name="support" type="checkbox"
+                                    value="Making decisions about your future" aria-describedby="support-1-item-hint">
+                                <label class="govuk-label govuk-checkboxes__label" for="support-1">
+                                    Making decisions about your future
+                                </label>
+                                <div id="support-1-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                                    Discuss your interests and skills with an expert </div>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="support-2" name="support" type="checkbox"
+                                    value="Finding apprenticeship opportunities" aria-describedby="support-2-item-hint">
+                                <label class="govuk-label govuk-checkboxes__label" for="support-2">
+                                    Finding apprenticeship opportunities
+                                </label>
+                                <div id="support-2-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                                    Learn where to search for opportunities that could be right for you
+                                </div>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="support-3" name="support" type="checkbox"
+                                    value="Applying for an apprenticeship" aria-describedby="support-3-item-hint">
+                                <label class="govuk-label govuk-checkboxes__label" for="support-3">
+                                    Applying for an apprenticeship
+                                </label>
+                                <div id="support-3-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                                    Support with writing your CV, writing application forms and interview </div>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="support-4" name="support" type="checkbox"
+                                    value="Getting ready for work" aria-describedby="support-4-item-hint">
+                                <label class="govuk-label govuk-checkboxes__label" for="support-4">
+                                    Getting ready for work
+                                </label>
+                                <div id="support-4-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                                    Learn about communication, teamwork, and problem-solving
+                                </div>
+                            </div>
+                        </div>
+
+                        {# <div class="govuk-checkboxes" data-module="govuk-checkboxes">
                             <h2 class="govuk-heading-m">Finding opportunities</h2>
                             <div class="govuk-checkboxes__item">
                                 <input class="govuk-checkboxes__input" id="support-1" name="support" type="checkbox"
@@ -113,7 +158,7 @@ href: "javascript:window.history.go(-1);"
                                     Mock sessions, common questions and feedback
                                 </div>
                             </div>
-                        </div>
+                        </div> #}
                     </fieldset>
                 </div>
 

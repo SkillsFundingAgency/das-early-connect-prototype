@@ -1,6 +1,6 @@
 {% extends "layouts/main.html" %}
 {% set serviceName %}
-Get help finding apprenticeships with Early Connect
+Get an apprenticeship adviser
 {% endset%}
 
 {% block beforeContent %}
@@ -22,7 +22,7 @@ Get help finding apprenticeships with Early Connect
     <div class="govuk-grid-column-two-thirds">
 
         <h1 class="govuk-heading-l">Confirm your details</h1>
-        <p class="govuk-body">Make sure your details and interests are correct.</p>
+        <p class="govuk-body">Check these details from UCAS are correct:</p>
         <h2 class="govuk-heading-m">Your details</h2>
         <dl class="govuk-summary-list govuk-!-margin-bottom-9">
             <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
@@ -69,7 +69,7 @@ Get help finding apprenticeships with Early Connect
                 </dd>
             </div>
         </dl>
-        <form action="telephone" method="post" novalidate>
+        <form action="telephone-ucas" method="post" novalidate>
             <input type="hidden" name="answers-checked" value="true">
             <button type="submit" class="govuk-button" data-module="govuk-button">
                 Continue

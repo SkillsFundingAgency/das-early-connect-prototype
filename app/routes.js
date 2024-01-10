@@ -218,3 +218,15 @@ router.post('/feature/triage-form/v1/check-your-answers/action', function (req, 
         res.redirect('/feature/triage-form/v1/check-your-answers')
     }
 })
+
+// Triage form v2
+router.post('/feature/triage-form/v2/check-your-answers/action', function (req, res) {
+    var source = req.session.data['source']
+
+    if (source == "ucas") {
+        res.redirect('/feature/triage-form/v2/check-your-answers-ucas')
+    }
+    else {
+        res.redirect('/feature/triage-form/v2/check-your-answers')
+    }
+})

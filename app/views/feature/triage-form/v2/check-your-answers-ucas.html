@@ -26,6 +26,7 @@ href: "javascript:window.history.go(-1);"
     <div class="govuk-grid-column-two-thirds">
 
         <h1 class="govuk-heading-l">Check your answers before sending your request</h1>
+        <p class="govuk-body">We’ll send this information to our team, who will match you with an adviser.</p>
         <h2 class="govuk-heading-m">Personal details</h2>
         <dl class="govuk-summary-list govuk-!-margin-bottom-9">
             <div class="govuk-summary-list__row  govuk-summary-list__row--no-actions">
@@ -83,7 +84,7 @@ href: "javascript:window.history.go(-1);"
             </div>
             <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
-                    Current and past applications
+                    Where you've applied to stay in education
                 </dt>
                 <dd class="govuk-summary-list__value">
                     {% if data['existing-applications'] %}
@@ -98,22 +99,19 @@ href: "javascript:window.history.go(-1);"
                 </dd>
                 <dd class="govuk-summary-list__actions">
                     <a class="govuk-link govuk-link--no-visited-state"
-                        href="existing-applications?change=true&source=ucas">Change<span class="govuk-visually-hidden">
-                            previous and
-                            current applications</span></a>
+                        href="existing-applications?change=true&source=ucas">Change<span class="govuk-visually-hidden"> where you've applied to stay in education</span></a>
                 </dd>
             </div>
             <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
-                    Working in other areas of the country
+                    Would move to another area in England
                 </dt>
                 <dd class="govuk-summary-list__value">
                     {{ data['relocate'] or 'No' }}
                 </dd>
                 <dd class="govuk-summary-list__actions">
                     <a class="govuk-link govuk-link--no-visited-state"
-                        href="relocate?change=true&source=ucas">Change<span class="govuk-visually-hidden"> working in
-                            other areas of the country</span></a>
+                        href="relocate?change=true&source=ucas">Change<span class="govuk-visually-hidden"> would move to another area in England</span></a>
                 </dd>
             </div>
         </dl>
@@ -168,8 +166,8 @@ href: "javascript:window.history.go(-1);"
                         {% endfor %}
                         {% else %}
 
-                        <li>Making decisions about your future</li>
-                        <li>Applying for an apprenticeship</li>
+                        <li>Understanding apprenticeships</li>
+                        <li>Finding apprenticeship opportunities</li>
 
                         {% endif %}
                     </ul>
@@ -181,7 +179,7 @@ href: "javascript:window.history.go(-1);"
                 </dd>
             </div>
         </dl>
-        <h2 class="govuk-heading-m">Now send your application</h2>
+        {# <h2 class="govuk-heading-m">Now send your application</h2> #}
         <p class="govuk-body">CONTENT TO BE ADDED TO COVER DATA SHAING AND AND T&C WHICH NEED TO BE ACCEPTED</p>
         <form action="confirmation" method="post" novalidate>
             <input type="hidden" name="answers-checked" value="true">

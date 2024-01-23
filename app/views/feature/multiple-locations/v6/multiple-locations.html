@@ -1,0 +1,70 @@
+{% extends "layouts/employer-header.html" %}
+
+{% block beforeContent %}
+{{super()}}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.go(-1);"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <span class="govuk-caption-xl">Business Apprentice</span>
+        <h1 class="govuk-heading-xl">
+            Add more than one location
+        </h1>
+        <h2 class="govuk-heading-m">
+            We'll use the same advert for each location
+        </h2>
+        <p class="govuk-body">
+            Check that details like the wage and training provider are the same for every location. If they're not,
+            create your
+            advert with one location instead. After you submit it, you can clone this advert to make a copy you can
+            edit.</a>.
+        </p>
+
+        <details class="govuk-details">
+            <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                    Help with cloning an advert
+                </span>
+            </summary>
+            <div class="govuk-details__text">
+                <p class="govuk-body">To clone your advert:</p>
+                <ol class="govuk-list govuk-list--number">
+                    <li>Finish creating this advert and submit it to DfE for review</li>
+                    <li>Open the adverts <strong>Pending review</strong> on your dashboard</li>
+                    <li>Select <strong>Manage</strong> for this advert</li>
+                    <li>Select <strong>Clone advert</strong></li>
+                    <li>Edit the location and other details that need changing, then submit it to DfE</li>
+                </ol>
+            </div>
+        </details>
+
+        <h2 class="govuk-heading-m govuk-!-margin-top-7">
+            Find an apprenticeship won't ask people where they want to work
+        </h2>
+        <p class="govuk-body">
+            We can handle applications for you, but our form doesn’t ask people which location they want to apply for.
+            You'll need
+            to accept applications through your own website if you want to ask this question.</a>.
+        </p>
+        <p class="govuk-body">
+            You can add a link to your own website later</a>.
+        </p>
+
+        <div class="govuk-button-group govuk-!-margin-top-8"><a href="add-multiple-locations" role="button"
+                draggable="false" class="govuk-button" data-module="govuk-button">
+                Continue
+            </a>
+            <a class="govuk-link" href="one-location">Create advert with only one location</a>
+        </div>
+
+    </div>
+</div>
+
+
+{% endblock %}

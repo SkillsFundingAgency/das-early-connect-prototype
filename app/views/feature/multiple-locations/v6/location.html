@@ -1,0 +1,60 @@
+{% extends "layouts/employer-header.html" %}
+
+{% block beforeContent %}
+{{super()}}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.go(-1);"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <span class="govuk-caption-xl">Business Apprentice</span>
+        <h1 class="govuk-heading-xl">
+            Location
+        </h1>
+        <p class="govuk-body">
+            You can add more than one location to your advert if your apprenticeship is available across multiple cities
+            or towns.
+            For example, there are positions in both Manchester and Leeds.</a>.
+        </p>
+        <form action="/feature/multiple-locations/v6/location/action" method="post" novalidate
+            class="govuk-!-margin-top-7">
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                        Where is this apprenticeship available?
+                    </legend>
+                    <div class="govuk-radios" data-module="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="location" name="location" type="radio" value="one">
+                            <label class="govuk-label govuk-radios__label" for="location">
+                                One location
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="location-2" name="location" type="radio"
+                                value="multiple">
+                            <label class="govuk-label govuk-radios__label" for="location-2">
+                                More than one location
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="govuk-button-group">
+                <button type="submit" class="govuk-button" data-module="govuk-button">
+                    Continue
+                </button>
+                <a class="govuk-link" href="#">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+{% endblock %}

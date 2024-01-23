@@ -1,0 +1,62 @@
+{% extends "layouts/employer-header.html" %}
+
+{% block beforeContent %}
+{{super()}}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.go(-1);"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form method="post" action="/feature/multiple-locations/v6/add-multiple-locations/action">
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="existing-location-hint">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                        <span class="govuk-caption-xl">Business Apprentice</span>
+                        <h1 class="govuk-fieldset__heading">
+                            Where will the apprentice work?
+                        </h1>
+                    </legend>
+                    <div id="existing-location-hint" class="govuk-hint">
+                        Select all locations which apply
+                    </div>
+                    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="selected-organisation-id"
+                                name="selected-location" type="checkbox" value="Organisation {{i}}">
+                            <label class="govuk-label govuk-checkboxes__label" for="selected-organisation-id">
+                                72 Guild Street, Coventry, SE23 6FH
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="selected-organisation-id"
+                                name="selected-location" type="checkbox" value="Organisation {{i}}">
+                            <label class="govuk-label govuk-checkboxes__label" for="selected-organisation-id">
+                                94 School Lane, Lincoln, LN70 9PC</li>
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item" data-target="business-name-vacancy-panel">
+                            <input class="govuk-checkboxes__input" id="different-location" name="selected-location"
+                                type="checkbox" value="different-location">
+                            <label class="govuk-label govuk-checkboxes__label" for="different-location">A new work
+                                location</label>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="govuk-button-group">
+                <button class="govuk-button" data-module="govuk-button">Continue</button>
+                <a class="govuk-link" href="../dashboard">Cancel</a>
+            </div>
+
+        </form>
+
+    </div>
+</div>
+
+
+{% endblock %}

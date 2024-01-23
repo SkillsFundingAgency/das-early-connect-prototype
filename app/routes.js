@@ -230,3 +230,45 @@ router.post('/feature/triage-form/v2/check-your-answers/action', function (req, 
         res.redirect('/feature/triage-form/v2/check-your-answers')
     }
 })
+
+// Multiple locations v6
+router.post('/feature/multiple-locations/v6/location/action', function (req, res) {
+    var location = req.session.data['location']
+
+    if (location == "one") {
+        res.redirect('/feature/multiple-locations/v6/one-location')
+    }
+    else {
+        res.redirect('/feature/multiple-locations/v6/multiple-locations')
+    }
+})
+router.post('/feature/multiple-locations/v6/one-location/action/', function (req, res) {
+    var apprenticeLocation = req.session.data['selected-location']
+
+    if (apprenticeLocation == "different-location") {
+        res.redirect('/feature/multiple-locations/v6/new-address?multiple=false')
+    }
+    else {
+        res.redirect('/feature/multiple-locations/v6/task-list')
+    }
+})
+router.post('/feature/multiple-locations/v6/add-multiple-locations/action', function (req, res) {
+    var apprenticeLocation = req.session.data['selected-location']
+
+    if (apprenticeLocation.includes("different-location")) {
+        res.redirect('/feature/multiple-locations/v6/new-address?multiple=true')
+    }
+    else {
+        res.redirect('/feature/multiple-locations/v6/check-your-answers')
+    }
+})
+router.post('/feature/multiple-locations-summary/v6/action/', function (req, res) {
+    var addAnother = req.session.data['add-another']
+
+    if (addAnother == "Yes") {
+        res.redirect('/feature/multiple-locations/v6/new-address?multiple=true')
+    }
+    else {
+        res.redirect('/feature/multiple-locations/v6/task-list')
+    }
+})

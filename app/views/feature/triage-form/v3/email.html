@@ -1,0 +1,49 @@
+{% extends "layouts/main.html" %}
+{% set serviceName %}
+Get an apprenticeship adviser
+{% endset%}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+        <strong class="govuk-tag govuk-phase-banner__content__tag">
+            Prototype
+        </strong>
+        <span class="govuk-phase-banner__text">
+            This is not a real service
+        </span>
+    </p>
+</div>
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.go(-1);"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        {% if data['change'] == "true" %}
+        <form action="/feature/triage-form/v3/check-your-answers/action" method="post" novalidate>
+            {% else %}
+            <form action="confirm-your-email" method="post" novalidate>
+                {% endif %}
+                <div class="govuk-form-group">
+                    <h1 class="govuk-label-wrapper">
+                        <label class="govuk-label govuk-label--l" for="email-address">
+                            What is your email address?
+                        </label>
+                    </h1>
+                    <input class="govuk-input govuk-input--width-20" id="email-address" name="email-address"
+                        type="email" spellcheck="false" autocomplete="email">
+                </div>
+                <p class="govuk-body">To confirm it is your email address we will send you a code.</p>
+                <button type="submit" class="govuk-button" data-module="govuk-button">
+                    Continue
+                </button>
+            </form>
+    </div>
+</div>
+
+{% endblock %}

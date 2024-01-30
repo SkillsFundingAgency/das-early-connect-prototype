@@ -1,0 +1,82 @@
+{% extends "layouts/main.html" %}
+{% set serviceName %}
+Get an apprenticeship adviser
+{% endset%}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+        <strong class="govuk-tag govuk-phase-banner__content__tag">
+            Prototype
+        </strong>
+        <span class="govuk-phase-banner__text">
+            This is not a real service
+        </span>
+    </p>
+</div>
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Get an apprenticeship adviser</h1>
+        <p class="govuk-body">UCAS has shared your details with the Department for Education. Before we send your details to an
+            adviser, you must
+            confirm your details are correct.</p>
+        <p class="govuk-body">We'll also ask you a few questions. This will help your adviser give you the right support.</p>
+        <h2 class="govuk-heading-l govuk-!-margin-top-7">Confirm your email address</h2>
+        <p class="govuk-body">Enter the full email address that ends in
+            <b>****on@domain.com</b>.
+        </p>
+
+        <form action="confirm-your-email-ucas" method="post" novalidate>
+            <div class="govuk-form-group govuk-!-margin-top-7">
+                <label class="govuk-label" for="email-address">
+                    Email address
+                </label>
+                <input class="govuk-input govuk-input--width-20" id="email-address" name="email-address" type="email"
+                    spellcheck="false" autocomplete="email">
+            </div>
+        
+            <p class="govuk-body">We'll send you a code to confirm this is your email address.</p>
+            <input name="source" value="ucas" type="hidden">
+
+            <details class="govuk-details">
+                <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                        Don't have access to this email address?
+                    </span>
+                </summary>
+                <div class="govuk-details__text">
+                    <p class="govuk-body">If you do not know or have access to this email address, you can create a request with a new email
+                        address. Please
+                        select the region that you are within:</p>
+                    
+                    <ul class="govuk-list">
+                        <li>
+                            <a class="govuk-link" href="start-page">Get an adviser in Lancashire</a>
+                        </li>
+                        <li>
+                            <a class="govuk-link" href="start-page">Get an adviser in Greater London</a>
+                        </li>
+                        <li>
+                            <a class="govuk-link" href="start-page">Get an adviser in North East</a>
+                        </li>
+                    </ul>
+                    </div>
+                    </details>
+
+            <button type="submit" class="govuk-button" data-module="govuk-button">
+                Continue
+            </button>
+        </form>
+
+
+
+
+    </div>
+</div>
+
+{% endblock %}

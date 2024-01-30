@@ -1,0 +1,45 @@
+{% extends "layouts/main.html" %}
+{% set serviceName %}
+Get an apprenticeship adviser
+{% endset%}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+        <strong class="govuk-tag govuk-phase-banner__content__tag">
+            Prototype
+        </strong>
+        <span class="govuk-phase-banner__text">
+            This is not a real service
+        </span>
+    </p>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl">Get an apprenticeship adviser</h1>
+        <p class="govuk-body">Get matched with the right adviser. We’ll also ask you a few questions to help your adviser give
+            you the right support.</p>
+        <p class="govuk-body">You should be done in less than 5 minutes.</p>
+
+        <a href="confirm-details?change=null&source=ucas" role="button" draggable="false"
+            class="govuk-button govuk-button--start govuk-!-margin-top-5" data-module="govuk-button">
+            Start now
+            <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19"
+                viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+                <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+            </svg></a>
+
+    </div>
+</div>
+
+
+<a href="start-page-ucas-expired" role="button" draggable="false" class="govuk-button govuk-button--secondary"
+    data-module="govuk-button" style="position:absolute; top:160px; right:30px;">
+    View expired link design
+</a>
+
+{% endblock %}

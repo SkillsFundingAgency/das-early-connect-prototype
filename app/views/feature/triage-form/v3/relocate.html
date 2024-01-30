@@ -1,0 +1,69 @@
+{% extends "layouts/main.html" %}
+{% set serviceName %}
+Get an apprenticeship adviser
+{% endset%}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+        <strong class="govuk-tag govuk-phase-banner__content__tag">
+            Prototype
+        </strong>
+        <span class="govuk-phase-banner__text">
+            This is not a real service
+        </span>
+    </p>
+</div>
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.go(-1);"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        {% if data['change'] == "true" %}
+        <form action="/feature/triage-form/v3/check-your-answers/action" method="post" novalidate>
+            {% else %}
+            <form class="form" action="support" method="post">
+                {% endif %}
+
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                            <h1 class="govuk-heading-l">Would you move to another area of England for an apprenticeship?
+                            </h1>
+                        </legend>
+
+                        <div class="govuk-radios" data-module="govuk-radios">
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="relocate-1" name="relocate" type="radio"
+                                    value="Yes">
+                                <label class="govuk-label govuk-radios__label" for="relocate-1">
+                                    Yes, for the right apprenticeship
+                                </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="relocate-2" name="relocate" type="radio"
+                                    value="No">
+                                <label class="govuk-label govuk-radios__label" for="relocate-2">
+                                    No
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+
+
+
+                <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+            </form>
+
+    </div>
+</div>
+
+{% endblock %}

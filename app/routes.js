@@ -283,7 +283,7 @@ router.post('/feature/multiple-locations/v6/add-multiple-locations/action', func
         res.redirect('/feature/multiple-locations/v6/new-address?multiple=true')
     }
     else {
-        res.redirect('/feature/multiple-locations/v6/check-your-answers')
+        res.redirect('/feature/multiple-locations/v6/multiple-locations-summary')
     }
 })
 router.post('/feature/multiple-locations-summary/v6/action/', function (req, res) {

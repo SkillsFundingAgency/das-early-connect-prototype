@@ -1,0 +1,47 @@
+{% extends "layouts/main.html" %}
+{% set serviceName %}
+Get an apprenticeship adviser
+{% endset%}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+        <strong class="govuk-tag govuk-phase-banner__content__tag">
+            Prototype
+        </strong>
+        <span class="govuk-phase-banner__text">
+            This is not a real service
+        </span>
+    </p>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl">This link has expired</h1>
+        <p class="govuk-body govuk-!-margin-top-8">Get an apprenticeship adviser by selecting your region:</p>
+
+        <ul class="govuk-list">
+            <li>
+                <a class="govuk-link" href="start-page">Get an adviser in Lancashire</a>
+            </li>
+            <li>
+                <a class="govuk-link" href="start-page">Get an adviser in Greater London</a>
+            </li>
+            <li>
+                <a class="govuk-link" href="start-page">Get an adviser in North East</a>
+            </li>
+        </ul>
+
+    </div>
+</div>
+
+
+<a href="start-page-ucas-link-fault" role="button" draggable="false" class="govuk-button govuk-button--secondary"
+    data-module="govuk-button" style="position:absolute; top:160px; right:30px;">
+    View problem with link page design
+</a>
+
+{% endblock %}

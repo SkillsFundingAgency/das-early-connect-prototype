@@ -1,0 +1,59 @@
+{% extends "layouts/main.html" %}
+{% set serviceName %}
+Get an apprenticeship adviser
+{% endset%}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+        <strong class="govuk-tag govuk-phase-banner__content__tag">
+            Prototype
+        </strong>
+        <span class="govuk-phase-banner__text">
+            This is not a real service
+        </span>
+    </p>
+</div>
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.go(-1);"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">Check your email</h1>
+
+        <div class="govuk-inset-text">
+            We’ve sent an email to <b>{{ data['email-address'] or 'emailaddress@domain.com' }}</b>
+        </div>
+        <p class="govuk-body">The email contains a 6 digit confirmation code.
+
+        <p class="govuk-body">It may take a few minutes for the email to arrive. The code will expire after 30 minutes.
+        </p>
+
+        <form action="name" method="post" novalidate>
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="confirmation-code">
+                    Enter the code
+                </label>
+                <input class="govuk-input govuk-input--width-10" id="confirmation-code" name="confirmationCode"
+                    type="text" spellcheck="false">
+            </div>
+
+            <p class="govuk-body">Not received an email?
+                <a href="#" class="govuk-link govuk-link--no-visited-state">Send the code again</a>.
+            </p>
+
+            <button type="submit" class="govuk-button" data-module="govuk-button">
+                Continue
+            </button>
+        </form>
+
+
+    </div>
+</div>
+
+{% endblock %}

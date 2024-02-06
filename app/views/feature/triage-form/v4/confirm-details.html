@@ -1,0 +1,94 @@
+{% extends "layouts/main.html" %}
+{% set serviceName %}
+Get an apprenticeship adviser
+{% endset%}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+        <strong class="govuk-tag govuk-phase-banner__content__tag">
+            Prototype
+        </strong>
+        <span class="govuk-phase-banner__text">
+            This is not a real service
+        </span>
+    </p>
+</div>
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.go(-1);"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-l">Confirm your details</h1>
+        <p class="govuk-body">Details provided by UCAS:</p>
+        <h2 class="govuk-heading-m">Your details</h2>
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+                <dt class="govuk-summary-list__key">
+                    Name
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    {{ data['first-name'] or 'Sarah' }} {{ data['last-name'] or 'Philips' }}
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+                <dt class="govuk-summary-list__key">
+                    Date of birth
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    {{ data['date-of-birth'] or '5 January 2007' }}
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+                <dt class="govuk-summary-list__key">
+                    Email address
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    {{ data['email-address'] or 'emailaddress@domain.com' }}
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+                <dt class="govuk-summary-list__key">
+                    Postcode
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    {{ data['post-code'] or 'SE23 6FH' }}
+                </dd>
+
+            </div>
+
+        </dl>
+        <h2 class="govuk-heading-m">Interests</h2>
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+                <dt class="govuk-summary-list__key">
+                    Areas of interest
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <ul class="govuk-list govuk-list--bullet">
+                        <li>Business and administration</li>
+                        <li>Finance and accounting</li>
+                        <li>Law and legal studies</li>
+                        <li>Protective services (emergency and uniformed services)</li>
+
+                    </ul>
+                </dd>
+            </div>
+        </dl>
+        <form action="telephone-ucas" method="post" novalidate>
+            <input type="hidden" name="answers-checked" value="true">
+            <button type="submit" class="govuk-button" data-module="govuk-button">
+                Continue
+            </button>
+        </form>
+
+    </div>
+</div>
+
+{% endblock %}

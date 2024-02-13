@@ -1,0 +1,178 @@
+{% extends "layouts/main.html" %}
+{% set serviceName %}
+Get an apprenticeship adviser
+{% endset%}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+        <strong class="govuk-tag govuk-phase-banner__content__tag">
+            Prototype
+        </strong>
+        <span class="govuk-phase-banner__text">
+            This is not a real service
+        </span>
+    </p>
+</div>
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.go(-1);"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        {% if data['change'] == "true" %}
+        <form action="/feature/triage-form/v5/check-your-answers/action" method="post" novalidate>
+            {% else %}
+            <form action="level" method="post" novalidate>
+                {% endif %}
+
+                <div class="govuk-form-group">
+                    <h1 class="govuk-label-wrapper">
+                        <label class="govuk-label govuk-label--l" for="establishment">
+                            Enter school or college name
+                        </label>
+                    </h1>
+                    <noscript>
+                        <input class="govuk-input govuk-input--width-20" id="establishment" name="establishment"
+                            type="text" value="{{ data['establishment'] }}">
+                    </noscript>
+                    <div id="establishment-container"></div>
+                </div>
+
+                <details class="govuk-details">
+                    <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text">
+                            I cannot find my school or college name
+                        </span>
+                    </summary>
+                    <div class="govuk-details__text">
+                        <p class="govuk-body">If you cannot find your school or college name listed above you maybe
+                            outside of the current pilot regions.</p>
+
+                        <p class="govuk-body">Please contact the support team on <a href="#"
+                                class="govuk-link">support@EMAILTOBECONFIRMED.gov.uk</p>
+                    </div>
+                </details>
+
+                <button type="submit" class="govuk-button" data-module="govuk-button">
+                    Continue
+                </button>
+            </form>
+
+    </div>
+</div>
+
+
+
+<script type="text/javascript" src="/public/javascripts/accessible-autocomplete.min.js"></script>
+<script>
+    const establishments = [
+        "Ashington Academy",
+        "Astley Community High School",
+        "Barbara Priestman Academy",
+        "Bede Academy",
+        "Bedlington Academy",
+        "Berwick Academy",
+        "Bishop Auckland College",
+        "Burnside College",
+        "Cardinal Hume Catholic School, Gateshead",
+        "Churchill Community College",
+        "City of Sunderland College",
+        "Cramlington Learning Village",
+        "Derwentside",
+        "Durham Sixth Form Centre",
+        "East Durham College",
+        "Excelsior Academy",
+        "Gateshead College",
+        "George Stephenson High School",
+        "Gosforth Academy",
+        "Grace College",
+        "Harton Academy",
+        "Haydon Bridge High School",
+        "Hermitage Academy",
+        "Hexham Priory School",
+        "James Calvert Spence College",
+        "Jesmond Park Academy",
+        "Kenton School",
+        "Kings Priory School",
+        "Kingsmeadow Community Comprehensive School",
+        "Longbenton High School",
+        "Lord Lawson of Beamish Academy",
+        "Monkseaton High School",
+        "Monkwearmouth Academy",
+        "NCEA Castle School",
+        "NCEA Duke's Secondary School",
+        "NCG",
+        "New College Durham",
+        "Newcastle Bridges School",
+        "Newcastle Sixth Form College - part of newcastle college group",
+        "North East Futures UTC",
+        "North Gosforth Academy",
+        "Northumberland College - part of city of sunderland college",
+        "Percy Hedley Hedleys College",
+        "Ponteland High School",
+        "Portland Academy",
+        "Prudhoe Community High School",
+        "Queen Elizabeth High School",
+        "Sacred Heart Catholic High School",
+        "Southmoor Academy",
+        "St Aidan's Catholic Academy",
+        "St Anthony's Girls' Catholic Academy",
+        "St Bede's Catholic School and Byron Sixth Form College",
+        "St Bede's Catholic School and Sixth Form College, Lanchester",
+        "St Benet Biscop Catholic Academy",
+        "St Cuthbert's High School",
+        "St Joseph's Catholic Academy",
+        "St Leonard's Catholic School, Durham",
+        "St Mary's Catholic School",
+        "St Robert of Newminster Catholic School and Sixth Form College, Washington",
+        "St Thomas More Catholic High School",
+        "St Thomas More Catholic School, Blaydon",
+        "St Wilfrid's RC College",
+        "Studio West",
+        "Teesdale School and Sixth Form",
+        "The Blyth Academy",
+        "The Cedars Academy",
+        "The Duchess's Community High School",
+        "The King Edward VI Academy",
+        "Thomas Bewick School",
+        "Thornbeck College - North East Autism Society",
+        "Thorp Academy",
+        "Trinity Academy New Bridge",
+        "Trinity Solutions Academy",
+        "Tyne Coast College (AKA South Tyneside College)",
+        "UTC South Durham",
+        "Walbottle Academy",
+        "Walker Riverside Academy",
+        "Whickham School",
+        "Whitburn Church of England Academy",
+        "Whitley Bay High School",
+        "Whitworth Park Academy",
+        "Woodlawn School",
+        "King James I Academy Bishop Auckland",
+        "St John's Catholic School & Sixth Form College",
+        "Park View School",
+        "Emmanuel College",
+        "Framwellgate School Durham",
+        "Durham Johnston Comprehensive School"
+    ];
+
+    accessibleAutocomplete({
+        autoselect: true,
+        element: document.querySelector('#establishment-container'),
+        id: 'establishment',
+        name: 'establishment',
+        source: establishments,
+        defaultValue: '{{ data[\'establishment\'] }}',
+        displayMenu: 'overlay',
+        minLength: 1,
+        NoResults: function () {
+            return "Not provided"
+        }
+    });
+</script>
+{% endblock %}

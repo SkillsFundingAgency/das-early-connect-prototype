@@ -1,0 +1,305 @@
+{% extends "layouts/main.html" %}
+{% set serviceName %}
+Get an apprenticeship adviser
+{% endset%}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+        <strong class="govuk-tag govuk-phase-banner__content__tag">
+            Prototype
+        </strong>
+        <span class="govuk-phase-banner__text">
+            This is not a real service
+        </span>
+    </p>
+</div>
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.go(-1);"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-l">Check your details before they’re sent to DfE</h1>
+        <p class="govuk-body">We’ll send this information to our team, who will match you with an adviser.</p>
+        <h2 class="govuk-heading-m">Personal details</h2>
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Name
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    {{ data['first-name'] or 'Sarah' }} {{ data['last-name'] or 'Philips' }}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link govuk-link--no-visited-state"
+                        href="name?change=true&source=service">Change<span class="govuk-visually-hidden">
+                            name</span></a>
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Date of birth
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    5 January 2007
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link govuk-link--no-visited-state"
+                        href="date-of-birth?change=true&source=service">Change<span class="govuk-visually-hidden">
+                            date of birth</span></a>
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row  govuk-summary-list__row--no-actions">
+                <dt class="govuk-summary-list__key">
+                    Email address
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    {{ data['email-address'] or 'emailaddress@domain.com' }}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link govuk-link--no-visited-state"
+                        href="email?change=true&source=service">Change<span class="govuk-visually-hidden"> telephone
+                            number</span></a>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Telephone number
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    {{ data['telephone-number'] or 'Not provided' }}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link govuk-link--no-visited-state"
+                        href="telephone?change=true&source=service">Change<span class="govuk-visually-hidden"> telephone
+                            number</span></a>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Postcode
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    {{ data['post-code'] or 'SE23 6FH' }}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link govuk-link--no-visited-state"
+                        href="postcode?change=true&source=service">Change<span class="govuk-visually-hidden">
+                            postcode</span></a>
+                </dd>
+            </div>
+
+
+        </dl>
+        <h2 class="govuk-heading-m">Education and preferences</h2>
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    School or college
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    {{ data['establishment'] or 'Example Academy' }}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link govuk-link--no-visited-state"
+                        href="establishment?change=true&source=service">Change<span class="govuk-visually-hidden">
+                            school or college</span></a>
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Areas of interest
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <ul class="govuk-list govuk-list--bullet">
+                        {% for item in data['sector'] %}
+                        <li>{{ item}}</li>
+                        {% endfor %}
+
+                        {% if data['sector'] %}
+                        {% for item in data['sector'] %}
+                        <li>{{ item}}</li>
+                        {% endfor %}
+                        {% else %}
+
+                        <li>Business and administration</li>
+                        <li>Finance and accounting</li>
+
+                        {% endif %}
+                    </ul>
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link govuk-link--no-visited-state"
+                        href="sector?change=true&source=service">Change<span class="govuk-visually-hidden">
+                            areas of
+                            interest</span></a>
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Where you've applied to stay in education
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    {% if data['existing-applications'] %}
+                    <ul class="govuk-list govuk-list--bullet"></ul>
+                    {% for item in data['existing-applications'] %}
+                    <li>{{ item}}</li>
+                    {% endfor %}
+                    </ul>
+                    {% else %}
+                    Apprenticeship
+                    {% endif %}
+
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link govuk-link--no-visited-state"
+                        href="existing-applications?change=true&source=service">Change<span
+                            class="govuk-visually-hidden"> previous and
+                            current applications</span></a>
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Would move to another area in England
+                </dt>
+                <dd class="govuk-summary-list__value">
+
+                    {{ data['relocate'] or 'No' }}
+
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link govuk-link--no-visited-state"
+                        href="relocate?change=true&source=service">Change<span class="govuk-visually-hidden"> would move
+                            to another area in England</span></a>
+                </dd>
+            </div>
+        </dl>
+        <h2 class="govuk-heading-m">Support details</h2>
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Apprenticeship level
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <ul class="govuk-list govuk-list--bullet">
+                        {% if data['level'] %}
+                        {% for item in data['level'] %}
+                        <li>{{ item}}</li>
+                        {% endfor %}
+                        {% else %}
+
+                        <li>Intermediate apprenticeships (level 2)</li>
+                        <li>Advanced apprenticeships (level 3)</li>
+
+                        {% endif %}
+                    </ul>
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link govuk-link--no-visited-state"
+                        href="level?change=true&source=service">Change<span class="govuk-visually-hidden">
+                            apprenticeship level</span></a>
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Support request
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <ul class="govuk-list govuk-list--bullet">
+                        {% if data['support'] %}
+                        {% for item in data['support'] %}
+                        <li>{{ item}}</li>
+                        {% endfor %}
+                        {% else %}
+
+                        <li>Making decisions about your future</li>
+                        <li>Applying for an apprenticeship</li>
+
+                        {% endif %}
+                    </ul>
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link govuk-link--no-visited-state"
+                        href="support?change=true&source=service">Change<span class="govuk-visually-hidden"> previous
+                            and
+                            current applications</span></a>
+                </dd>
+            </div>
+        </dl>
+        <h2 class="govuk-heading-m">Terms and conditions</h2>
+        <p class="govuk-body">The Department for Education (DfE) is working with regional partners to deliver this
+            service.</p>
+        <p class="govuk-body">By submitting this information, you agree that:</p>
+        <ul class="govuk-list--bullet govuk-list">
+            <li>we can share your information with our partner in your region</li>
+            <li>our regional partner can contact you about apprenticeships</li>
+            <li>we can ask you for feedback on this service</li>
+
+        </ul>
+
+        <details class="govuk-details">
+            <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                    Who are our regional partners?
+                </span>
+            </summary>
+            <div class="govuk-details__text">
+                <p class="govuk-body">Based on your postcode, we'll share your information with your local regional
+                    partner.
+                </p>
+
+                <table class="govuk-table">
+                    <thead class="govuk-table__head">
+                        <tr class="govuk-table__row">
+                            <th scope="col" class="govuk-table__header">Region</th>
+                            <th scope="col" class="govuk-table__header">Partner</th>
+                        </tr>
+                    </thead>
+                    <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Lancashire</th>
+                            <td class="govuk-table__cell">Lancashire Enterprise Partnership </td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">London</th>
+                            <td class="govuk-table__cell">Greater London Authority </td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">The North East</th>
+                            <td class="govuk-table__cell">North of Tyne Combined Authority, working with Education
+                                Development Trust </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </details>
+
+        <p class="govuk-body">We'll use and share your data according to our <a href="privacy-policy"
+                class="govuk-link govuk-link--no-visited-state" target="_blank">privacy policy (opens in new tab)</a>.
+            We'll keep your
+            data until 31 October
+            2024 to provide you this service. We'll then keep your data for up to another year so we can assess and
+            improve this
+            service.</p>
+
+        <p class="govuk-body">If you want to view your data, ask for your data to be deleted, or to withdraw from this
+            service, contact us at
+            <a href="mailto:engage.apprenticeships@education.gov.uk?subject=Get an apprenticeship adviser service"
+                class="govuk-link govuk-link--no-visited-state"
+                target=" _blank">engage.apprenticeships@education.gov.uk</a>.
+        </p>
+        <form action="confirmation" method="post" novalidate>
+            <input type="hidden" name="answers-checked" value="true">
+            <button type="submit" class="govuk-button" data-module="govuk-button">
+                Accept and send
+            </button>
+        </form>
+
+    </div>
+</div>
+
+{% endblock %}

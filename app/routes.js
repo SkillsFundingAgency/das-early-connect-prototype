@@ -267,6 +267,17 @@ router.post('/feature/triage-form/v5/check-your-answers/action', function (req, 
     }
 })
 
+// Triage form v6
+router.post('/feature/triage-form/v6/check-your-answers/action', function (req, res) {
+    var source = req.session.data['source']
+
+    if (source == "ucas") {
+        res.redirect('/feature/triage-form/v6/check-your-answers-ucas')
+    }
+    else {
+        res.redirect('/feature/triage-form/v6/check-your-answers')
+    }
+})
 
 // Multiple locations v6
 router.post('/feature/multiple-locations/v6/location/action', function (req, res) {

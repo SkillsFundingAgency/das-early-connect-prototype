@@ -1,0 +1,106 @@
+{% extends "layouts/main.html" %}
+{% set serviceName %}
+Get an apprenticeship adviser
+{% endset%}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+        <strong class="govuk-tag govuk-phase-banner__content__tag">
+            Prototype
+        </strong>
+        <span class="govuk-phase-banner__text">
+            This is not a real service
+        </span>
+    </p>
+</div>
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.go(-1);"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        {% if data['change'] == "true" %}
+        <form action="/feature/triage-form/v6/check-your-answers/action" method="post" novalidate>
+            {% else %}
+            <form action="existing-applications" method="post" novalidate>
+                {% endif %}
+
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" aria-describedby="interest-hint">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                            <h1 class="govuk-heading-l">What level of apprenticeship are you interested in?</h1>
+                        </legend>
+                        <p class="govuk-hint" id="interest-hint">Select all that apply
+                        </p>
+
+                        <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="level-1" name="level" type="checkbox"
+                                    value="Intermediate apprenticeships (Level 2)"
+                                    aria-describedby="intermediate-item-hint">
+                                <label class="govuk-label govuk-checkboxes__label" for="level-1">
+                                    Intermediate apprenticeships (Level 2)
+                                </label>
+                                <div id="intermediate-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                                    Equal to GCSEs
+                                </div>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="level-2" name="level" type="checkbox"
+                                    value="Advanced apprenticeships (Level 3)" aria-describedby="advanced-item-hint">
+                                <label class="govuk-label govuk-checkboxes__label" for="level-2">
+                                    Advanced apprenticeships (Level 3)
+                                </label>
+                                <div id="advanced-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                                    Equal to A levels
+                                </div>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="level-3" name="level" type="checkbox"
+                                    value="Higher apprenticeships (Levels 4-5)" aria-describedby="higher-item-hint">
+                                <label class="govuk-label govuk-checkboxes__label" for="level-3">
+                                    Higher apprenticeships (Levels 4-5)
+                                </label>
+                                <div id="higher-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                                    Equal to a Higher National Certificate or foundation degree
+                                </div>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="level-4" name="level" type="checkbox"
+                                    value="Degree apprenticeships (Levels 6-7)" aria-describedby="degree-item-hint">
+                                <label class="govuk-label govuk-checkboxes__label" for="level-4">
+                                    Degree apprenticeships (Levels 6-7)
+                                </label>
+                                <div id="degree-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                                    Equal to an undergraduate or postgraduate degree
+                                </div>
+                            </div>
+                            <div class="govuk-checkboxes__divider">or</div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="level-5" name="level" type="checkbox"
+                                    value="Not sure" data-behaviour="exclusive">
+                                <label class="govuk-label govuk-checkboxes__label" for="level-5">
+                                    Not sure
+                                </label>
+
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+
+
+
+                <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+            </form>
+
+    </div>
+</div>
+
+{% endblock %}

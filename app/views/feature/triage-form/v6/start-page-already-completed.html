@@ -1,0 +1,35 @@
+{% extends "layouts/main.html" %}
+{% set serviceName %}
+Get an apprenticeship adviser
+{% endset%}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+        <strong class="govuk-tag govuk-phase-banner__content__tag">
+            Prototype
+        </strong>
+        <span class="govuk-phase-banner__text">
+            This is not a real service
+        </span>
+    </p>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl">You have already completed this form</h1>
+        <p class="govuk-body govuk-!-margin-top-8">You have already completed a request on the 'Get an apprenticeship advisor' service.</p>
+        <p class="govuk-body">If you are having difficulty and need support, please <a href="mail:engage.apprenticeships@education.gov.uk" title="Contact the apprenticeship helpdesk">email the apprenticeship helpdesk</a>.</p>
+
+    </div>
+</div>
+
+<a href="start-page-ucas" role="button" draggable="false" class="govuk-button govuk-button--secondary"
+    data-module="govuk-button" style="position:absolute; top:160px; right:30px;">
+    View start page design
+</a>
+
+{% endblock %}

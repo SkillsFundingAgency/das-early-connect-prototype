@@ -1,0 +1,63 @@
+{% extends "layouts/main.html" %}
+
+{% block stylesheets %}
+  {{ super() }}
+  <link href="/public/css/das-main.css" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block header %}
+{{ govukHeader({
+serviceName: "Apprenticeships",
+containerClasses: "govuk-header govuk-width-container das-header--no-border das-header--provider-legacy"
+}) }}
+
+{% block after_header %}
+<div class="das-account-header das-account-header--provider">
+    <div class="account-information floating-menu" role="navigation">
+        <div class="js-float">
+            <p class="das-account-header__title">Your training provider account</p>
+            <nav class="das-user-navigation" id="user-nav">
+                <ul class="das-user-navigation__list" role="menubar">
+                    <li class="das-user-navigation__list-item"><a href="#" class="das-user-navigation__link">Christopher Hicks</a></li>
+                    <li class="das-user-navigation__list-item das-user-navigation__list-item  has-sub-menu">
+                        <a href="#" class="das-user-navigation__link" role="menuitem" class="menu-main">Settings</a>
+                    </li>
+                    <li class="das-user-navigation__list-item"><a href="#" role="menuitem" class="das-user-navigation__link menu-main">Sign out</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<div class="header-organisation" role="navigation">
+    <nav class="header-inner">
+        <ul role="menubar" id="global-nav-links">
+            <li><a href="#" class="govuk-link--no-visited-state selected" role="menuitem">Home</a></li>
+            <li><a href="#" class="govuk-link--no-visited-state" role="menuitem">Apprentice requests</a></li>
+            <li><a href="#" class="govuk-link--no-visited-state" role="menuitem">Manage funding</a></li>
+            <li><a href="#" class="govuk-link--no-visited-state" role="menuitem">Manage your apprentices</a></li>
+            <li><a href="#" class="govuk-link--no-visited-state" role="menuitem">Recruit apprentices</a></li>
+            <li class="menu-link"><a href="#" class="govuk-link--no-visited-state">More</a>
+                <ul>
+                    <li><a href="#" role="menuitem">PAYE schemes</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</div>
+{% endblock %}
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+        <strong class="govuk-tag govuk-phase-banner__content__tag ">Prototype</strong>
+        <span class="govuk-phase-banner__text">This is not a real service.</span>
+    </p>
+</div>
+
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.go(-1);"
+}) }}
+{% endblock %}

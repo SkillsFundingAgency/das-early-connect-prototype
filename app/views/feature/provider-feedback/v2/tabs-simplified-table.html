@@ -1,0 +1,761 @@
+{% extends "layouts/provider-header.html" %}
+
+{% block pageTitle %}
+  Your feedback – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner" style="margin-bottom: 2em;">
+      <div class="govuk-notification-banner__header">
+      <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+      Notice
+      </h2>
+      </div>
+      <div class="govuk-notification-banner__content">
+      <h3 class="govuk-notification-banner__heading">
+      XX MONTH 2024:
+      </h3>
+      <p>We made changes to how our review scores are calculated. You may see slightly different scores than you did before.
+      </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <h1 class="govuk-heading-xl">Your feedback</h1>
+    <h2 class="govuk-heading-l">Feedback from employers</h2>
+    <div class="govuk-tabs" data-module="govuk-tabs">
+  <h3 class="govuk-tabs__title">
+    Feedback from employers by year
+  </h3>
+  <ul class="govuk-tabs__list">
+    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+      <a class="govuk-tabs__tab" href="#employer2023to2024">
+        2023 to 2024
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#employer2022to2023">
+        2022 to 2023
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#employer2021to2022">
+        2021 to 2022
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#employer2020to2021">
+        2020 to 2021
+      </a>
+    </li>
+  </ul>
+  <div class="govuk-tabs__panel" id="employer2023to2024">
+    <p class="govuk-body-l govuk-!-margin-bottom-4">
+      <span class="das-rating das-rating--good" role="img" aria-label="Rating: 3 out of 4 stars">
+          <span aria-hidden="true" class="das-rating__icon-star"></span>
+          <span aria-hidden="true" class="das-rating__icon-star"></span>
+          <span aria-hidden="true" class="das-rating__icon-star"></span>
+          <span aria-hidden="true" class="das-rating__icon-star--empty"></span>
+      </span>
+      <span class="govuk-!-font-weight-bold das-rating__label--good">Good</span>
+      <span class="govuk-body">(236 reviews)</span>
+      </p>
+    <table class="govuk-table provider-feedback-employer-table">
+      <caption class="govuk-table__caption govuk-table__caption--m">1 September 2023 to <span class="currentDate"></span></caption>
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Metric</th>
+          <th scope="col" class="govuk-table__header">Percentage score</th>
+          <th scope="col" class="govuk-table__header">Total number of ratings</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Communication with employers</td>
+          <td class="govuk-table__cell">60%</td>
+          <td class="govuk-table__cell">184</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Reporting on progress of apprentices</td>
+          <td class="govuk-table__cell">40%</td>
+          <td class="govuk-table__cell">124</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Getting new apprentices started</td>
+          <td class="govuk-table__cell">75%</td>
+          <td class="govuk-table__cell">102</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Providing the right training at the right time</td>
+          <td class="govuk-table__cell">70%</td>
+          <td class="govuk-table__cell">70</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Training facilities</td>
+          <td class="govuk-table__cell">92%</td>
+          <td class="govuk-table__cell">62</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Adapting to my needs</td>
+          <td class="govuk-table__cell">77%</td>
+          <td class="govuk-table__cell">61</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Improving apprentice skills</td>
+          <td class="govuk-table__cell">79%</td>
+          <td class="govuk-table__cell">56</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Working with small numbers of apprentices</td>
+          <td class="govuk-table__cell">83%</td>
+          <td class="govuk-table__cell">52</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Initial assessment of apprentices</td>
+          <td class="govuk-table__cell">67%</td>
+          <td class="govuk-table__cell">42</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="employer2022to2023">
+    <p class="govuk-body-l govuk-!-margin-bottom-4">
+      <span class="das-rating das-rating--good" role="img" aria-label="Rating: 3 out of 4 stars">
+          <span aria-hidden="true" class="das-rating__icon-star"></span>
+          <span aria-hidden="true" class="das-rating__icon-star"></span>
+          <span aria-hidden="true" class="das-rating__icon-star"></span>
+          <span aria-hidden="true" class="das-rating__icon-star--empty"></span>
+      </span>
+      <span class="govuk-!-font-weight-bold das-rating__label--good">Good</span>
+      <span class="govuk-body">(231 reviews)</span>
+      </p>
+    <table class="govuk-table provider-feedback-employer-table">
+      <caption class="govuk-table__caption govuk-table__caption--m">1 September 2022 to 31 August 2023</caption>
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Metric</th>
+          <th scope="col" class="govuk-table__header">Percentage score</th>
+          <th scope="col" class="govuk-table__header">Total number of ratings</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Communication with employers</td>
+          <td class="govuk-table__cell">55%</td>
+          <td class="govuk-table__cell">179</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Reporting on progress of apprentices</td>
+          <td class="govuk-table__cell">35%</td>
+          <td class="govuk-table__cell">119</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Getting new apprentices started</td>
+          <td class="govuk-table__cell">70%</td>
+          <td class="govuk-table__cell">97</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Providing the right training at the right time</td>
+          <td class="govuk-table__cell">65%</td>
+          <td class="govuk-table__cell">65</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Training facilities</td>
+          <td class="govuk-table__cell">87%</td>
+          <td class="govuk-table__cell">57</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Adapting to my needs</td>
+          <td class="govuk-table__cell">72%</td>
+          <td class="govuk-table__cell">56</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Improving apprentice skills</td>
+          <td class="govuk-table__cell">74%</td>
+          <td class="govuk-table__cell">51</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Working with small numbers of apprentices</td>
+          <td class="govuk-table__cell">78%</td>
+          <td class="govuk-table__cell">47</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Initial assessment of apprentices</td>
+          <td class="govuk-table__cell">62%</td>
+          <td class="govuk-table__cell">37</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="employer2021to2022">
+    <p class="govuk-body-l govuk-!-margin-bottom-4">
+      <span class="das-rating das-rating--poor" role="img" aria-label="Rating: 2 out of 4 stars">
+          <span aria-hidden="true" class="das-rating__icon-star"></span>
+          <span aria-hidden="true" class="das-rating__icon-star"></span>
+          <span aria-hidden="true" class="das-rating__icon-star--empty"></span>
+          <span aria-hidden="true" class="das-rating__icon-star--empty"></span>
+      </span>
+      <span class="govuk-!-font-weight-bold das-rating__label--poor">Needs improvement</span>
+      <span class="govuk-body">(226 reviews)</span>
+      </p>
+    <table class="govuk-table provider-feedback-employer-table">
+      <caption class="govuk-table__caption govuk-table__caption--m">1 September 2021 to 31 August 2022</caption>
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Metric</th>
+          <th scope="col" class="govuk-table__header">Percentage score</th>
+          <th scope="col" class="govuk-table__header">Total number of ratings</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Communication with employers</td>
+          <td class="govuk-table__cell">50%</td>
+          <td class="govuk-table__cell">174</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Reporting on progress of apprentices</td>
+          <td class="govuk-table__cell">30%</td>
+          <td class="govuk-table__cell">114</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Getting new apprentices started</td>
+          <td class="govuk-table__cell">65%</td>
+          <td class="govuk-table__cell">92</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Providing the right training at the right time</td>
+          <td class="govuk-table__cell">60%</td>
+          <td class="govuk-table__cell">60</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Training facilities</td>
+          <td class="govuk-table__cell">82%</td>
+          <td class="govuk-table__cell">52</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Adapting to my needs</td>
+          <td class="govuk-table__cell">67%</td>
+          <td class="govuk-table__cell">51</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Improving apprentice skills</td>
+          <td class="govuk-table__cell">69%</td>
+          <td class="govuk-table__cell">46</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Working with small numbers of apprentices</td>
+          <td class="govuk-table__cell">73%</td>
+          <td class="govuk-table__cell">42</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Initial assessment of apprentices</td>
+          <td class="govuk-table__cell">57%</td>
+          <td class="govuk-table__cell">32</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="employer2020to2021">
+    <p class="govuk-body-l govuk-!-margin-bottom-4">
+        <span class="das-rating das-rating--poor" role="img" aria-label="Rating: 2 out of 4 stars">
+            <span aria-hidden="true" class="das-rating__icon-star"></span>
+            <span aria-hidden="true" class="das-rating__icon-star"></span>
+            <span aria-hidden="true" class="das-rating__icon-star--empty"></span>
+            <span aria-hidden="true" class="das-rating__icon-star--empty"></span>
+        </span>
+        <span class="govuk-!-font-weight-bold das-rating__label--poor">Needs improvement</span>
+        <span class="govuk-body">(221 reviews)</span>
+        </p>
+      <table class="govuk-table provider-feedback-employer-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">1 September 2020 to 31 August 2021</caption><thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Metric</th>
+            <th scope="col" class="govuk-table__header">Percentage score</th>
+            <th scope="col" class="govuk-table__header">Total number of ratings</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Communication with employers</td>
+            <td class="govuk-table__cell">45%</td>
+            <td class="govuk-table__cell">169</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Reporting on progress of apprentices</td>
+            <td class="govuk-table__cell">25%</td>
+            <td class="govuk-table__cell">109</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Getting new apprentices started</td>
+            <td class="govuk-table__cell">60%</td>
+            <td class="govuk-table__cell">87</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Providing the right training at the right time</td>
+            <td class="govuk-table__cell">55%</td>
+            <td class="govuk-table__cell">55</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Training facilities</td>
+            <td class="govuk-table__cell">77%</td>
+            <td class="govuk-table__cell">47</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Adapting to my needs</td>
+            <td class="govuk-table__cell">62%</td>
+            <td class="govuk-table__cell">46</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Improving apprentice skills</td>
+            <td class="govuk-table__cell">64%</td>
+            <td class="govuk-table__cell">41</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Working with small numbers of apprentices</td>
+            <td class="govuk-table__cell">78%</td>
+            <td class="govuk-table__cell">37</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Initial assessment of apprentices</td>
+            <td class="govuk-table__cell">52%</td>
+            <td class="govuk-table__cell">27</td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+</div>
+
+<h2 class="govuk-heading-l">Feedback from apprentices</h2>
+<div class="govuk-tabs" data-module="govuk-tabs">
+<h3 class="govuk-tabs__title">
+Feedback from apprentices by year
+</h3>
+<ul class="govuk-tabs__list">
+<li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+  <a class="govuk-tabs__tab" href="#apprentice2023toPresent">
+    2023 to 2024
+  </a>
+</li>
+<li class="govuk-tabs__list-item">
+  <a class="govuk-tabs__tab" href="#apprentice2022to2023">
+    2022 to 2023
+  </a>
+</li>
+<li class="govuk-tabs__list-item">
+  <a class="govuk-tabs__tab" href="#apprentice2021to2022">
+    2021 to 2022
+  </a>
+</li>
+<li class="govuk-tabs__list-item">
+  <a class="govuk-tabs__tab" href="#apprentice2020to2021">
+    2020 to 2021
+  </a>
+</li>
+</ul>
+<div class="govuk-tabs__panel" id="apprentice2023toPresent">
+<p class="govuk-body-l govuk-!-margin-bottom-4">
+  <span class="das-rating das-rating--good" role="img" aria-label="Rating: 3 out of 4 stars">
+      <span aria-hidden="true" class="das-rating__icon-star"></span>
+      <span aria-hidden="true" class="das-rating__icon-star"></span>
+      <span aria-hidden="true" class="das-rating__icon-star"></span>
+      <span aria-hidden="true" class="das-rating__icon-star--empty"></span>
+  </span>
+  <span class="govuk-!-font-weight-bold das-rating__label--good">Good</span>
+  <span class="govuk-body">(59 reviews)</span>
+  </p>
+  <h3 class="govuk-heading-m">1 September 2023 to <span class="currentDate"></span></h3>
+<table class="govuk-table provider-feedback-apprentice-table">
+  <caption class="govuk-table__caption govuk-table__caption--m">Communication</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Metric</th>
+      <th scope="col" class="govuk-table__header">Percentage score</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Communicating clearly with you</td>
+      <td class="govuk-table__cell">79%</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Ensuring you understand the requirements of your end-point assessment</td>
+      <td class="govuk-table__cell">77%</td>
+    </tr>
+  </tbody>
+</table>
+<table class="govuk-table provider-feedback-apprentice-table">
+  <caption class="govuk-table__caption govuk-table__caption--m">Organisation</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Metric</th>
+      <th scope="col" class="govuk-table__header">Percentage score</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Organising well-structured training</td>
+      <td class="govuk-table__cell">79%</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Providing accessible training resources</td>
+      <td class="govuk-table__cell">81%</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Balancing online learning with classroom-based training to suit your apprenticeship</td>
+      <td class="govuk-table__cell">71%</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Taking into account your previous learning</td>
+      <td class="govuk-table__cell">81%</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Giving you relevant training that helps you perform your job better</td>
+      <td class="govuk-table__cell">79%</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Providing Off The Job training that takes up at least 20% of your total apprenticeship time</td>
+      <td class="govuk-table__cell">92%</td>
+    </tr>
+  </tbody>
+</table>
+<table class="govuk-table provider-feedback-apprentice-table">
+  <caption class="govuk-table__caption govuk-table__caption--m">Support</caption><thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Metric</th>
+      <th scope="col" class="govuk-table__header">Percentage score</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Helping you learn new skills and develop existing ones</td>
+      <td class="govuk-table__cell">85%</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Supporting you and your apprenticeship</td>
+      <td class="govuk-table__cell">79%</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Resolving any issues you have</td>
+      <td class="govuk-table__cell">83%</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Preparing you for success in your future career</td>
+      <td class="govuk-table__cell">85%</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="apprentice2022to2023">
+<p class="govuk-body-l govuk-!-margin-bottom-4">
+  <span class="das-rating das-rating--good" role="img" aria-label="Rating: 3 out of 4 stars">
+      <span aria-hidden="true" class="das-rating__icon-star"></span>
+      <span aria-hidden="true" class="das-rating__icon-star"></span>
+      <span aria-hidden="true" class="das-rating__icon-star"></span>
+      <span aria-hidden="true" class="das-rating__icon-star--empty"></span>
+  </span>
+  <span class="govuk-!-font-weight-bold das-rating__label--good">Good</span>
+  <span class="govuk-body">(54 reviews)</span>
+  </p>
+  <h3 class="govuk-heading-m">1 September 2022 to 31 August 2023</h3>
+  <table class="govuk-table provider-feedback-apprentice-table">
+    <caption class="govuk-table__caption govuk-table__caption--m">Communication</caption>
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header">Metric</th>
+        <th scope="col" class="govuk-table__header">Percentage score</th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">Communicating clearly with you</td>
+        <td class="govuk-table__cell">74%</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">Ensuring you understand the requirements of your end-point assessment</td>
+        <td class="govuk-table__cell">72%</td>
+      </tr>
+    </tbody>
+  </table>
+  <table class="govuk-table provider-feedback-apprentice-table">
+    <caption class="govuk-table__caption govuk-table__caption--m">Organisation</caption>
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header">Metric</th>
+        <th scope="col" class="govuk-table__header">Percentage score</th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">Organising well-structured training</td>
+        <td class="govuk-table__cell">74%</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">Providing accessible training resources</td>
+        <td class="govuk-table__cell">76%</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">Balancing online learning with classroom-based training to suit your apprenticeship</td>
+        <td class="govuk-table__cell">66%</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">Taking into account your previous learning</td>
+        <td class="govuk-table__cell">76%</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">Giving you relevant training that helps you perform your job better</td>
+        <td class="govuk-table__cell">74%</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">Providing Off The Job training that takes up at least 20% of your total apprenticeship time</td>
+        <td class="govuk-table__cell">87%</td>
+      </tr>
+    </tbody>
+  </table>
+  <table class="govuk-table provider-feedback-apprentice-table">
+    <caption class="govuk-table__caption govuk-table__caption--m">Support</caption>
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header">Metric</th>
+        <th scope="col" class="govuk-table__header">Percentage score</th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">Helping you learn new skills and develop existing ones</td>
+        <td class="govuk-table__cell">80%</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">Supporting you and your apprenticeship</td>
+        <td class="govuk-table__cell">74%</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">Resolving any issues you have</td>
+        <td class="govuk-table__cell">78%</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">Preparing you for success in your future career</td>
+        <td class="govuk-table__cell">80%</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="apprentice2021to2022">
+<p class="govuk-body-l govuk-!-margin-bottom-4">
+  <span class="das-rating das-rating--poor" role="img" aria-label="Rating: 2 out of 4 stars">
+      <span aria-hidden="true" class="das-rating__icon-star"></span>
+      <span aria-hidden="true" class="das-rating__icon-star"></span>
+      <span aria-hidden="true" class="das-rating__icon-star--empty"></span>
+      <span aria-hidden="true" class="das-rating__icon-star--empty"></span>
+  </span>
+  <span class="govuk-!-font-weight-bold das-rating__label--poor">Needs improvement</span>
+  <span class="govuk-body">(49 reviews)</span>
+  </p>
+  <h3 class="govuk-heading-m">1 September 2021 to 31 August 2022</h3>
+<table class="govuk-table provider-feedback-apprentice-table">
+  <caption class="govuk-table__caption govuk-table__caption--m">Communication</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Metric</th>
+      <th scope="col" class="govuk-table__header">Percentage score</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Communicating clearly with you</td>
+      <td class="govuk-table__cell">69%</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Ensuring you understand the requirements of your end-point assessment</td>
+      <td class="govuk-table__cell">67%</td>
+    </tr>
+  </tbody>
+</table>
+<table class="govuk-table provider-feedback-apprentice-table">
+  <caption class="govuk-table__caption govuk-table__caption--m">Organisation</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Metric</th>
+      <th scope="col" class="govuk-table__header">Percentage score</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Organising well-structured training</td>
+      <td class="govuk-table__cell">69%</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Providing accessible training resources</td>
+      <td class="govuk-table__cell">71%</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Balancing online learning with classroom-based training to suit your apprenticeship</td>
+      <td class="govuk-table__cell">61%</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Taking into account your previous learning</td>
+      <td class="govuk-table__cell">71%</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Giving you relevant training that helps you perform your job better</td>
+      <td class="govuk-table__cell">69%</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Providing Off The Job training that takes up at least 20% of your total apprenticeship time</td>
+      <td class="govuk-table__cell">82%</td>
+    </tr>
+  </tbody>
+</table>
+<table class="govuk-table provider-feedback-apprentice-table">
+  <caption class="govuk-table__caption govuk-table__caption--m">Support</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Metric</th>
+      <th scope="col" class="govuk-table__header">Percentage score</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Helping you learn new skills and develop existing ones</td>
+      <td class="govuk-table__cell">75%</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Supporting you and your apprenticeship</td>
+      <td class="govuk-table__cell">69%</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Resolving any issues you have</td>
+      <td class="govuk-table__cell">73%</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Preparing you for success in your future career</td>
+      <td class="govuk-table__cell">75%</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="apprentice2020to2021">
+<p class="govuk-body-l govuk-!-margin-bottom-4">
+  <span class="das-rating das-rating--poor" role="img" aria-label="Rating: 2 out of 4 stars">
+      <span aria-hidden="true" class="das-rating__icon-star"></span>
+      <span aria-hidden="true" class="das-rating__icon-star"></span>
+      <span aria-hidden="true" class="das-rating__icon-star--empty"></span>
+      <span aria-hidden="true" class="das-rating__icon-star--empty"></span>
+  </span>
+  <span class="govuk-!-font-weight-bold das-rating__label--poor">Needs improvement</span>
+  <span class="govuk-body">(44 reviews)</span>
+  </p>
+  <h3 class="govuk-heading-m">1 September 2020 to 31 August 2021</h3>
+<table class="govuk-table provider-feedback-apprentice-table">
+  <caption class="govuk-table__caption govuk-table__caption--m">Communication</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Metric</th>
+      <th scope="col" class="govuk-table__header">Percentage score</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Communicating clearly with you</td>
+      <td class="govuk-table__cell">59%</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Ensuring you understand the requirements of your end-point assessment</td>
+      <td class="govuk-table__cell">57%</td>
+    </tr>
+  </tbody>
+</table>
+<table class="govuk-table provider-feedback-apprentice-table">
+  <caption class="govuk-table__caption govuk-table__caption--m">Organisation</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Metric</th>
+      <th scope="col" class="govuk-table__header">Percentage score</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Organising well-structured training</td>
+      <td class="govuk-table__cell">59%</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Providing accessible training resources</td>
+      <td class="govuk-table__cell">61%</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Balancing online learning with classroom-based training to suit your apprenticeship</td>
+      <td class="govuk-table__cell">51%</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Taking into account your previous learning</td>
+      <td class="govuk-table__cell">61%</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Giving you relevant training that helps you perform your job better</td>
+      <td class="govuk-table__cell">59%</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Providing Off The Job training that takes up at least 20% of your total apprenticeship time</td>
+      <td class="govuk-table__cell">72%</td>
+    </tr>
+  </tbody>
+</table>
+<table class="govuk-table provider-feedback-apprentice-table">
+  <caption class="govuk-table__caption govuk-table__caption--m">Support</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Metric</th>
+      <th scope="col" class="govuk-table__header">Percentage score</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Helping you learn new skills and develop existing ones</td>
+      <td class="govuk-table__cell">65%</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Supporting you and your apprenticeship</td>
+      <td class="govuk-table__cell">59%</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Resolving any issues you have</td>
+      <td class="govuk-table__cell">63%</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Preparing you for success in your future career</td>
+      <td class="govuk-table__cell">65%</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+<script>
+  // Function to generate formatted date
+  function generateFormattedDate() {
+    // Get the current date
+    var currentDate = new Date();
+
+    // Format the date with the name of the month using toLocaleString()
+    var formattedDate = currentDate.getDate() + ' ' +
+                        currentDate.toLocaleString('en-GB', { month: 'long' }) + ' ' +
+                        currentDate.getFullYear();
+
+    return formattedDate;
+  }
+
+  // Update all elements with the class 'currentDate' with the formatted date
+  var currentDateElements = document.querySelectorAll('.currentDate');
+  currentDateElements.forEach(function(element) {
+    element.textContent = generateFormattedDate();
+  });
+</script>
+
+{% endblock %}

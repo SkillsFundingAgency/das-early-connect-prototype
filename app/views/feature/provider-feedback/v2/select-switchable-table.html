@@ -1,0 +1,1134 @@
+{% extends "layouts/provider-header.html" %}
+
+{% block stylesheets %}
+  {{ super() }}
+  <link href="/public/css/employer-reviews-app.css" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block pageTitle %}
+  Your feedback – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner" style="margin-bottom: 2em;">
+        <div class="govuk-notification-banner__header">
+          <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+            Notice
+          </h2>
+        </div>
+        <div class="govuk-notification-banner__content">
+          <h3 class="govuk-notification-banner__heading">
+            XX MONTH 2024:
+          </h3>
+          <p>We made changes to how our review scores are calculated. You may see slightly different scores than you did before.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h1 class="govuk-heading-xl">Your feedback</h1>
+  <h2 class="govuk-heading-l">Feedback from employers</h2>
+  <div class="govuk-tabs" data-module="govuk-tabs">
+    <h3 class="govuk-tabs__title">
+      Feedback from employers by year
+    </h3>
+
+    <div class="govuk-form-group feedback-group" data-group="employers">
+      <label class="govuk-label" for="sort-employers">
+        Choose which feedback period you would like to see:
+      </label>
+      <select class="govuk-select" id="sort-employers" name="sort-employers" data-panel="employers">
+        <option value="employer2023to2024" selected>2023 to 2024</option>
+        <option value="employer2022to2023">2022 to 2023</option>
+        <option value="employer2021to2022">2021 to 2022</option>
+        <option value="employer2020to2021">2020 to 2021</option>
+      </select>
+    </div>
+
+    <!-- EMPLOYERS FEEDBACK 2023 TO 2024 STARTS -->
+    <div class="govuk-tabs__panel govuk-tabs__panel-employers" id="employer2023to2024">
+      <p class="govuk-body-l govuk-!-margin-bottom-4">
+        <span class="das-rating das-rating--good" role="img" aria-label="Rating: 3 out of 4 stars">
+          <span aria-hidden="true" class="das-rating__icon-star"></span>
+          <span aria-hidden="true" class="das-rating__icon-star"></span>
+          <span aria-hidden="true" class="das-rating__icon-star"></span>
+          <span aria-hidden="true" class="das-rating__icon-star--empty"></span>
+        </span>
+        <span class="govuk-!-font-weight-bold das-rating__label--good">Good</span>
+        <span class="govuk-body">(236 reviews)</span>
+      </p>
+      <h3 class="govuk-heading-m">1 September 2023 to <span class="currentDate">26 April 2024</span></h3>
+      <!-- GRAPH AND TABLES CODE STARTS -->
+      <div data-show-hide-panels="true">
+        <div class="app-show-hide-panel" data-panel-label="graph" id="app-emp-feedback-graph-2023to2024">
+          <div class="govuk-button-group app-show-hide-panel__buttons">
+            <!-- Button to switch to the table view -->
+            <button class="govuk-button govuk-button--secondary govuk-!-font-size-16" onclick="toggleTables('employer2023to2024')">Change to table and accessible view</button>
+          </div>
+          <!-- Your graph content -->
+          <!-- Your graph content -->
+          <div id="employer-feedback-graph">
+            <div class="app-graph"><ul class="app-graph-key"><li class="app-graph-key__list-item app-graph-key__list-item--colour-1">Percentage of employers that selected this as a strength</li><li class="app-graph-key__list-item app-graph-key__list-item--colour-2">Percentage of employers that selected this as needs improvement</li></ul><ul class="app-graph__list"><li class="app-graph__list-item"><h3 class="app-graph__label">Communication with employers<span class="app-graph__caption">(selected by 184 employers)</span></h3><div class="app-graph__chart-wrap"><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-1" style="width: 60%;" title="60% of 184 employers selected this as a 'strength'" tabindex="0"><span class="app-graph__figure">60%</span></span></span></span><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-2" style="width: 40%;" title="40% of 184 employers selected this as a 'needs improvement'" tabindex="0"><span class="app-graph__figure">40%</span></span></span></span></div></li><li class="app-graph__list-item"><h3 class="app-graph__label">Reporting on progress of apprentices<span class="app-graph__caption">(selected by 124 employers)</span></h3><div class="app-graph__chart-wrap"><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-1" style="width: 40%;" title="40% of 124 employers selected this as a 'strength'" tabindex="0"><span class="app-graph__figure">40%</span></span></span></span><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-2" style="width: 60%;" title="60% of 124 employers selected this as a 'needs improvement'" tabindex="0"><span class="app-graph__figure">60%</span></span></span></span></div></li><li class="app-graph__list-item"><h3 class="app-graph__label">Getting new apprentices started<span class="app-graph__caption">(selected by 102 employers)</span></h3><div class="app-graph__chart-wrap"><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-1" style="width: 75%;" title="75% of 102 employers selected this as a 'strength'" tabindex="0"><span class="app-graph__figure">75%</span></span></span></span><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-2" style="width: 25%;" title="25% of 102 employers selected this as a 'needs improvement'" tabindex="0"><span class="app-graph__figure">25%</span></span></span></span></div></li><li class="app-graph__list-item"><h3 class="app-graph__label">Providing the right training at the right time<span class="app-graph__caption">(selected by 70 employers)</span></h3><div class="app-graph__chart-wrap"><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-1" style="width: 70%;" title="70% of 70 employers selected this as a 'strength'" tabindex="0"><span class="app-graph__figure">70%</span></span></span></span><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-2" style="width: 30%;" title="30% of 70 employers selected this as a 'needs improvement'" tabindex="0"><span class="app-graph__figure">30%</span></span></span></span></div></li><li class="app-graph__list-item"><h3 class="app-graph__label">Training facilities<span class="app-graph__caption">(selected by 62 employers)</span></h3><div class="app-graph__chart-wrap"><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-1" style="width: 92%;" title="92% of 62 employers selected this as a 'strength'" tabindex="0"><span class="app-graph__figure">92%</span></span></span></span><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-2" style="width: 8%;" title="8% of 62 employers selected this as a 'needs improvement'" tabindex="0"><span class="app-graph__figure">8%</span></span></span></span></div></li><li class="app-graph__list-item"><h3 class="app-graph__label">Adapting to my needs<span class="app-graph__caption">(selected by 61 employers)</span></h3><div class="app-graph__chart-wrap"><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-1" style="width: 77%;" title="77% of 61 employers selected this as a 'strength'" tabindex="0"><span class="app-graph__figure">77%</span></span></span></span><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-2" style="width: 23%;" title="23% of 61 employers selected this as a 'needs improvement'" tabindex="0"><span class="app-graph__figure">23%</span></span></span></span></div></li><li class="app-graph__list-item"><h3 class="app-graph__label">Improving apprentice skills<span class="app-graph__caption">(selected by 56 employers)</span></h3><div class="app-graph__chart-wrap"><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-1" style="width: 79%;" title="79% of 56 employers selected this as a 'strength'" tabindex="0"><span class="app-graph__figure">79%</span></span></span></span><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-2" style="width: 21%;" title="21% of 56 employers selected this as a 'needs improvement'" tabindex="0"><span class="app-graph__figure">21%</span></span></span></span></div></li><li class="app-graph__list-item"><h3 class="app-graph__label">Working with small numbers of apprentices<span class="app-graph__caption">(selected by 52 employers)</span></h3><div class="app-graph__chart-wrap"><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-1" style="width: 83%;" title="83% of 52 employers selected this as a 'strength'" tabindex="0"><span class="app-graph__figure">83%</span></span></span></span><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-2" style="width: 17%;" title="17% of 52 employers selected this as a 'needs improvement'" tabindex="0"><span class="app-graph__figure">17%</span></span></span></span></div></li><li class="app-graph__list-item"><h3 class="app-graph__label">Initial assessment of apprentices<span class="app-graph__caption">(selected by 49 employers)</span></h3><div class="app-graph__chart-wrap"><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-1" style="width: 67%;" title="67% of 49 employers selected this as a 'strength'" tabindex="0"><span class="app-graph__figure">67%</span></span></span></span><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-2" style="width: 33%;" title="33% of 49 employers selected this as a 'needs improvement'" tabindex="0"><span class="app-graph__figure">33%</span></span></span></span></div></li></ul></div>
+          </div>
+        </div>
+      </div>
+      <!-- TABLE CONTAINER -->
+      <div class="app-show-hide-panel app-show-hide-panel__hidden" data-panel-label="table and accessible" id="app-emp-feedback-table-2023to2024">
+        <div class="govuk-button-group app-show-hide-panel__buttons">
+          <!-- Button to switch back to the graph view -->
+          <button class="govuk-button govuk-button--secondary govuk-!-font-size-16" onclick="toggleTables('employer2023to2024')">Change to graph view</button>
+        </div>
+        <table class="govuk-table das-table--responsive govuk-!-font-size-16" data-target="employer-feedback-graph" data-label="employers" data-feedback-graph="true">
+            <thead class="govuk-table__head">
+                  <tr class="govuk-table__row">
+                      <th scope="col" class="govuk-table__header">Statement</th>
+                      <th scope="col" class="govuk-table__header govuk-table__header--numeric">Percentage of employers that selected this as a "strength"</th>
+                      <th scope="col" class="govuk-table__header govuk-table__header--numeric">Percentage of employers that selected this as "needs improvement"</th>
+                      <th scope="col" class="govuk-table__header govuk-table__header--numeric">Total number of employers that selected this statement</th>
+                  </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                      <th class="govuk-table__cell govuk-!-font-weight-regular" scope="row">Communication with employers</th>
+                      <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of employers that selected this as a strength" data-title="60% of 184 employers selected this as a 'strength'">
+                      60%
+                      </td>
+                      <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of employers that selected this as needs improvement" data-title="40% of 184 employers selected this as a 'needs improvement'">
+                      40%
+                      </td>
+                      <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Total number of employers that selected this statement">184</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                      <th class="govuk-table__cell govuk-!-font-weight-regular" scope="row">Reporting on progress of apprentices</th>
+                      <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of employers that selected this as a strength" data-title="40% of 124 employers selected this as a 'strength'">
+                      40%
+                      </td>
+                      <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of employers that selected this as needs improvement" data-title="60% of 124 employers selected this as a 'needs improvement'">
+                      60%
+                      </td>
+                      <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Total number of employers that selected this statement">124</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                      <th class="govuk-table__cell govuk-!-font-weight-regular" scope="row">Getting new apprentices started</th>
+                      <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of employers that selected this as a strength" data-title="75% of 102 employers selected this as a 'strength'">
+                      75%
+                      </td>
+                      <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of employers that selected this as needs improvement" data-title="25% of 102 employers selected this as a 'needs improvement'">
+                      25%
+                      </td>
+                      <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Total number of employers that selected this statement">102</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                      <th class="govuk-table__cell govuk-!-font-weight-regular" scope="row">Providing the right training at the right time</th>
+                      <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of employers that selected this as a strength" data-title="70% of 70 employers selected this as a 'strength'">
+                      70%
+                      </td>
+                      <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of employers that selected this as needs improvement" data-title="30% of 70 employers selected this as a 'needs improvement'">
+                      30%
+                      </td>
+                      <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Total number of employers that selected this statement">70</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                      <th class="govuk-table__cell govuk-!-font-weight-regular" scope="row">Training facilities</th>
+                      <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of employers that selected this as a strength" data-title="92% of 62 employers selected this as a 'strength'">
+                      92%
+                      </td>
+                      <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of employers that selected this as needs improvement" data-title="8% of 62 employers selected this as a 'needs improvement'">
+                      8%
+                      </td>
+                      <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Total number of employers that selected this statement">62</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                      <th class="govuk-table__cell govuk-!-font-weight-regular" scope="row">Adapting to my needs</th>
+                      <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of employers that selected this as a strength" data-title="77% of 61 employers selected this as a 'strength'">
+                      77%
+                      </td>
+                      <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of employers that selected this as needs improvement" data-title="23% of 61 employers selected this as a 'needs improvement'">
+                      23%
+                      </td>
+                      <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Total number of employers that selected this statement">61</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                      <th class="govuk-table__cell govuk-!-font-weight-regular" scope="row">Improving apprentice skills</th>
+                      <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of employers that selected this as a strength" data-title="79% of 56 employers selected this as a 'strength'">
+                      79%
+                      </td>
+                      <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of employers that selected this as needs improvement" data-title="21% of 56 employers selected this as a 'needs improvement'">
+                      21%
+                      </td>
+                      <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Total number of employers that selected this statement">56</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                      <th class="govuk-table__cell govuk-!-font-weight-regular" scope="row">Working with small numbers of apprentices</th>
+                      <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of employers that selected this as a strength" data-title="83% of 52 employers selected this as a 'strength'">
+                      83%
+                      </td>
+                      <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of employers that selected this as needs improvement" data-title="17% of 52 employers selected this as a 'needs improvement'">
+                      17%
+                      </td>
+                      <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Total number of employers that selected this statement">52</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                      <th class="govuk-table__cell govuk-!-font-weight-regular" scope="row">Initial assessment of apprentices</th>
+                      <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of employers that selected this as a strength" data-title="67% of 49 employers selected this as a 'strength'">
+                      67%
+                      </td>
+                      <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of employers that selected this as needs improvement" data-title="33% of 49 employers selected this as a 'needs improvement'">
+                      33%
+                      </td>
+                      <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Total number of employers that selected this statement">49</td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+      <!-- GRAPH AND TABLES CODE ENDS -->
+    </div>
+    <!-- EMPLOYERS FEEDBACK 2023 TO 2024 ENDS -->
+
+    <!-- EMPLOYERS FEEDBACK 2022 TO 2023 STARTS -->
+    <div class="govuk-tabs__panel govuk-tabs__panel-employers govuk-tabs__panel--hidden" id="employer2022to2023">
+      <p class="govuk-body-l govuk-!-margin-bottom-4">
+        <span class="das-rating das-rating--good" role="img" aria-label="Rating: 3 out of 4 stars">
+          <span aria-hidden="true" class="das-rating__icon-star"></span>
+          <span aria-hidden="true" class="das-rating__icon-star"></span>
+          <span aria-hidden="true" class="das-rating__icon-star"></span>
+          <span aria-hidden="true" class="das-rating__icon-star--empty"></span>
+        </span>
+        <span class="govuk-!-font-weight-bold das-rating__label--good">Good</span>
+        <span class="govuk-body">(226 reviews)</span>
+      </p>
+      <h3 class="govuk-heading-m">1 September 2022 to 31 August 2023</h3>
+      <!-- GRAPH AND TABLES CODE STARTS -->
+      <div data-show-hide-panels="true">
+        <div class="app-show-hide-panel" data-panel-label="graph" id="app-emp-feedback-graph-2022to2023">
+          <div class="govuk-button-group app-show-hide-panel__buttons">
+            <!-- Button to switch to the table view -->
+            <button class="govuk-button govuk-button--secondary govuk-!-font-size-16" onclick="toggleTables('employer2022to2023')">Change to table and accessible view</button>
+          </div>
+          <!-- Your graph content -->
+          <div id="employer-feedback-graph">
+            <div class="app-graph"><ul class="app-graph-key"><li class="app-graph-key__list-item app-graph-key__list-item--colour-1">Percentage of employers that selected this as a strength</li><li class="app-graph-key__list-item app-graph-key__list-item--colour-2">Percentage of employers that selected this as needs improvement</li></ul><ul class="app-graph__list"><li class="app-graph__list-item"><h3 class="app-graph__label">Communication with employers<span class="app-graph__caption">(selected by 49 employers)</span></h3><div class="app-graph__chart-wrap"><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-1" style="width: 61%;" title="61% of 49 employers selected this as a 'strength'" tabindex="0"><span class="app-graph__figure">61%</span></span></span></span><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-2" style="width: 39%;" title="39% of 49 employers selected this as a 'needs improvement'" tabindex="0"><span class="app-graph__figure">39%</span></span></span></span></div></li><li class="app-graph__list-item"><h3 class="app-graph__label">Getting new apprentices started<span class="app-graph__caption">(selected by 36 employers)</span></h3><div class="app-graph__chart-wrap"><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-1" style="width: 86%;" title="86% of 36 employers selected this as a 'strength'" tabindex="0"><span class="app-graph__figure">86%</span></span></span></span><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-2" style="width: 14%;" title="14% of 36 employers selected this as a 'needs improvement'" tabindex="0"><span class="app-graph__figure">14%</span></span></span></span></div></li><li class="app-graph__list-item"><h3 class="app-graph__label">Reporting on progress of apprentices<span class="app-graph__caption">(selected by 31 employers)</span></h3><div class="app-graph__chart-wrap"><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-1" style="width: 52%;" title="52% of 31 employers selected this as a 'strength'" tabindex="0"><span class="app-graph__figure">52%</span></span></span></span><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-2" style="width: 48%;" title="48% of 31 employers selected this as a 'needs improvement'" tabindex="0"><span class="app-graph__figure">48%</span></span></span></span></div></li><li class="app-graph__list-item"><h3 class="app-graph__label">Providing the right training at the right time<span class="app-graph__caption">(selected by 19 employers)</span></h3><div class="app-graph__chart-wrap"><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-1" style="width: 63%;" title="63% of 19 employers selected this as a 'strength'" tabindex="0"><span class="app-graph__figure">63%</span></span></span></span><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-2" style="width: 37%;" title="37% of 19 employers selected this as a 'needs improvement'" tabindex="0"><span class="app-graph__figure">37%</span></span></span></span></div></li><li class="app-graph__list-item"><h3 class="app-graph__label">Improving apprentice skills<span class="app-graph__caption">(selected by 19 employers)</span></h3><div class="app-graph__chart-wrap"><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-1" style="width: 84%;" title="84% of 19 employers selected this as a 'strength'" tabindex="0"><span class="app-graph__figure">84%</span></span></span></span><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-2" style="width: 16%;" title="16% of 19 employers selected this as a 'needs improvement'" tabindex="0"><span class="app-graph__figure">16%</span></span></span></span></div></li><li class="app-graph__list-item"><h3 class="app-graph__label">Initial assessment of apprentices<span class="app-graph__caption">(selected by 18 employers)</span></h3><div class="app-graph__chart-wrap"><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-1" style="width: 78%;" title="78% of 18 employers selected this as a 'strength'" tabindex="0"><span class="app-graph__figure">78%</span></span></span></span><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-2" style="width: 22%;" title="22% of 18 employers selected this as a 'needs improvement'" tabindex="0"><span class="app-graph__figure">22%</span></span></span></span></div></li><li class="app-graph__list-item"><h3 class="app-graph__label">Adapting to my needs<span class="app-graph__caption">(selected by 17 employers)</span></h3><div class="app-graph__chart-wrap"><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-1" style="width: 71%;" title="71% of 17 employers selected this as a 'strength'" tabindex="0"><span class="app-graph__figure">71%</span></span></span></span><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-2" style="width: 29%;" title="29% of 17 employers selected this as a 'needs improvement'" tabindex="0"><span class="app-graph__figure">29%</span></span></span></span></div></li><li class="app-graph__list-item"><h3 class="app-graph__label">Working with small numbers of apprentices<span class="app-graph__caption">(selected by 6 employers)</span></h3><div class="app-graph__chart-wrap"><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-1" style="width: 67%;" title="67% of 6 employers selected this as a 'strength'" tabindex="0"><span class="app-graph__figure">67%</span></span></span></span><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-2" style="width: 33%;" title="33% of 6 employers selected this as a 'needs improvement'" tabindex="0"><span class="app-graph__figure">33%</span></span></span></span></div></li><li class="app-graph__list-item"><h3 class="app-graph__label">Training facilities<span class="app-graph__caption">(selected by 3 employers)</span></h3><div class="app-graph__chart-wrap"><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-1" style="width: 67%;" title="67% of 3 employers selected this as a 'strength'" tabindex="0"><span class="app-graph__figure">67%</span></span></span></span><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-2" style="width: 33%;" title="33% of 3 employers selected this as a 'needs improvement'" tabindex="0"><span class="app-graph__figure">33%</span></span></span></span></div></li></ul></div>
+          </div>
+        </div>
+      </div>
+      <!-- TABLE CONTAINER -->
+      <div class="app-show-hide-panel app-show-hide-panel__hidden" data-panel-label="table and accessible" id="app-emp-feedback-table-2022to2023">
+        <div class="govuk-button-group app-show-hide-panel__buttons">
+          <!-- Button to switch back to the graph view -->
+          <button class="govuk-button govuk-button--secondary govuk-!-font-size-16" onclick="toggleTables('employer2022to2023')">Change to graph view</button>
+        </div>
+        <table class="govuk-table das-table--responsive govuk-!-font-size-16" data-target="employer-feedback-graph" data-label="employers" data-feedback-graph="true">
+          <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header">Statement</th>
+                  <th scope="col" class="govuk-table__header govuk-table__header--numeric">Percentage of employers that selected this as a "strength"</th>
+                  <th scope="col" class="govuk-table__header govuk-table__header--numeric">Percentage of employers that selected this as "needs improvement"</th>
+                  <th scope="col" class="govuk-table__header govuk-table__header--numeric">Total number of employers that selected this statement</th>
+              </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                  <th class="govuk-table__cell govuk-!-font-weight-regular" scope="row">Communication with employers</th>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of employers that selected this as a strength" data-title="61% of 49 employers selected this as a 'strength'">
+                  61%
+                  </td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of employers that selected this as needs improvement" data-title="39% of 49 employers selected this as a 'needs improvement'">
+                  39%
+                  </td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Total number of employers that selected this statement">49</td>
+              </tr>
+              <tr class="govuk-table__row">
+                  <th class="govuk-table__cell govuk-!-font-weight-regular" scope="row">Getting new apprentices started</th>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of employers that selected this as a strength" data-title="86% of 36 employers selected this as a 'strength'">
+                  86%
+                  </td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of employers that selected this as needs improvement" data-title="14% of 36 employers selected this as a 'needs improvement'">
+                  14%
+                  </td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Total number of employers that selected this statement">36</td>
+              </tr>
+              <tr class="govuk-table__row">
+                  <th class="govuk-table__cell govuk-!-font-weight-regular" scope="row">Reporting on progress of apprentices</th>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of employers that selected this as a strength" data-title="52% of 31 employers selected this as a 'strength'">
+                  52%
+                  </td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of employers that selected this as needs improvement" data-title="48% of 31 employers selected this as a 'needs improvement'">
+                  48%
+                  </td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Total number of employers that selected this statement">31</td>
+              </tr>
+              <tr class="govuk-table__row">
+                  <th class="govuk-table__cell govuk-!-font-weight-regular" scope="row">Providing the right training at the right time</th>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of employers that selected this as a strength" data-title="63% of 19 employers selected this as a 'strength'">
+                  63%
+                  </td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of employers that selected this as needs improvement" data-title="37% of 19 employers selected this as a 'needs improvement'">
+                  37%
+                  </td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Total number of employers that selected this statement">19</td>
+              </tr>
+              <tr class="govuk-table__row">
+                  <th class="govuk-table__cell govuk-!-font-weight-regular" scope="row">Improving apprentice skills</th>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of employers that selected this as a strength" data-title="84% of 19 employers selected this as a 'strength'">
+                  84%
+                  </td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of employers that selected this as needs improvement" data-title="16% of 19 employers selected this as a 'needs improvement'">
+                  16%
+                  </td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Total number of employers that selected this statement">19</td>
+              </tr>
+              <tr class="govuk-table__row">
+                  <th class="govuk-table__cell govuk-!-font-weight-regular" scope="row">Initial assessment of apprentices</th>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of employers that selected this as a strength" data-title="78% of 18 employers selected this as a 'strength'">
+                  78%
+                  </td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of employers that selected this as needs improvement" data-title="22% of 18 employers selected this as a 'needs improvement'">
+                  22%
+                  </td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Total number of employers that selected this statement">18</td>
+              </tr>
+              <tr class="govuk-table__row">
+                  <th class="govuk-table__cell govuk-!-font-weight-regular" scope="row">Adapting to my needs</th>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of employers that selected this as a strength" data-title="71% of 17 employers selected this as a 'strength'">
+                  71%
+                  </td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of employers that selected this as needs improvement" data-title="29% of 17 employers selected this as a 'needs improvement'">
+                  29%
+                  </td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Total number of employers that selected this statement">17</td>
+              </tr>
+              <tr class="govuk-table__row">
+                  <th class="govuk-table__cell govuk-!-font-weight-regular" scope="row">Working with small numbers of apprentices</th>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of employers that selected this as a strength" data-title="67% of 6 employers selected this as a 'strength'">
+                  67%
+                  </td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of employers that selected this as needs improvement" data-title="33% of 6 employers selected this as a 'needs improvement'">
+                  33%
+                  </td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Total number of employers that selected this statement">6</td>
+              </tr>
+              <tr class="govuk-table__row">
+                  <th class="govuk-table__cell govuk-!-font-weight-regular" scope="row">Training facilities</th>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of employers that selected this as a strength" data-title="67% of 3 employers selected this as a 'strength'">
+                  67%
+                  </td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of employers that selected this as needs improvement" data-title="33% of 3 employers selected this as a 'needs improvement'">
+                  33%
+                  </td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Total number of employers that selected this statement">3</td>
+              </tr>
+          </tbody>
+      </table>
+      </div>
+      <!-- GRAPH AND TABLES CODE ENDS -->
+    </div>
+    <!-- EMPLOYERS FEEDBACK 2022 TO 2023 END -->
+
+    <!-- EMPLOYERS FEEDBACK 2021 TO 2022 STARTS -->
+    <div class="govuk-tabs__panel govuk-tabs__panel-employers govuk-tabs__panel--hidden" id="employer2021to2022">
+      <p class="govuk-body-l govuk-!-margin-bottom-4">
+        <span class="das-rating das-rating--good" role="img" aria-label="Rating: 3 out of 4 stars">
+          <span aria-hidden="true" class="das-rating__icon-star"></span>
+          <span aria-hidden="true" class="das-rating__icon-star"></span>
+          <span aria-hidden="true" class="das-rating__icon-star"></span>
+          <span aria-hidden="true" class="das-rating__icon-star--empty"></span>
+        </span>
+        <span class="govuk-!-font-weight-bold das-rating__label--good">Good</span>
+        <span class="govuk-body">(236 reviews)</span>
+      </p>
+      <h3 class="govuk-heading-m">1 September 2021 to 31 August 2022</h3>
+      <!-- GRAPH AND TABLES CODE STARTS -->
+      <div data-show-hide-panels="true">
+        <div class="app-show-hide-panel" data-panel-label="graph" id="app-emp-feedback-graph-2021to2022">
+          <div class="govuk-button-group app-show-hide-panel__buttons">
+            <!-- Button to switch to the table view -->
+            <button class="govuk-button govuk-button--secondary govuk-!-font-size-16" onclick="toggleTables('employer2021to2022')">Change to table and accessible view</button>
+          </div>
+          <!-- Your graph content -->
+          <div id="employer-feedback-graph">
+            <div class="app-graph"><ul class="app-graph-key"><li class="app-graph-key__list-item app-graph-key__list-item--colour-1">Percentage of employers that selected this as a strength</li><li class="app-graph-key__list-item app-graph-key__list-item--colour-2">Percentage of employers that selected this as needs improvement</li></ul><ul class="app-graph__list"><li class="app-graph__list-item"><h3 class="app-graph__label">Communication with employers<span class="app-graph__caption">(selected by 346 employers)</span></h3><div class="app-graph__chart-wrap"><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-1" style="width: 52%;" title="52% of 346 employers selected this as a 'strength'" tabindex="0"><span class="app-graph__figure">52%</span></span></span></span><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-2" style="width: 48%;" title="48% of 346 employers selected this as a 'needs improvement'" tabindex="0"><span class="app-graph__figure">48%</span></span></span></span></div></li><li class="app-graph__list-item"><h3 class="app-graph__label">Reporting on progress of apprentices<span class="app-graph__caption">(selected by 249 employers)</span></h3><div class="app-graph__chart-wrap"><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-1" style="width: 29%;" title="29% of 249 employers selected this as a 'strength'" tabindex="0"><span class="app-graph__figure">29%</span></span></span></span><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-2" style="width: 71%;" title="71% of 249 employers selected this as a 'needs improvement'" tabindex="0"><span class="app-graph__figure">71%</span></span></span></span></div></li><li class="app-graph__list-item"><h3 class="app-graph__label">Getting new apprentices started<span class="app-graph__caption">(selected by 185 employers)</span></h3><div class="app-graph__chart-wrap"><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-1" style="width: 81%;" title="81% of 185 employers selected this as a 'strength'" tabindex="0"><span class="app-graph__figure">81%</span></span></span></span><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-2" style="width: 19%;" title="19% of 185 employers selected this as a 'needs improvement'" tabindex="0"><span class="app-graph__figure">19%</span></span></span></span></div></li><li class="app-graph__list-item"><h3 class="app-graph__label">Training facilities<span class="app-graph__caption">(selected by 141 employers)</span></h3><div class="app-graph__chart-wrap"><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-1" style="width: 88%;" title="88% of 141 employers selected this as a 'strength'" tabindex="0"><span class="app-graph__figure">88%</span></span></span></span><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-2" style="width: 12%;" title="12% of 141 employers selected this as a 'needs improvement'" tabindex="0"><span class="app-graph__figure">12%</span></span></span></span></div></li><li class="app-graph__list-item"><h3 class="app-graph__label">Providing the right training at the right time<span class="app-graph__caption">(selected by 133 employers)</span></h3><div class="app-graph__chart-wrap"><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-1" style="width: 70%;" title="70% of 133 employers selected this as a 'strength'" tabindex="0"><span class="app-graph__figure">70%</span></span></span></span><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-2" style="width: 30%;" title="30% of 133 employers selected this as a 'needs improvement'" tabindex="0"><span class="app-graph__figure">30%</span></span></span></span></div></li><li class="app-graph__list-item"><h3 class="app-graph__label">Adapting to my needs<span class="app-graph__caption">(selected by 129 employers)</span></h3><div class="app-graph__chart-wrap"><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-1" style="width: 66%;" title="66% of 129 employers selected this as a 'strength'" tabindex="0"><span class="app-graph__figure">66%</span></span></span></span><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-2" style="width: 34%;" title="34% of 129 employers selected this as a 'needs improvement'" tabindex="0"><span class="app-graph__figure">34%</span></span></span></span></div></li><li class="app-graph__list-item"><h3 class="app-graph__label">Improving apprentice skills<span class="app-graph__caption">(selected by 119 employers)</span></h3><div class="app-graph__chart-wrap"><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-1" style="width: 76%;" title="76% of 119 employers selected this as a 'strength'" tabindex="0"><span class="app-graph__figure">76%</span></span></span></span><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-2" style="width: 24%;" title="24% of 119 employers selected this as a 'needs improvement'" tabindex="0"><span class="app-graph__figure">24%</span></span></span></span></div></li><li class="app-graph__list-item"><h3 class="app-graph__label">Working with small numbers of apprentices<span class="app-graph__caption">(selected by 95 employers)</span></h3><div class="app-graph__chart-wrap"><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-1" style="width: 83%;" title="83% of 95 employers selected this as a 'strength'" tabindex="0"><span class="app-graph__figure">83%</span></span></span></span><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-2" style="width: 17%;" title="17% of 95 employers selected this as a 'needs improvement'" tabindex="0"><span class="app-graph__figure">17%</span></span></span></span></div></li><li class="app-graph__list-item"><h3 class="app-graph__label">Initial assessment of apprentices<span class="app-graph__caption">(selected by 95 employers)</span></h3><div class="app-graph__chart-wrap"><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-1" style="width: 85%;" title="85% of 95 employers selected this as a 'strength'" tabindex="0"><span class="app-graph__figure">85%</span></span></span></span><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-2" style="width: 15%;" title="15% of 95 employers selected this as a 'needs improvement'" tabindex="0"><span class="app-graph__figure">15%</span></span></span></span></div></li></ul></div>
+        </div>
+        </div>
+      </div>
+      <!-- TABLE CONTAINER -->
+      <div class="app-show-hide-panel app-show-hide-panel__hidden" data-panel-label="table and accessible" id="app-emp-feedback-table-2021to2022">
+        <div class="govuk-button-group app-show-hide-panel__buttons">
+          <!-- Button to switch back to the graph view -->
+          <button class="govuk-button govuk-button--secondary govuk-!-font-size-16" onclick="toggleTables('employer2021to2022')">Change to graph view</button>
+        </div>
+        <table class="govuk-table das-table--responsive govuk-!-font-size-16" data-target="employer-feedback-graph" data-label="employers" data-feedback-graph="true">
+          <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header">Statement</th>
+                  <th scope="col" class="govuk-table__header govuk-table__header--numeric">Percentage of employers that selected this as a "strength"</th>
+                  <th scope="col" class="govuk-table__header govuk-table__header--numeric">Percentage of employers that selected this as "needs improvement"</th>
+                  <th scope="col" class="govuk-table__header govuk-table__header--numeric">Total number of employers that selected this statement</th>
+              </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                  <th class="govuk-table__cell govuk-!-font-weight-regular" scope="row">Communication with employers</th>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of employers that selected this as a strength" data-title="52% of 346 employers selected this as a 'strength'">
+                  52%
+                  </td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of employers that selected this as needs improvement" data-title="48% of 346 employers selected this as a 'needs improvement'">
+                  48%
+                  </td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Total number of employers that selected this statement">346</td>
+              </tr>
+              <tr class="govuk-table__row">
+                  <th class="govuk-table__cell govuk-!-font-weight-regular" scope="row">Reporting on progress of apprentices</th>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of employers that selected this as a strength" data-title="29% of 249 employers selected this as a 'strength'">
+                  29%
+                  </td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of employers that selected this as needs improvement" data-title="71% of 249 employers selected this as a 'needs improvement'">
+                  71%
+                  </td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Total number of employers that selected this statement">249</td>
+              </tr>
+              <tr class="govuk-table__row">
+                  <th class="govuk-table__cell govuk-!-font-weight-regular" scope="row">Getting new apprentices started</th>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of employers that selected this as a strength" data-title="81% of 185 employers selected this as a 'strength'">
+                  81%
+                  </td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of employers that selected this as needs improvement" data-title="19% of 185 employers selected this as a 'needs improvement'">
+                  19%
+                  </td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Total number of employers that selected this statement">185</td>
+              </tr>
+              <tr class="govuk-table__row">
+                  <th class="govuk-table__cell govuk-!-font-weight-regular" scope="row">Training facilities</th>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of employers that selected this as a strength" data-title="88% of 141 employers selected this as a 'strength'">
+                  88%
+                  </td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of employers that selected this as needs improvement" data-title="12% of 141 employers selected this as a 'needs improvement'">
+                  12%
+                  </td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Total number of employers that selected this statement">141</td>
+              </tr>
+              <tr class="govuk-table__row">
+                  <th class="govuk-table__cell govuk-!-font-weight-regular" scope="row">Providing the right training at the right time</th>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of employers that selected this as a strength" data-title="70% of 133 employers selected this as a 'strength'">
+                  70%
+                  </td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of employers that selected this as needs improvement" data-title="30% of 133 employers selected this as a 'needs improvement'">
+                  30%
+                  </td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Total number of employers that selected this statement">133</td>
+              </tr>
+              <tr class="govuk-table__row">
+                  <th class="govuk-table__cell govuk-!-font-weight-regular" scope="row">Adapting to my needs</th>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of employers that selected this as a strength" data-title="66% of 129 employers selected this as a 'strength'">
+                  66%
+                  </td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of employers that selected this as needs improvement" data-title="34% of 129 employers selected this as a 'needs improvement'">
+                  34%
+                  </td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Total number of employers that selected this statement">129</td>
+              </tr>
+              <tr class="govuk-table__row">
+                  <th class="govuk-table__cell govuk-!-font-weight-regular" scope="row">Improving apprentice skills</th>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of employers that selected this as a strength" data-title="76% of 119 employers selected this as a 'strength'">
+                  76%
+                  </td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of employers that selected this as needs improvement" data-title="24% of 119 employers selected this as a 'needs improvement'">
+                  24%
+                  </td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Total number of employers that selected this statement">119</td>
+              </tr>
+              <tr class="govuk-table__row">
+                  <th class="govuk-table__cell govuk-!-font-weight-regular" scope="row">Working with small numbers of apprentices</th>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of employers that selected this as a strength" data-title="83% of 95 employers selected this as a 'strength'">
+                  83%
+                  </td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of employers that selected this as needs improvement" data-title="17% of 95 employers selected this as a 'needs improvement'">
+                  17%
+                  </td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Total number of employers that selected this statement">95</td>
+              </tr>
+              <tr class="govuk-table__row">
+                  <th class="govuk-table__cell govuk-!-font-weight-regular" scope="row">Initial assessment of apprentices</th>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of employers that selected this as a strength" data-title="85% of 95 employers selected this as a 'strength'">
+                  85%
+                  </td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of employers that selected this as needs improvement" data-title="15% of 95 employers selected this as a 'needs improvement'">
+                  15%
+                  </td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Total number of employers that selected this statement">95</td>
+              </tr>
+          </tbody>
+      </table>
+      </div>
+      <!-- GRAPH AND TABLES CODE ENDS -->
+    </div>
+    <!-- EMPLOYERS FEEDBACK 2021 TO 2022 END -->
+
+    <!-- EMPLOYERS FEEDBACK 2020 TO 2021 STARTS -->
+    <div class="govuk-tabs__panel govuk-tabs__panel-employers govuk-tabs__panel--hidden" id="employer2020to2021">
+      <!--<p class="govuk-body-l govuk-!-margin-bottom-4">
+        <span class="das-rating das-rating--good" role="img" aria-label="Rating: 3 out of 4 stars">
+          <span aria-hidden="true" class="das-rating__icon-star"></span>
+          <span aria-hidden="true" class="das-rating__icon-star"></span>
+          <span aria-hidden="true" class="das-rating__icon-star"></span>
+          <span aria-hidden="true" class="das-rating__icon-star--empty"></span>
+        </span>
+        <span class="govuk-!-font-weight-bold das-rating__label--good">Good</span>
+        <span class="govuk-body">(236 reviews)</span>
+      </p>-->
+      <h3 class="govuk-heading-m">1 September 2020 to 31 August 2021</h3>
+      <p>There is no employer feedback for this period of time.</p>
+      <!-- GRAPH AND TABLES CODE STARTS -->
+      <!--<div data-show-hide-panels="true">
+        <div class="app-show-hide-panel" data-panel-label="graph" id="app-emp-feedback-graph-2020to2021">
+          <div class="govuk-button-group app-show-hide-panel__buttons">
+            <!-- Button to switch to the table view -->
+            <!--<button class="govuk-button govuk-button--secondary govuk-!-font-size-16" onclick="toggleTables('employer2020to2021')">Change to table and accessible view</button>
+          </div>
+          <!-- Your graph content -->
+          <!--<p>Employers 2020 to 2021 graph</p>
+        </div>
+      </div>
+      <!-- TABLE CONTAINER -->
+      <!--<div class="app-show-hide-panel app-show-hide-panel__hidden" data-panel-label="table and accessible" id="app-emp-feedback-table-2020to2021">
+        <div class="govuk-button-group app-show-hide-panel__buttons">
+          <!-- Button to switch back to the graph view -->
+          <!--<button class="govuk-button govuk-button--secondary govuk-!-font-size-16" onclick="toggleTables('employer2020to2021')">Change to graph view</button>
+        </div>
+        <p>Employers 2020 to 2021 table</p>
+      </div>
+      <!-- GRAPH AND TABLES CODE ENDS -->
+    </div>
+    <!-- EMPLOYERS FEEDBACK 2020 TO 2021 END -->
+</div>
+
+<h2 class="govuk-heading-l">Feedback from apprentices</h2>
+<div class="govuk-tabs" data-module="govuk-tabs">
+<h3 class="govuk-tabs__title">
+Feedback from apprentices by year
+</h3>
+<div class="govuk-form-group feedback-group" data-group="apprentices">
+  <label class="govuk-label" for="sort-apprentices">
+    Choose which feedback period you would like to see:
+  </label>
+  <select class="govuk-select" id="sort-apprentices" name="sort-apprentices" data-panel="apprentices">
+    <option value="apprentice2023to2024" selected>2023 to 2024</option>
+    <option value="apprentice2022to2023">2022 to 2023</option>
+    <option value="apprentice2021to2022">2021 to 2022</option>
+    <option value="apprentice2020to2021">2020 to 2021</option>
+  </select>
+</div>
+<!-- APPRENTICE FEEDBACK 2023 TO 2024 STARTS -->
+<div class="govuk-tabs__panel govuk-tabs__panel-apprentices" id="apprentice2023to2024">
+  <p class="govuk-body-l govuk-!-margin-bottom-4">
+    <span class="das-rating das-rating--good" role="img" aria-label="Rating: 3 out of 4 stars">
+      <span aria-hidden="true" class="das-rating__icon-star"></span>
+      <span aria-hidden="true" class="das-rating__icon-star"></span>
+      <span aria-hidden="true" class="das-rating__icon-star"></span>
+      <span aria-hidden="true" class="das-rating__icon-star--empty"></span>
+    </span>
+    <span class="govuk-!-font-weight-bold das-rating__label--good">Good</span>
+    <span class="govuk-body">(225 reviews)</span>
+  </p>
+  <h3 class="govuk-heading-m">1 September 2023 to <span class="currentDate">26 April 2024</span></h3>
+  <!-- GRAPH AND TABLES CODE STARTS -->
+  <div data-show-hide-panels="true">
+    <div class="app-show-hide-panel" data-panel-label="graph" id="app-emp-feedback-graph-2023to2024">
+      <div class="govuk-button-group app-show-hide-panel__buttons">
+        <!-- Button to switch to the table view -->
+        <button class="govuk-button govuk-button--secondary govuk-!-font-size-16" onclick="toggleTables('apprentice2023to2024')">Change to table and accessible view</button>
+      </div>
+      <!-- Your graph content -->
+      <div id="apprentice-feedback-graph">
+        <div class="app-graph"><ul class="app-graph-key"><li class="app-graph-key__list-item app-graph-key__list-item--colour-1">Percentage of apprentices that agreed with this statement</li><li class="app-graph-key__list-item app-graph-key__list-item--colour-2">Percentage of apprentices that disagreed with this statement</li></ul><h2 class="govuk-caption-l app-graph__category">Communication</h2><ul class="app-graph__list"><li class="app-graph__list-item"><h3 class="app-graph__label">Communicating clearly with you</h3><div class="app-graph__chart-wrap"><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-1" style="width: 74%;" title="74% of apprentices agreed with this statement" tabindex="0"><span class="app-graph__figure">74%</span></span></span></span><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-2" style="width: 26%;" title="26% of apprentices disagreed with this statement" tabindex="0"><span class="app-graph__figure">26%</span></span></span></span></div></li><li class="app-graph__list-item"><h3 class="app-graph__label">Ensuring you understand the requirements of your end-point assessment</h3><div class="app-graph__chart-wrap"><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-1" style="width: 76%;" title="76% of apprentices agreed with this statement" tabindex="0"><span class="app-graph__figure">76%</span></span></span></span><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-2" style="width: 24%;" title="24% of apprentices disagreed with this statement" tabindex="0"><span class="app-graph__figure">24%</span></span></span></span></div></li></ul></div><div class="app-graph"><h2 class="govuk-caption-l app-graph__category">Organisation</h2><ul class="app-graph__list"><li class="app-graph__list-item"><h3 class="app-graph__label">Organising well-structured training</h3><div class="app-graph__chart-wrap"><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-1" style="width: 76%;" title="76% of apprentices agreed with this statement" tabindex="0"><span class="app-graph__figure">76%</span></span></span></span><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-2" style="width: 24%;" title="24% of apprentices disagreed with this statement" tabindex="0"><span class="app-graph__figure">24%</span></span></span></span></div></li><li class="app-graph__list-item"><h3 class="app-graph__label">Providing accessible training resources</h3><div class="app-graph__chart-wrap"><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-1" style="width: 80%;" title="80% of apprentices agreed with this statement" tabindex="0"><span class="app-graph__figure">80%</span></span></span></span><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-2" style="width: 20%;" title="20% of apprentices disagreed with this statement" tabindex="0"><span class="app-graph__figure">20%</span></span></span></span></div></li><li class="app-graph__list-item"><h3 class="app-graph__label">Balancing online learning with classroom-based training to suit your apprenticeship</h3><div class="app-graph__chart-wrap"><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-1" style="width: 78%;" title="78% of apprentices agreed with this statement" tabindex="0"><span class="app-graph__figure">78%</span></span></span></span><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-2" style="width: 22%;" title="22% of apprentices disagreed with this statement" tabindex="0"><span class="app-graph__figure">22%</span></span></span></span></div></li><li class="app-graph__list-item"><h3 class="app-graph__label">Taking into account your previous learning</h3><div class="app-graph__chart-wrap"><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-1" style="width: 82%;" title="82% of apprentices agreed with this statement" tabindex="0"><span class="app-graph__figure">82%</span></span></span></span><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-2" style="width: 18%;" title="18% of apprentices disagreed with this statement" tabindex="0"><span class="app-graph__figure">18%</span></span></span></span></div></li><li class="app-graph__list-item"><h3 class="app-graph__label">Giving you relevant training that helps you perform your job better</h3><div class="app-graph__chart-wrap"><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-1" style="width: 78%;" title="78% of apprentices agreed with this statement" tabindex="0"><span class="app-graph__figure">78%</span></span></span></span><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-2" style="width: 22%;" title="22% of apprentices disagreed with this statement" tabindex="0"><span class="app-graph__figure">22%</span></span></span></span></div></li><li class="app-graph__list-item"><h3 class="app-graph__label">Providing Off The Job training that takes up at least 20% of your total apprenticeship time</h3><div class="app-graph__chart-wrap"><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-1" style="width: 88%;" title="88% of apprentices agreed with this statement" tabindex="0"><span class="app-graph__figure">88%</span></span></span></span><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-2" style="width: 12%;" title="12% of apprentices disagreed with this statement" tabindex="0"><span class="app-graph__figure">12%</span></span></span></span></div></li></ul></div><div class="app-graph"><h2 class="govuk-caption-l app-graph__category">Support</h2><ul class="app-graph__list"><li class="app-graph__list-item"><h3 class="app-graph__label">Helping you learn new skills and develop existing ones</h3><div class="app-graph__chart-wrap"><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-1" style="width: 86%;" title="86% of apprentices agreed with this statement" tabindex="0"><span class="app-graph__figure">86%</span></span></span></span><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-2" style="width: 14%;" title="14% of apprentices disagreed with this statement" tabindex="0"><span class="app-graph__figure">14%</span></span></span></span></div></li><li class="app-graph__list-item"><h3 class="app-graph__label">Supporting you and your apprenticeship</h3><div class="app-graph__chart-wrap"><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-1" style="width: 78%;" title="78% of apprentices agreed with this statement" tabindex="0"><span class="app-graph__figure">78%</span></span></span></span><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-2" style="width: 22%;" title="22% of apprentices disagreed with this statement" tabindex="0"><span class="app-graph__figure">22%</span></span></span></span></div></li><li class="app-graph__list-item"><h3 class="app-graph__label">Resolving any issues you have</h3><div class="app-graph__chart-wrap"><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-1" style="width: 82%;" title="82% of apprentices agreed with this statement" tabindex="0"><span class="app-graph__figure">82%</span></span></span></span><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-2" style="width: 18%;" title="18% of apprentices disagreed with this statement" tabindex="0"><span class="app-graph__figure">18%</span></span></span></span></div></li><li class="app-graph__list-item"><h3 class="app-graph__label">Preparing you for success in your future career</h3><div class="app-graph__chart-wrap"><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-1" style="width: 84%;" title="84% of apprentices agreed with this statement" tabindex="0"><span class="app-graph__figure">84%</span></span></span></span><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-2" style="width: 16%;" title="16% of apprentices disagreed with this statement" tabindex="0"><span class="app-graph__figure">16%</span></span></span></span></div></li></ul></div>
+      </div>
+    </div>
+  </div>
+  <!-- TABLE CONTAINER -->
+  <div class="app-show-hide-panel app-show-hide-panel__hidden" data-panel-label="table and accessible" id="app-emp-feedback-table-2023to2024">
+    <div class="govuk-button-group app-show-hide-panel__buttons">
+      <!-- Button to switch back to the graph view -->
+      <button class="govuk-button govuk-button--secondary govuk-!-font-size-16" onclick="toggleTables('apprentice2023to2024')">Change to graph view</button>
+    </div>
+    <table class="govuk-table das-table--responsive govuk-!-font-size-16 govuk-!-margin-bottom-8" data-target="apprentice-feedback-graph" data-label="apprentices" data-feedback-graph="true">
+      <caption class="govuk-table__caption govuk-caption-l govuk-!-font-weight-regular">Communication</caption>
+      <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Statement</th>
+      <th scope="col" class="govuk-table__header govuk-table__header--numeric">Percentage of apprentices that agreed with this statement</th>
+      <th scope="col" class="govuk-table__header govuk-table__header--numeric">Percentage of apprentices that disagreed with this statement</th>
+      </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+      <th class="govuk-table__cell govuk-!-font-weight-regular" scope="row">Communicating clearly with you</th>
+      <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that agreed with this statement" data-title="74% of apprentices agreed with this statement">
+      74%
+      </td>
+      <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that disagreed with this statement" data-title="26% of apprentices disagreed with this statement">
+      26%
+      </td>
+      </tr>
+      <tr class="govuk-table__row">
+      <th class="govuk-table__cell govuk-!-font-weight-regular" scope="row">Ensuring you understand the requirements of your end-point assessment</th>
+      <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that agreed with this statement" data-title="76% of apprentices agreed with this statement">
+      76%
+      </td>
+      <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that disagreed with this statement" data-title="24% of apprentices disagreed with this statement">
+      24%
+      </td>
+      </tr>
+      </tbody>
+      </table>
+    <table class="govuk-table das-table--responsive govuk-!-font-size-16 govuk-!-margin-bottom-8" data-target="apprentice-feedback-graph" data-label="apprentices" data-feedback-graph="true" data-hide-legend="true">
+        <caption class="govuk-table__caption govuk-caption-l govuk-!-font-weight-regular">Organisation</caption>
+        <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">Statement</th>
+                <th scope="col" class="govuk-table__header govuk-table__header--numeric">Percentage of apprentices that agreed with this statement</th>
+                <th scope="col" class="govuk-table__header govuk-table__header--numeric">Percentage of apprentices that disagreed with this statement</th>
+            </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__cell govuk-!-font-weight-regular" scope="row">Organising well-structured training</th>
+                    <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that agreed with this statement" data-title="76% of apprentices agreed with this statement">
+                    76%
+                    </td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that disagreed with this statement" data-title="24% of apprentices disagreed with this statement">
+                    24%
+                    </td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__cell govuk-!-font-weight-regular" scope="row">Providing accessible training resources</th>
+                    <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that agreed with this statement" data-title="80% of apprentices agreed with this statement">
+                    80%
+                    </td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that disagreed with this statement" data-title="20% of apprentices disagreed with this statement">
+                    20%
+                    </td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__cell govuk-!-font-weight-regular" scope="row">Balancing online learning with classroom-based training to suit your apprenticeship</th>
+                    <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that agreed with this statement" data-title="78% of apprentices agreed with this statement">
+                    78%
+                    </td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that disagreed with this statement" data-title="22% of apprentices disagreed with this statement">
+                    22%
+                    </td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__cell govuk-!-font-weight-regular" scope="row">Taking into account your previous learning</th>
+                    <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that agreed with this statement" data-title="82% of apprentices agreed with this statement">
+                    82%
+                    </td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that disagreed with this statement" data-title="18% of apprentices disagreed with this statement">
+                    18%
+                    </td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__cell govuk-!-font-weight-regular" scope="row">Giving you relevant training that helps you perform your job better</th>
+                    <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that agreed with this statement" data-title="78% of apprentices agreed with this statement">
+                    78%
+                    </td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that disagreed with this statement" data-title="22% of apprentices disagreed with this statement">
+                    22%
+                    </td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__cell govuk-!-font-weight-regular" scope="row">Providing Off The Job training that takes up at least 20% of your total apprenticeship time</th>
+                    <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that agreed with this statement" data-title="88% of apprentices agreed with this statement">
+                    88%
+                    </td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that disagreed with this statement" data-title="12% of apprentices disagreed with this statement">
+                    12%
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+    <table class="govuk-table das-table--responsive govuk-!-font-size-16 govuk-!-margin-bottom-8" data-target="apprentice-feedback-graph" data-label="apprentices" data-feedback-graph="true" data-hide-legend="true">
+      <caption class="govuk-table__caption govuk-caption-l govuk-!-font-weight-regular">Support</caption>
+      <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Statement</th>
+              <th scope="col" class="govuk-table__header govuk-table__header--numeric">Percentage of apprentices that agreed with this statement</th>
+              <th scope="col" class="govuk-table__header govuk-table__header--numeric">Percentage of apprentices that disagreed with this statement</th>
+          </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                  <th class="govuk-table__cell govuk-!-font-weight-regular" scope="row">Helping you learn new skills and develop existing ones</th>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that agreed with this statement" data-title="86% of apprentices agreed with this statement">
+                  86%
+                  </td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that disagreed with this statement" data-title="14% of apprentices disagreed with this statement">
+                  14%
+                  </td>
+              </tr>
+              <tr class="govuk-table__row">
+                  <th class="govuk-table__cell govuk-!-font-weight-regular" scope="row">Supporting you and your apprenticeship</th>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that agreed with this statement" data-title="78% of apprentices agreed with this statement">
+                  78%
+                  </td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that disagreed with this statement" data-title="22% of apprentices disagreed with this statement">
+                  22%
+                  </td>
+              </tr>
+              <tr class="govuk-table__row">
+                  <th class="govuk-table__cell govuk-!-font-weight-regular" scope="row">Resolving any issues you have</th>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that agreed with this statement" data-title="82% of apprentices agreed with this statement">
+                  82%
+                  </td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that disagreed with this statement" data-title="18% of apprentices disagreed with this statement">
+                  18%
+                  </td>
+              </tr>
+              <tr class="govuk-table__row">
+                  <th class="govuk-table__cell govuk-!-font-weight-regular" scope="row">Preparing you for success in your future career</th>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that agreed with this statement" data-title="84% of apprentices agreed with this statement">
+                  84%
+                  </td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that disagreed with this statement" data-title="16% of apprentices disagreed with this statement">
+                  16%
+                  </td>
+              </tr>
+      </tbody>
+  </table>
+  </div>
+  <!-- GRAPH AND TABLES CODE ENDS -->
+</div>
+<!-- APPRENTICE FEEDBACK 2023 TO 2024 ENDS -->
+
+<!-- APPRENTICE FEEDBACK 2022 TO 2023 STARTS -->
+<div class="govuk-tabs__panel govuk-tabs__panel-apprentices govuk-tabs__panel--hidden" id="apprentice2022to2023">
+  <p class="govuk-body-l govuk-!-margin-bottom-4">
+    <span class="das-rating das-rating--good" role="img" aria-label="Rating: 3 out of 4 stars">
+      <span aria-hidden="true" class="das-rating__icon-star"></span>
+      <span aria-hidden="true" class="das-rating__icon-star"></span>
+      <span aria-hidden="true" class="das-rating__icon-star"></span>
+      <span aria-hidden="true" class="das-rating__icon-star--empty"></span>
+    </span>
+    <span class="govuk-!-font-weight-bold das-rating__label--good">Good</span>
+    <span class="govuk-body">(215 reviews)</span>
+  </p>
+  <h3 class="govuk-heading-m">1 September 2022 to 31 August 2023</h3>
+  <!-- GRAPH AND TABLES CODE STARTS -->
+  <div data-show-hide-panels="true">
+    <div class="app-show-hide-panel" data-panel-label="graph" id="app-emp-feedback-graph-2022to2023">
+      <div class="govuk-button-group app-show-hide-panel__buttons">
+        <!-- Button to switch to the table view -->
+        <button class="govuk-button govuk-button--secondary govuk-!-font-size-16" onclick="toggleTables('apprentice2022to2023')">Change to table and accessible view</button>
+      </div>
+      <!-- Your graph content -->
+      <div id="apprentice-feedback-graph">
+        <div class="app-graph"><ul class="app-graph-key"><li class="app-graph-key__list-item app-graph-key__list-item--colour-1">Percentage of apprentices that agreed with this statement</li><li class="app-graph-key__list-item app-graph-key__list-item--colour-2">Percentage of apprentices that disagreed with this statement</li></ul><h2 class="govuk-caption-l app-graph__category">Communication</h2><ul class="app-graph__list"><li class="app-graph__list-item"><h3 class="app-graph__label">Communicating clearly with you</h3><div class="app-graph__chart-wrap"><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-1" style="width: 60%;" title="60% of apprentices agreed with this statement" tabindex="0"><span class="app-graph__figure">60%</span></span></span></span><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-2" style="width: 40%;" title="40% of apprentices disagreed with this statement" tabindex="0"><span class="app-graph__figure">40%</span></span></span></span></div></li><li class="app-graph__list-item"><h3 class="app-graph__label">Ensuring you understand the requirements of your end-point assessment</h3><div class="app-graph__chart-wrap"><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-1" style="width: 73%;" title="73% of apprentices agreed with this statement" tabindex="0"><span class="app-graph__figure">73%</span></span></span></span><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-2" style="width: 27%;" title="27% of apprentices disagreed with this statement" tabindex="0"><span class="app-graph__figure">27%</span></span></span></span></div></li></ul></div><div class="app-graph"><h2 class="govuk-caption-l app-graph__category">Organisation</h2><ul class="app-graph__list"><li class="app-graph__list-item"><h3 class="app-graph__label">Organising well-structured training</h3><div class="app-graph__chart-wrap"><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-1" style="width: 60%;" title="60% of apprentices agreed with this statement" tabindex="0"><span class="app-graph__figure">60%</span></span></span></span><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-2" style="width: 40%;" title="40% of apprentices disagreed with this statement" tabindex="0"><span class="app-graph__figure">40%</span></span></span></span></div></li><li class="app-graph__list-item"><h3 class="app-graph__label">Providing accessible training resources</h3><div class="app-graph__chart-wrap"><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-1" style="width: 67%;" title="67% of apprentices agreed with this statement" tabindex="0"><span class="app-graph__figure">67%</span></span></span></span><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-2" style="width: 33%;" title="33% of apprentices disagreed with this statement" tabindex="0"><span class="app-graph__figure">33%</span></span></span></span></div></li><li class="app-graph__list-item"><h3 class="app-graph__label">Balancing online learning with classroom-based training to suit your apprenticeship</h3><div class="app-graph__chart-wrap"><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-1" style="width: 67%;" title="67% of apprentices agreed with this statement" tabindex="0"><span class="app-graph__figure">67%</span></span></span></span><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-2" style="width: 33%;" title="33% of apprentices disagreed with this statement" tabindex="0"><span class="app-graph__figure">33%</span></span></span></span></div></li><li class="app-graph__list-item"><h3 class="app-graph__label">Taking into account your previous learning</h3><div class="app-graph__chart-wrap"><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-1" style="width: 60%;" title="60% of apprentices agreed with this statement" tabindex="0"><span class="app-graph__figure">60%</span></span></span></span><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-2" style="width: 40%;" title="40% of apprentices disagreed with this statement" tabindex="0"><span class="app-graph__figure">40%</span></span></span></span></div></li><li class="app-graph__list-item"><h3 class="app-graph__label">Giving you relevant training that helps you perform your job better</h3><div class="app-graph__chart-wrap"><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-1" style="width: 53%;" title="53% of apprentices agreed with this statement" tabindex="0"><span class="app-graph__figure">53%</span></span></span></span><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-2" style="width: 47%;" title="47% of apprentices disagreed with this statement" tabindex="0"><span class="app-graph__figure">47%</span></span></span></span></div></li><li class="app-graph__list-item"><h3 class="app-graph__label">Providing Off The Job training that takes up at least 20% of your total apprenticeship time</h3><div class="app-graph__chart-wrap"><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-1" style="width: 73%;" title="73% of apprentices agreed with this statement" tabindex="0"><span class="app-graph__figure">73%</span></span></span></span><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-2" style="width: 27%;" title="27% of apprentices disagreed with this statement" tabindex="0"><span class="app-graph__figure">27%</span></span></span></span></div></li></ul></div><div class="app-graph"><h2 class="govuk-caption-l app-graph__category">Support</h2><ul class="app-graph__list"><li class="app-graph__list-item"><h3 class="app-graph__label">Helping you learn new skills and develop existing ones</h3><div class="app-graph__chart-wrap"><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-1" style="width: 67%;" title="67% of apprentices agreed with this statement" tabindex="0"><span class="app-graph__figure">67%</span></span></span></span><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-2" style="width: 33%;" title="33% of apprentices disagreed with this statement" tabindex="0"><span class="app-graph__figure">33%</span></span></span></span></div></li><li class="app-graph__list-item"><h3 class="app-graph__label">Supporting you and your apprenticeship</h3><div class="app-graph__chart-wrap"><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-1" style="width: 73%;" title="73% of apprentices agreed with this statement" tabindex="0"><span class="app-graph__figure">73%</span></span></span></span><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-2" style="width: 27%;" title="27% of apprentices disagreed with this statement" tabindex="0"><span class="app-graph__figure">27%</span></span></span></span></div></li><li class="app-graph__list-item"><h3 class="app-graph__label">Resolving any issues you have</h3><div class="app-graph__chart-wrap"><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-1" style="width: 67%;" title="67% of apprentices agreed with this statement" tabindex="0"><span class="app-graph__figure">67%</span></span></span></span><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-2" style="width: 33%;" title="33% of apprentices disagreed with this statement" tabindex="0"><span class="app-graph__figure">33%</span></span></span></span></div></li><li class="app-graph__list-item"><h3 class="app-graph__label">Preparing you for success in your future career</h3><div class="app-graph__chart-wrap"><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-1" style="width: 67%;" title="67% of apprentices agreed with this statement" tabindex="0"><span class="app-graph__figure">67%</span></span></span></span><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-2" style="width: 33%;" title="33% of apprentices disagreed with this statement" tabindex="0"><span class="app-graph__figure">33%</span></span></span></span></div></li></ul></div>
+      </div>
+    </div>
+  </div>
+  <!-- TABLE CONTAINER -->
+  <div class="app-show-hide-panel app-show-hide-panel__hidden" data-panel-label="table and accessible" id="app-emp-feedback-table-2022to2023">
+    <div class="govuk-button-group app-show-hide-panel__buttons">
+      <!-- Button to switch back to the graph view -->
+      <button class="govuk-button govuk-button--secondary govuk-!-font-size-16" onclick="toggleTables('apprentice2022to2023')">Change to graph view</button>
+    </div>
+    <table class="govuk-table das-table--responsive govuk-!-font-size-16 govuk-!-margin-bottom-8" data-target="apprentice-feedback-graph" data-label="apprentices" data-feedback-graph="true">
+      <caption class="govuk-table__caption govuk-caption-l govuk-!-font-weight-regular">Communication</caption>
+      <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Statement</th>
+              <th scope="col" class="govuk-table__header govuk-table__header--numeric">Percentage of apprentices that agreed with this statement</th>
+              <th scope="col" class="govuk-table__header govuk-table__header--numeric">Percentage of apprentices that disagreed with this statement</th>
+          </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                  <th class="govuk-table__cell govuk-!-font-weight-regular" scope="row">Communicating clearly with you</th>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that agreed with this statement" data-title="60% of apprentices agreed with this statement">
+                  60%
+                  </td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that disagreed with this statement" data-title="40% of apprentices disagreed with this statement">
+                  40%
+                  </td>
+              </tr>
+              <tr class="govuk-table__row">
+                  <th class="govuk-table__cell govuk-!-font-weight-regular" scope="row">Ensuring you understand the requirements of your end-point assessment</th>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that agreed with this statement" data-title="73% of apprentices agreed with this statement">
+                  73%
+                  </td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that disagreed with this statement" data-title="27% of apprentices disagreed with this statement">
+                  27%
+                  </td>
+              </tr>
+      </tbody>
+  </table>
+  <table class="govuk-table das-table--responsive govuk-!-font-size-16 govuk-!-margin-bottom-8" data-target="apprentice-feedback-graph" data-label="apprentices" data-feedback-graph="true" data-hide-legend="true">
+    <caption class="govuk-table__caption govuk-caption-l govuk-!-font-weight-regular">Organisation</caption>
+    <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Statement</th>
+            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Percentage of apprentices that agreed with this statement</th>
+            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Percentage of apprentices that disagreed with this statement</th>
+        </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+                <th class="govuk-table__cell govuk-!-font-weight-regular" scope="row">Organising well-structured training</th>
+                <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that agreed with this statement" data-title="60% of apprentices agreed with this statement">
+                60%
+                </td>
+                <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that disagreed with this statement" data-title="40% of apprentices disagreed with this statement">
+                40%
+                </td>
+            </tr>
+            <tr class="govuk-table__row">
+                <th class="govuk-table__cell govuk-!-font-weight-regular" scope="row">Providing accessible training resources</th>
+                <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that agreed with this statement" data-title="67% of apprentices agreed with this statement">
+                67%
+                </td>
+                <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that disagreed with this statement" data-title="33% of apprentices disagreed with this statement">
+                33%
+                </td>
+            </tr>
+            <tr class="govuk-table__row">
+                <th class="govuk-table__cell govuk-!-font-weight-regular" scope="row">Balancing online learning with classroom-based training to suit your apprenticeship</th>
+                <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that agreed with this statement" data-title="67% of apprentices agreed with this statement">
+                67%
+                </td>
+                <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that disagreed with this statement" data-title="33% of apprentices disagreed with this statement">
+                33%
+                </td>
+            </tr>
+            <tr class="govuk-table__row">
+                <th class="govuk-table__cell govuk-!-font-weight-regular" scope="row">Taking into account your previous learning</th>
+                <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that agreed with this statement" data-title="60% of apprentices agreed with this statement">
+                60%
+                </td>
+                <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that disagreed with this statement" data-title="40% of apprentices disagreed with this statement">
+                40%
+                </td>
+            </tr>
+            <tr class="govuk-table__row">
+                <th class="govuk-table__cell govuk-!-font-weight-regular" scope="row">Giving you relevant training that helps you perform your job better</th>
+                <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that agreed with this statement" data-title="53% of apprentices agreed with this statement">
+                53%
+                </td>
+                <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that disagreed with this statement" data-title="47% of apprentices disagreed with this statement">
+                47%
+                </td>
+            </tr>
+            <tr class="govuk-table__row">
+                <th class="govuk-table__cell govuk-!-font-weight-regular" scope="row">Providing Off The Job training that takes up at least 20% of your total apprenticeship time</th>
+                <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that agreed with this statement" data-title="73% of apprentices agreed with this statement">
+                73%
+                </td>
+                <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that disagreed with this statement" data-title="27% of apprentices disagreed with this statement">
+                27%
+                </td>
+            </tr>
+    </tbody>
+  </table>
+  <table class="govuk-table das-table--responsive govuk-!-font-size-16 govuk-!-margin-bottom-8" data-target="apprentice-feedback-graph" data-label="apprentices" data-feedback-graph="true" data-hide-legend="true">
+    <caption class="govuk-table__caption govuk-caption-l govuk-!-font-weight-regular">Support</caption>
+    <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Statement</th>
+            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Percentage of apprentices that agreed with this statement</th>
+            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Percentage of apprentices that disagreed with this statement</th>
+        </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+                <th class="govuk-table__cell govuk-!-font-weight-regular" scope="row">Helping you learn new skills and develop existing ones</th>
+                <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that agreed with this statement" data-title="67% of apprentices agreed with this statement">
+                67%
+                </td>
+                <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that disagreed with this statement" data-title="33% of apprentices disagreed with this statement">
+                33%
+                </td>
+            </tr>
+            <tr class="govuk-table__row">
+                <th class="govuk-table__cell govuk-!-font-weight-regular" scope="row">Supporting you and your apprenticeship</th>
+                <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that agreed with this statement" data-title="73% of apprentices agreed with this statement">
+                73%
+                </td>
+                <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that disagreed with this statement" data-title="27% of apprentices disagreed with this statement">
+                27%
+                </td>
+            </tr>
+            <tr class="govuk-table__row">
+                <th class="govuk-table__cell govuk-!-font-weight-regular" scope="row">Resolving any issues you have</th>
+                <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that agreed with this statement" data-title="67% of apprentices agreed with this statement">
+                67%
+                </td>
+                <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that disagreed with this statement" data-title="33% of apprentices disagreed with this statement">
+                33%
+                </td>
+            </tr>
+            <tr class="govuk-table__row">
+                <th class="govuk-table__cell govuk-!-font-weight-regular" scope="row">Preparing you for success in your future career</th>
+                <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that agreed with this statement" data-title="67% of apprentices agreed with this statement">
+                67%
+                </td>
+                <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that disagreed with this statement" data-title="33% of apprentices disagreed with this statement">
+                33%
+                </td>
+            </tr>
+    </tbody>
+  </table>
+  </div>
+  <!-- GRAPH AND TABLES CODE ENDS -->
+</div>
+<!-- APPRENTICE FEEDBACK 2022 TO 2023 ENDS -->
+
+<!-- APPRENTICE FEEDBACK 2021 TO 2022 STARTS -->
+<div class="govuk-tabs__panel govuk-tabs__panel-apprentices govuk-tabs__panel--hidden" id="apprentice2021to2022">
+  <p class="govuk-body-l govuk-!-margin-bottom-4">
+    <span class="das-rating das-rating--good" role="img" aria-label="Rating: 3 out of 4 stars">
+      <span aria-hidden="true" class="das-rating__icon-star"></span>
+      <span aria-hidden="true" class="das-rating__icon-star"></span>
+      <span aria-hidden="true" class="das-rating__icon-star"></span>
+      <span aria-hidden="true" class="das-rating__icon-star--empty"></span>
+    </span>
+    <span class="govuk-!-font-weight-bold das-rating__label--good">Good</span>
+    <span class="govuk-body">(205 reviews)</span>
+  </p>
+  <h3 class="govuk-heading-m">1 September 2021 to 31 August 2022</h3>
+  <!-- GRAPH AND TABLES CODE STARTS -->
+  <div data-show-hide-panels="true">
+    <div class="app-show-hide-panel" data-panel-label="graph" id="app-emp-feedback-graph-2021to2022">
+      <div class="govuk-button-group app-show-hide-panel__buttons">
+        <!-- Button to switch to the table view -->
+        <button class="govuk-button govuk-button--secondary govuk-!-font-size-16" onclick="toggleTables('apprentice2021to2022')">Change to table and accessible view</button>
+      </div>
+      <!-- Your graph content -->
+      <div id="apprentice-feedback-graph">
+        <div class="app-graph"><ul class="app-graph-key"><li class="app-graph-key__list-item app-graph-key__list-item--colour-1">Percentage of apprentices that agreed with this statement</li><li class="app-graph-key__list-item app-graph-key__list-item--colour-2">Percentage of apprentices that disagreed with this statement</li></ul><h2 class="govuk-caption-l app-graph__category">Communication</h2><ul class="app-graph__list"><li class="app-graph__list-item"><h3 class="app-graph__label">Communicating clearly with you</h3><div class="app-graph__chart-wrap"><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-1" style="width: 56%;" title="56% of apprentices agreed with this statement" tabindex="0"><span class="app-graph__figure">56%</span></span></span></span><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-2" style="width: 44%;" title="44% of apprentices disagreed with this statement" tabindex="0"><span class="app-graph__figure">44%</span></span></span></span></div></li><li class="app-graph__list-item"><h3 class="app-graph__label">Ensuring you understand the requirements of your end-point assessment</h3><div class="app-graph__chart-wrap"><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-1" style="width: 67%;" title="67% of apprentices agreed with this statement" tabindex="0"><span class="app-graph__figure">67%</span></span></span></span><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-2" style="width: 33%;" title="33% of apprentices disagreed with this statement" tabindex="0"><span class="app-graph__figure">33%</span></span></span></span></div></li></ul></div><div class="app-graph"><h2 class="govuk-caption-l app-graph__category">Organisation</h2><ul class="app-graph__list"><li class="app-graph__list-item"><h3 class="app-graph__label">Organising well-structured training</h3><div class="app-graph__chart-wrap"><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-1" style="width: 58%;" title="58% of apprentices agreed with this statement" tabindex="0"><span class="app-graph__figure">58%</span></span></span></span><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-2" style="width: 42%;" title="42% of apprentices disagreed with this statement" tabindex="0"><span class="app-graph__figure">42%</span></span></span></span></div></li><li class="app-graph__list-item"><h3 class="app-graph__label">Providing accessible training resources</h3><div class="app-graph__chart-wrap"><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-1" style="width: 80%;" title="80% of apprentices agreed with this statement" tabindex="0"><span class="app-graph__figure">80%</span></span></span></span><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-2" style="width: 20%;" title="20% of apprentices disagreed with this statement" tabindex="0"><span class="app-graph__figure">20%</span></span></span></span></div></li><li class="app-graph__list-item"><h3 class="app-graph__label">Balancing online learning with classroom-based training to suit your apprenticeship</h3><div class="app-graph__chart-wrap"><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-1" style="width: 71%;" title="71% of apprentices agreed with this statement" tabindex="0"><span class="app-graph__figure">71%</span></span></span></span><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-2" style="width: 29%;" title="29% of apprentices disagreed with this statement" tabindex="0"><span class="app-graph__figure">29%</span></span></span></span></div></li><li class="app-graph__list-item"><h3 class="app-graph__label">Taking into account your previous learning</h3><div class="app-graph__chart-wrap"><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-1" style="width: 71%;" title="71% of apprentices agreed with this statement" tabindex="0"><span class="app-graph__figure">71%</span></span></span></span><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-2" style="width: 29%;" title="29% of apprentices disagreed with this statement" tabindex="0"><span class="app-graph__figure">29%</span></span></span></span></div></li><li class="app-graph__list-item"><h3 class="app-graph__label">Giving you relevant training that helps you perform your job better</h3><div class="app-graph__chart-wrap"><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-1" style="width: 70%;" title="70% of apprentices agreed with this statement" tabindex="0"><span class="app-graph__figure">70%</span></span></span></span><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-2" style="width: 30%;" title="30% of apprentices disagreed with this statement" tabindex="0"><span class="app-graph__figure">30%</span></span></span></span></div></li><li class="app-graph__list-item"><h3 class="app-graph__label">Providing Off The Job training that takes up at least 20% of your total apprenticeship time</h3><div class="app-graph__chart-wrap"><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-1" style="width: 82%;" title="82% of apprentices agreed with this statement" tabindex="0"><span class="app-graph__figure">82%</span></span></span></span><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-2" style="width: 18%;" title="18% of apprentices disagreed with this statement" tabindex="0"><span class="app-graph__figure">18%</span></span></span></span></div></li></ul></div><div class="app-graph"><h2 class="govuk-caption-l app-graph__category">Support</h2><ul class="app-graph__list"><li class="app-graph__list-item"><h3 class="app-graph__label">Helping you learn new skills and develop existing ones</h3><div class="app-graph__chart-wrap"><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-1" style="width: 79%;" title="79% of apprentices agreed with this statement" tabindex="0"><span class="app-graph__figure">79%</span></span></span></span><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-2" style="width: 21%;" title="21% of apprentices disagreed with this statement" tabindex="0"><span class="app-graph__figure">21%</span></span></span></span></div></li><li class="app-graph__list-item"><h3 class="app-graph__label">Supporting you and your apprenticeship</h3><div class="app-graph__chart-wrap"><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-1" style="width: 73%;" title="73% of apprentices agreed with this statement" tabindex="0"><span class="app-graph__figure">73%</span></span></span></span><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-2" style="width: 27%;" title="27% of apprentices disagreed with this statement" tabindex="0"><span class="app-graph__figure">27%</span></span></span></span></div></li><li class="app-graph__list-item"><h3 class="app-graph__label">Resolving any issues you have</h3><div class="app-graph__chart-wrap"><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-1" style="width: 71%;" title="71% of apprentices agreed with this statement" tabindex="0"><span class="app-graph__figure">71%</span></span></span></span><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-2" style="width: 29%;" title="29% of apprentices disagreed with this statement" tabindex="0"><span class="app-graph__figure">29%</span></span></span></span></div></li><li class="app-graph__list-item"><h3 class="app-graph__label">Preparing you for success in your future career</h3><div class="app-graph__chart-wrap"><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-1" style="width: 72%;" title="72% of apprentices agreed with this statement" tabindex="0"><span class="app-graph__figure">72%</span></span></span></span><span class="app-graph__chart"><span class="app-graph__bar"><span class="app-graph__bar-value app-graph__bar-value--colour-2" style="width: 28%;" title="28% of apprentices disagreed with this statement" tabindex="0"><span class="app-graph__figure">28%</span></span></span></span></div></li></ul></div>
+    </div>
+    </div>
+  </div>
+  <!-- TABLE CONTAINER -->
+  <div class="app-show-hide-panel app-show-hide-panel__hidden" data-panel-label="table and accessible" id="app-emp-feedback-table-2021to2022">
+    <div class="govuk-button-group app-show-hide-panel__buttons">
+      <!-- Button to switch back to the graph view -->
+      <button class="govuk-button govuk-button--secondary govuk-!-font-size-16" onclick="toggleTables('apprentice2021to2022')">Change to graph view</button>
+    </div>
+    <table class="govuk-table das-table--responsive govuk-!-font-size-16 govuk-!-margin-bottom-8" data-target="apprentice-feedback-graph" data-label="apprentices" data-feedback-graph="true">
+      <caption class="govuk-table__caption govuk-caption-l govuk-!-font-weight-regular">Communication</caption>
+      <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Statement</th>
+              <th scope="col" class="govuk-table__header govuk-table__header--numeric">Percentage of apprentices that agreed with this statement</th>
+              <th scope="col" class="govuk-table__header govuk-table__header--numeric">Percentage of apprentices that disagreed with this statement</th>
+          </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                  <th class="govuk-table__cell govuk-!-font-weight-regular" scope="row">Communicating clearly with you</th>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that agreed with this statement" data-title="56% of apprentices agreed with this statement">
+                  56%
+                  </td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that disagreed with this statement" data-title="44% of apprentices disagreed with this statement">
+                  44%
+                  </td>
+              </tr>
+              <tr class="govuk-table__row">
+                  <th class="govuk-table__cell govuk-!-font-weight-regular" scope="row">Ensuring you understand the requirements of your end-point assessment</th>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that agreed with this statement" data-title="67% of apprentices agreed with this statement">
+                  67%
+                  </td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that disagreed with this statement" data-title="33% of apprentices disagreed with this statement">
+                  33%
+                  </td>
+              </tr>
+      </tbody>
+    </table>
+    <table class="govuk-table das-table--responsive govuk-!-font-size-16 govuk-!-margin-bottom-8" data-target="apprentice-feedback-graph" data-label="apprentices" data-feedback-graph="true" data-hide-legend="true">
+    <caption class="govuk-table__caption govuk-caption-l govuk-!-font-weight-regular">Organisation</caption>
+    <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Statement</th>
+            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Percentage of apprentices that agreed with this statement</th>
+            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Percentage of apprentices that disagreed with this statement</th>
+        </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+                <th class="govuk-table__cell govuk-!-font-weight-regular" scope="row">Organising well-structured training</th>
+                <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that agreed with this statement" data-title="58% of apprentices agreed with this statement">
+                58%
+                </td>
+                <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that disagreed with this statement" data-title="42% of apprentices disagreed with this statement">
+                42%
+                </td>
+            </tr>
+            <tr class="govuk-table__row">
+                <th class="govuk-table__cell govuk-!-font-weight-regular" scope="row">Providing accessible training resources</th>
+                <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that agreed with this statement" data-title="80% of apprentices agreed with this statement">
+                80%
+                </td>
+                <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that disagreed with this statement" data-title="20% of apprentices disagreed with this statement">
+                20%
+                </td>
+            </tr>
+            <tr class="govuk-table__row">
+                <th class="govuk-table__cell govuk-!-font-weight-regular" scope="row">Balancing online learning with classroom-based training to suit your apprenticeship</th>
+                <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that agreed with this statement" data-title="71% of apprentices agreed with this statement">
+                71%
+                </td>
+                <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that disagreed with this statement" data-title="29% of apprentices disagreed with this statement">
+                29%
+                </td>
+            </tr>
+            <tr class="govuk-table__row">
+                <th class="govuk-table__cell govuk-!-font-weight-regular" scope="row">Taking into account your previous learning</th>
+                <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that agreed with this statement" data-title="71% of apprentices agreed with this statement">
+                71%
+                </td>
+                <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that disagreed with this statement" data-title="29% of apprentices disagreed with this statement">
+                29%
+                </td>
+            </tr>
+            <tr class="govuk-table__row">
+                <th class="govuk-table__cell govuk-!-font-weight-regular" scope="row">Giving you relevant training that helps you perform your job better</th>
+                <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that agreed with this statement" data-title="70% of apprentices agreed with this statement">
+                70%
+                </td>
+                <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that disagreed with this statement" data-title="30% of apprentices disagreed with this statement">
+                30%
+                </td>
+            </tr>
+            <tr class="govuk-table__row">
+                <th class="govuk-table__cell govuk-!-font-weight-regular" scope="row">Providing Off The Job training that takes up at least 20% of your total apprenticeship time</th>
+                <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that agreed with this statement" data-title="82% of apprentices agreed with this statement">
+                82%
+                </td>
+                <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that disagreed with this statement" data-title="18% of apprentices disagreed with this statement">
+                18%
+                </td>
+            </tr>
+    </tbody>
+    </table>
+    <table class="govuk-table das-table--responsive govuk-!-font-size-16 govuk-!-margin-bottom-8" data-target="apprentice-feedback-graph" data-label="apprentices" data-feedback-graph="true" data-hide-legend="true">
+  <caption class="govuk-table__caption govuk-caption-l govuk-!-font-weight-regular">Support</caption>
+  <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Statement</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric">Percentage of apprentices that agreed with this statement</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric">Percentage of apprentices that disagreed with this statement</th>
+      </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+              <th class="govuk-table__cell govuk-!-font-weight-regular" scope="row">Helping you learn new skills and develop existing ones</th>
+              <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that agreed with this statement" data-title="79% of apprentices agreed with this statement">
+              79%
+              </td>
+              <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that disagreed with this statement" data-title="21% of apprentices disagreed with this statement">
+              21%
+              </td>
+          </tr>
+          <tr class="govuk-table__row">
+              <th class="govuk-table__cell govuk-!-font-weight-regular" scope="row">Supporting you and your apprenticeship</th>
+              <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that agreed with this statement" data-title="73% of apprentices agreed with this statement">
+              73%
+              </td>
+              <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that disagreed with this statement" data-title="27% of apprentices disagreed with this statement">
+              27%
+              </td>
+          </tr>
+          <tr class="govuk-table__row">
+              <th class="govuk-table__cell govuk-!-font-weight-regular" scope="row">Resolving any issues you have</th>
+              <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that agreed with this statement" data-title="71% of apprentices agreed with this statement">
+              71%
+              </td>
+              <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that disagreed with this statement" data-title="29% of apprentices disagreed with this statement">
+              29%
+              </td>
+          </tr>
+          <tr class="govuk-table__row">
+              <th class="govuk-table__cell govuk-!-font-weight-regular" scope="row">Preparing you for success in your future career</th>
+              <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that agreed with this statement" data-title="72% of apprentices agreed with this statement">
+              72%
+              </td>
+              <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Percentage of apprentices that disagreed with this statement" data-title="28% of apprentices disagreed with this statement">
+              28%
+              </td>
+          </tr>
+  </tbody>
+    </table>
+  </div>
+  <!-- GRAPH AND TABLES CODE ENDS -->
+</div>
+<!-- APPRENTICE FEEDBACK 2021 TO 2022 ENDS -->
+
+<!-- APPRENTICE FEEDBACK 2020 TO 2021 STARTS -->
+<div class="govuk-tabs__panel govuk-tabs__panel-apprentices govuk-tabs__panel--hidden" id="apprentice2020to2021">
+  <!--<p class="govuk-body-l govuk-!-margin-bottom-4">
+    <span class="das-rating das-rating--good" role="img" aria-label="Rating: 3 out of 4 stars">
+      <span aria-hidden="true" class="das-rating__icon-star"></span>
+      <span aria-hidden="true" class="das-rating__icon-star"></span>
+      <span aria-hidden="true" class="das-rating__icon-star"></span>
+      <span aria-hidden="true" class="das-rating__icon-star--empty"></span>
+    </span>
+    <span class="govuk-!-font-weight-bold das-rating__label--good">Good</span>
+    <span class="govuk-body">(236 reviews)</span>
+  </p>-->
+  <h3 class="govuk-heading-m">1 September 2020 to 31 August 2021</h3>
+  <p>There is no apprentice feedback for this period of time.</p>
+  <!-- GRAPH AND TABLES CODE STARTS -->
+  <!-- <div data-show-hide-panels="true">
+    <div class="app-show-hide-panel" data-panel-label="graph" id="app-emp-feedback-graph-2020to2021">
+      <div class="govuk-button-group app-show-hide-panel__buttons">
+        <!-- Button to switch to the table view -->
+        <!--<button class="govuk-button govuk-button--secondary govuk-!-font-size-16" onclick="toggleTables('apprentice2020to2021')">Change to table and accessible view</button>
+      </div>
+      <!-- Your graph content -->
+      <!--<p>There is no apprentice feedback data for this year.</p>
+    </div>
+  </div>
+  <!-- TABLE CONTAINER -->
+  <!--<div class="app-show-hide-panel app-show-hide-panel__hidden" data-panel-label="table and accessible" id="app-emp-feedback-table-2020to2021">
+    <div class="govuk-button-group app-show-hide-panel__buttons">
+      <!-- Button to switch back to the graph view -->
+      <!--<button class="govuk-button govuk-button--secondary govuk-!-font-size-16" onclick="toggleTables('apprentice2020to2021')">Change to graph view</button>
+    </div>
+    <p>Apprentice 2020 to 2021 table</p>
+  </div>
+  <!-- GRAPH AND TABLES CODE ENDS -->
+</div>
+<!-- APPRENTICE FEEDBACK 2020 TO 2021 ENDS -->
+
+</div>
+
+
+<script>
+  // Function to generate formatted date
+  function generateFormattedDate() {
+    // Get the current date
+    var currentDate = new Date();
+
+    // Format the date with the name of the month using toLocaleString()
+    var formattedDate = currentDate.getDate() + ' ' +
+                        currentDate.toLocaleString('en-GB', { month: 'long' }) + ' ' +
+                        currentDate.getFullYear();
+
+    return formattedDate;
+  }
+
+  // Update all elements with the class 'currentDate' with the formatted date
+  var currentDateElements = document.querySelectorAll('.currentDate');
+  currentDateElements.forEach(function(element) {
+    element.textContent = generateFormattedDate();
+  });
+</script>
+
+{% block pageScripts %}
+  <script src="/public/javascripts/switchable-tables.js"></script>
+  <script src="/public/javascripts/feedback-select-component.js"></script>
+{% endblock %}
+
+{% endblock %}

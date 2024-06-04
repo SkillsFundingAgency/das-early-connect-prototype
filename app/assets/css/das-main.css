@@ -9679,7 +9679,7 @@ span.das-table-cell--highlight {
   }
 }
 
-/** V2 Prototype CSS STARTS **/
+/** Prototype CSS STARTS **/
 
 .das-rating.das-rating--poor .das-rating__icon-star, .das-rating.das-rating--poor .das-rating__icon-star--empty {
   filter: invert(50%) sepia(60%) saturate(4885%) hue-rotate(10deg) brightness(80%) contrast(100%);
@@ -9701,4 +9701,8 @@ color: #B95B00;
   height: auto;
   margin-top: 10px;
 }
-/** V2 Prototype CSS ENDS **/
+
+.app-contents-list {
+  margin: 0 0 3em 0;
+
+/**  Prototype CSS ENDS **/

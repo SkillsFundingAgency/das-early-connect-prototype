@@ -9704,5 +9704,15 @@ color: #B95B00;
 
 .app-contents-list {
   margin: 0 0 3em 0;
+}
 
+.provider-feedback-grey-panel {
+  background: #f3f2f1;
+  padding: 20px;
+  margin-bottom: 2em;
+}
+
+.provider-feedback-grey-panel .govuk-button--secondary {
+  background-color: #dbdad9;
+}
 /**  Prototype CSS ENDS **/

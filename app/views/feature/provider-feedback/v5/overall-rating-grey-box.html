@@ -31,21 +31,32 @@ How we calculate your employer rating{% extends "layouts/provider-header.html" %
     </div>
   </div>
   <h1 class="govuk-heading-xl" id="your-feedback">Your feedback</h1>
+  <p class="govuk-body">We ask employers and apprentices for feedback on your training. They can give feedback after the apprentice has been training for 3 months.</p>
+  <p class="govuk-body">If they give feedback more than once, we'll use their newest answers to calculate your scores.</p>
   <nav id="contents" aria-label="Contents" class="app-contents-list" role="navigation">
     <h2 class="app-contents-list__title">Contents</h2>
     <ul class="app-contents-list__list">
       <li class="app-contents-list__list-item app-contents-list__list-item--dashed"><a href="#employer-feedback" title="Employer feedback">Employer reviews</a></li>
-      <ul><li class="app-contents-list__list-item app-contents-list__list-item--dashed"><a href="#overall-rating-employers" title="Overall rating from employers">Overall rating from employers</a></li></ul>
+        <ul>
+          <li class="app-contents-list__list-item app-contents-list__list-item--dashed"><a href="#overall-rating-employers" title="Overall rating from employers">Overall rating from employers</a></li>
+          <li class="app-contents-list__list-item app-contents-list__list-item--dashed"><a href="#employerReviewsByYear" title="Employer ratings by year">Employers ratings by year</a></li>
+      </ul>
       <li class="app-contents-list__list-item app-contents-list__list-item--dashed"><a href="#apprentice-feedback" title="Apprentice feedback">Apprentice reviews</a></li>
-      <ul><li class="app-contents-list__list-item app-contents-list__list-item--dashed"><a href="#apprentice-feedback" title="overall-rating-apprentices">Overall rating from apprentices</a></li></ul>
+        <ul>
+          <li class="app-contents-list__list-item app-contents-list__list-item--dashed"><a href="#apprentice-feedback" title="overall-rating-apprentices">Overall rating from apprentices</a></li>
+          <li class="app-contents-list__list-item app-contents-list__list-item--dashed"><a href="#apprenticeReviewsByYear" title="Apprentice ratings by year">Apprentice ratings by year</a></li>
+        </ul>
     </ul>
     </nav>
-  <p class="govuk-body">Employers and apprentices can start giving feedback 3 months into their training.</p>
   <h2 class="govuk-heading-l" id="employer-feedback">Employer reviews</h2>
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <div class="provider-feedback-grey-panel">
-      <h3 class="govuk-heading-m" id="overall-rating-employers">Overall rating from employers</h3>
+      <h3 class="govuk-heading-m" id="overall-rating-employers">Overall scores</h3>
+      <p class="govuk-body">Your scores from employers since joining the Apprenticeship service.</p>
+      <div class="govuk-inset-text">
+        <p class="govuk-body">We show this rating on your <a href="#">Find apprenticeship training provider page (opens in new tab)</a>.</p>
+      </div>
       <p class="govuk-body-l govuk-!-margin-bottom-4">
         <span class="das-rating das-rating--good" role="img" aria-label="Rating: 4 out of 4 stars">
           <span aria-hidden="true" class="das-rating__icon-star"></span>
@@ -56,8 +67,6 @@ How we calculate your employer rating{% extends "layouts/provider-header.html" %
         <span class="govuk-!-font-weight-bold das-rating__label--good">Excellent</span>
         <span class="govuk-body">(236 reviews)</span>
       </p>
-      <p>Your average score since joining the Apprenticeship service.</p>
-      <p>We show this rating on <a href="#">Find apprenticeship training</a>.</p>
       <details class="govuk-details">
         <summary class="govuk-details__summary">
           <span class="govuk-details__summary-text">
@@ -197,7 +206,7 @@ How we calculate your employer rating{% extends "layouts/provider-header.html" %
       </div>
     </div>
   </div>
-  <div class="govuk-tabs" data-module="govuk-tabs">
+  <div class="govuk-tabs" data-module="govuk-tabs" id="employerReviewsByYear">
     <h3 class="govuk-tabs__title">
       Employer feedback by year
     </h3>
@@ -243,8 +252,12 @@ How we calculate your employer rating{% extends "layouts/provider-header.html" %
         <span class="govuk-!-font-weight-bold das-rating__label--good">Good</span>
         <span class="govuk-body">(236 reviews)</span>
       </p>
-      <h4>What employers disliked about the rating</h4>
-        <p>Employers can choose to share the areas they think work well or need improvement.</p>
+      <h4>Areas of strength and improvement</h4>
+        <p>Employers can select:</p>
+        <ul>
+          <li>up to 3 things they think are your strength</li>
+          <li>up to 3 things they think need improvement</li>
+        </ul>
       <!-- GRAPH AND TABLES CODE STARTS -->
       <div data-show-hide-panels="true">
         <div class="app-show-hide-panel" data-panel-label="graph" id="app-emp-feedback-graph-2023to2024">
@@ -387,8 +400,12 @@ How we calculate your employer rating{% extends "layouts/provider-header.html" %
       <span class="govuk-!-font-weight-bold das-rating__label--good">Good</span>
       <span class="govuk-body">(226 reviews)</span>
     </p>
-    <h4>What employers disliked about the rating</h4>
-      <p>Employers can choose to share the areas they think work well or need improvement.</p>
+    <h4>Areas of strength and improvement</h4>
+      <p>Employers can select:</p>
+      <ul>
+        <li>up to 3 things they think are your strength</li>
+        <li>up to 3 things they think need improvement</li>
+      </ul>
       <!-- GRAPH AND TABLES CODE STARTS -->
       <div data-show-hide-panels="true">
         <div class="app-show-hide-panel" data-panel-label="graph" id="app-emp-feedback-graph-2022to2023">
@@ -530,8 +547,12 @@ How we calculate your employer rating{% extends "layouts/provider-header.html" %
         <span class="govuk-!-font-weight-bold das-rating__label--good">Good</span>
         <span class="govuk-body">(216 reviews)</span>
       </p>
-      <h4>What employers disliked about the rating</h4>
-        <p>Employers can choose to share the areas they think work well or need improvement.</p>
+      <h4>Areas of strength and improvement</h4>
+        <p>Employers can select:</p>
+        <ul>
+          <li>up to 3 things they think are your strength</li>
+          <li>up to 3 things they think need improvement</li>
+        </ul>
       <!-- GRAPH AND TABLES CODE STARTS -->
       <div data-show-hide-panels="true">
         <div class="app-show-hide-panel" data-panel-label="graph" id="app-emp-feedback-graph-2021to2022">
@@ -671,7 +692,7 @@ How we calculate your employer rating{% extends "layouts/provider-header.html" %
         <span class="govuk-body">(236 reviews)</span>
       </p>-->
       <h3 class="govuk-heading-m">1 August 2020 to 31 July 2021</h3>
-      <p>There is no employer feedback for this period of time.</p>
+      <p>There are no employer reviews for this period of time.</p>
       <!-- GRAPH AND TABLES CODE STARTS -->
       <!--<div data-show-hide-panels="true">
         <div class="app-show-hide-panel" data-panel-label="graph" id="app-emp-feedback-graph-2020to2021">
@@ -708,7 +729,7 @@ How we calculate your employer rating{% extends "layouts/provider-header.html" %
     <span class="govuk-body">(236 reviews)</span>
   </p>-->
   <h3 class="govuk-heading-m">1 August 2019 to 31 July 2020</h3>
-  <p>There is no employer feedback for this period of time.</p>
+  <p>There are no employer reviews for this period of time.</p>
   <!-- GRAPH AND TABLES CODE STARTS -->
   <!--<div data-show-hide-panels="true">
     <div class="app-show-hide-panel" data-panel-label="graph" id="app-emp-feedback-graph-2020to2021">
@@ -738,7 +759,11 @@ How we calculate your employer rating{% extends "layouts/provider-header.html" %
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <div class="provider-feedback-grey-panel">
-    <h3 class="govuk-heading-m" id="overall-rating-apprentices">Overall rating from apprentices</h3>
+    <h3 class="govuk-heading-m" id="overall-rating-apprentices">Overall scores</h3>
+    <p class="govuk-body">Your scores from apprentices since joining the Apprenticeship service.</p>
+    <div class="govuk-inset-text">
+      <p class="govuk-body">We show this rating on your <a href="#">Find apprenticeship training provider page (opens in new tab)</a>.</p>
+    </div>
     <p class="govuk-body-l govuk-!-margin-bottom-4">
       <span class="das-rating das-rating--good" role="img" aria-label="Rating: 4 out of 4 stars">
         <span aria-hidden="true" class="das-rating__icon-star"></span>
@@ -749,8 +774,6 @@ How we calculate your employer rating{% extends "layouts/provider-header.html" %
       <span class="govuk-!-font-weight-bold das-rating__label--good">Excellent</span>
       <span class="govuk-body">(236 reviews)</span>
     </p>
-    <p>Your average score since joining the Apprenticeship service.</p>
-    <p>We show this rating on <a href="#">Find apprenticeship training</a>.</p>
     <details class="govuk-details">
       <summary class="govuk-details__summary">
         <span class="govuk-details__summary-text">
@@ -931,7 +954,7 @@ How we calculate your employer rating{% extends "layouts/provider-header.html" %
     </div>
   </div>
 </div>
-<div class="govuk-tabs" data-module="govuk-tabs">
+<div class="govuk-tabs" data-module="govuk-tabs" id="apprenticeReviewsByYear">
 <h3 class="govuk-tabs__title">
 Apprentice feedback by year
 </h3>
@@ -964,9 +987,9 @@ Apprentice feedback by year
 </ul>
 <!-- APPRENTICE FEEDBACK 2023 TO 2024 STARTS -->
 <div class="govuk-tabs__panel" id="apprentice2023to2024">
-
-  <h4>Rating</h4>
-  <p>Your average score when employers are asked to rate you 'Excellent', 'Good', 'Poor' or 'Very poor'.</p>
+<h3 class="govuk-heading-m">1 August 2023 to <span class="currentDate">26 April 2024</span></h3>
+  <h4 class="govuk-heading-s">Rating</h4>
+  <p class="govuk-body">Your average score when apprentices are asked to rate you 'Excellent', 'Good', 'Poor' or 'Very poor'.</p>
   <p class="govuk-body-l govuk-!-margin-bottom-4">
   <span class="das-rating das-rating--good" role="img" aria-label="Rating: 3 out of 4 stars">
     <span aria-hidden="true" class="das-rating__icon-star"></span>
@@ -977,10 +1000,8 @@ Apprentice feedback by year
   <span class="govuk-!-font-weight-bold das-rating__label--good">Good</span>
   <span class="govuk-body">(225 reviews)</span>
   </p>
-  <h4>What employers disliked about the rating</h4>
-  <p>Employers can choose to share the areas they think work well or need improvement.</p>
-
-  <h3 class="govuk-heading-m">1 August 2023 to <span class="currentDate">26 April 2024</span></h3>
+  <h4 class="govuk-heading-s">How apprentices found your training</h4>
+  <p>We asked apprentices what was to a reasonable standard.</p>
   <!-- GRAPH AND TABLES CODE STARTS -->
   <div data-show-hide-panels="true">
     <div class="app-show-hide-panel" data-panel-label="graph" id="app-emp-feedback-graph-2023to2024">
@@ -1151,6 +1172,9 @@ Apprentice feedback by year
 
 <!-- APPRENTICE FEEDBACK 2022 TO 2023 STARTS -->
 <div class="govuk-tabs__panel" id="apprentice2022to2023">
+<h3 class="govuk-heading-m">1 August 2022 to 31 July 2023</h3>
+<h4 class="govuk-heading-s">Rating</h4>
+<p class="govuk-body">Your average score when apprentices are asked to rate you 'Excellent', 'Good', 'Poor' or 'Very poor'.</p>
   <p class="govuk-body-l govuk-!-margin-bottom-4">
     <span class="das-rating das-rating--good" role="img" aria-label="Rating: 3 out of 4 stars">
       <span aria-hidden="true" class="das-rating__icon-star"></span>
@@ -1161,17 +1185,8 @@ Apprentice feedback by year
     <span class="govuk-!-font-weight-bold das-rating__label--good">Good</span>
     <span class="govuk-body">(215 reviews)</span>
   </p>
-  <details class="govuk-details">
-  <summary class="govuk-details__summary">
-    <span class="govuk-details__summary-text">
-      How we calculate your apprentice rating
-    </span>
-  </summary>
-  <div class="govuk-details__text">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus consequat pellentesque mollis. Etiam posuere rhoncus mi vel vestibulum. Curabitur sit amet ultrices lorem. Nullam et elit sem. In hendrerit ante a velit elementum laoreet. Etiam porta sodales elementum. Phasellus placerat aliquam tristique. Suspendisse nisi risus, euismod sed ligula sit amet, volutpat lobortis elit. Aenean a feugiat nulla. Etiam eget dolor interdum, volutpat leo et, pretium lacus. Integer sagittis accumsan lobortis. Sed massa velit, sollicitudin ac lobortis nec, tincidunt ac magna.
-  </div>
-</details>
-  <h3 class="govuk-heading-m">1 August 2022 to 31 July 2023</h3>
+  <h4 class="govuk-heading-s">How apprentices found your training</h4>
+  <p class="govuk-body">We asked apprentices what was to a reasonable standard.</p>
   <!-- GRAPH AND TABLES CODE STARTS -->
   <div data-show-hide-panels="true">
     <div class="app-show-hide-panel" data-panel-label="graph" id="app-emp-feedback-graph-2022to2023">
@@ -1342,6 +1357,9 @@ Apprentice feedback by year
 
 <!-- APPRENTICE FEEDBACK 2021 TO 2022 STARTS -->
 <div class="govuk-tabs__panel" id="apprentice2021to2022">
+  <h3 class="govuk-heading-m">1 August 2021 to 31 July 2022</h3>
+  <h4 class="govuk-heading-s">Rating</h4>
+  <p class="govuk-body">Your average score when apprentices are asked to rate you 'Excellent', 'Good', 'Poor' or 'Very poor'.</p>
   <p class="govuk-body-l govuk-!-margin-bottom-4">
     <span class="das-rating das-rating--good" role="img" aria-label="Rating: 3 out of 4 stars">
       <span aria-hidden="true" class="das-rating__icon-star"></span>
@@ -1352,17 +1370,8 @@ Apprentice feedback by year
     <span class="govuk-!-font-weight-bold das-rating__label--good">Good</span>
     <span class="govuk-body">(205 reviews)</span>
   </p>
-  <details class="govuk-details">
-  <summary class="govuk-details__summary">
-    <span class="govuk-details__summary-text">
-      How we calculate your apprentice rating
-    </span>
-  </summary>
-  <div class="govuk-details__text">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus consequat pellentesque mollis. Etiam posuere rhoncus mi vel vestibulum. Curabitur sit amet ultrices lorem. Nullam et elit sem. In hendrerit ante a velit elementum laoreet. Etiam porta sodales elementum. Phasellus placerat aliquam tristique. Suspendisse nisi risus, euismod sed ligula sit amet, volutpat lobortis elit. Aenean a feugiat nulla. Etiam eget dolor interdum, volutpat leo et, pretium lacus. Integer sagittis accumsan lobortis. Sed massa velit, sollicitudin ac lobortis nec, tincidunt ac magna.
-  </div>
-</details>
-  <h3 class="govuk-heading-m">1 August 2021 to 31 July 2022</h3>
+  <h4 class="govuk-heading-s">How apprentices found your training</h4>
+  <p class="govuk-body">We asked apprentices what was to a reasonable standard.</p>
   <!-- GRAPH AND TABLES CODE STARTS -->
   <div data-show-hide-panels="true">
     <div class="app-show-hide-panel" data-panel-label="graph" id="app-emp-feedback-graph-2021to2022">
@@ -1544,7 +1553,7 @@ Apprentice feedback by year
     <span class="govuk-body">(236 reviews)</span>
   </p>-->
   <h3 class="govuk-heading-m">1 August 2020 to 31 July 2021</h3>
-  <p>There is no apprentice feedback for this period of time.</p>
+  <p>You’ll see apprentice reviews after at least 10 apprentices give feedback during an academic year.</p>
   <!-- GRAPH AND TABLES CODE STARTS -->
   <!-- <div data-show-hide-panels="true">
     <div class="app-show-hide-panel" data-panel-label="graph" id="app-emp-feedback-graph-2020to2021">
@@ -1581,7 +1590,7 @@ Apprentice feedback by year
     <span class="govuk-body">(236 reviews)</span>
   </p>-->
   <h3 class="govuk-heading-m">1 August 2019 to 31 July 2020</h3>
-  <p>There is no apprentice feedback for this period of time.</p>
+  <p>You’ll see apprentice reviews after at least 10 apprentices give feedback during an academic year.</p>
   <!-- GRAPH AND TABLES CODE STARTS -->
   <!-- <div data-show-hide-panels="true">
     <div class="app-show-hide-panel" data-panel-label="graph" id="app-emp-feedback-graph-2020to2021">

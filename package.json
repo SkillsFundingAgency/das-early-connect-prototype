@@ -10,6 +10,6 @@
     "@x-govuk/govuk-prototype-filters": "1.4.0",
     "accessible-autocomplete": "^2.0.4",
     "govuk-frontend": "5.4.0",
-    "govuk-prototype-kit": "13.16.2"
+    "govuk-prototype-kit": "13.20.1"
   }
 }
